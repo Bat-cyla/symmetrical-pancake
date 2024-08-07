@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-07-31 14:08:55
+/* Smarty version 4.1.1, created on 2024-08-01 16:02:30
   from '/app/www/design/backend/templates/views/storefronts/components/picker/presets.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66aa1b47c605e2_68624461',
+  'unifunc' => 'content_66ab876620b816_41112707',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:views/storefronts/components/picker/picker.tpl' => 1,
   ),
 ),false)) {
-function content_66aa1b47c605e2_68624461 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66ab876620b816_41112707 (Smarty_Internal_Template $_smarty_tpl) {
 \Tygh\Languages\Helper::preloadLangVars(array('show_all_storefronts','all_storefronts_short','all_storefronts_short','select_storefront','show_all_storefronts_with_count','all_storefronts_short','all_storefronts_short','all_storefronts'));
 $_smarty_tpl->_assignInScope('is_enabled', $_smarty_tpl->tpl_vars['app']->value["storefront.switcher.is_enabled"]);
 $_smarty_tpl->_assignInScope('is_available_for_disaptch', $_smarty_tpl->tpl_vars['app']->value['storefront.switcher.is_available_for_dispatch']);?>

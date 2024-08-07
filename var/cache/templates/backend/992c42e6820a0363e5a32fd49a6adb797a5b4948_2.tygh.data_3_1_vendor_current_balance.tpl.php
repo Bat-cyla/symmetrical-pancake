@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-07-31 14:09:01
+/* Smarty version 4.1.1, created on 2024-08-05 08:22:33
   from '/app/www/design/backend/templates/views/index/components/analytics_section/analytics_data/data_3_1_vendor_current_balance.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66aa1b4db5cf03_77177382',
+  'unifunc' => 'content_66b0619915d9a6_63072604',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:common/price.tpl' => 1,
   ),
 ),false)) {
-function content_66aa1b4db5cf03_77177382 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66b0619915d9a6_63072604 (Smarty_Internal_Template $_smarty_tpl) {
 \Tygh\Languages\Helper::preloadLangVars(array('dashboard.analytics_card.vendor_current_balance','dashboard.analytics_card.view_accounting'));
 if (fn_allowed_for("MULTIVENDOR")) {
 if ($_smarty_tpl->tpl_vars['runtime']->value['company_id']) {

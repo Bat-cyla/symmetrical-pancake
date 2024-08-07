@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-07-31 14:08:56
+/* Smarty version 4.1.1, created on 2024-08-01 16:01:25
   from '/app/www/design/backend/templates/views/companies/components/picker/picker.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66aa1b48368431_16273831',
+  'unifunc' => 'content_66ab8725e37e99_88233710',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:views/companies/components/picker/item.tpl' => 1,
   ),
 ),false)) {
-function content_66aa1b48368431_16273831 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66ab8725e37e99_88233710 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/app/www/app/functions/smarty_plugins/modifier.to_json.php','function'=>'smarty_modifier_to_json',),));
 \Tygh\Languages\Helper::preloadLangVars(array('type_to_search_or_click_button','none'));
 ?>

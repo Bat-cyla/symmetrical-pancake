@@ -178,10 +178,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 // OUTPUT routines
 //
 if ($mode == 'manage') {
+
     $subsections = Settings::instance()->getSectionTabs($section_id, CART_LANGUAGE);
 
     $options = Settings::instance(['storefront_id' => $storefront_id])->getList($section_id);
-
     $ln = Settings::instance()->getSettingDataByName('license_number');
     if (!empty($options[$ln['section_tab_name']][$ln['object_id']]['value'])) {
         $options[$ln['section_tab_name']][$ln['object_id']]['value'] =

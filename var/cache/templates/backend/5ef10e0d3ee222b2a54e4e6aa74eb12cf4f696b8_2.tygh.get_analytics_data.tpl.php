@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-07-31 14:09:01
+/* Smarty version 4.1.1, created on 2024-08-05 08:22:33
   from '/app/www/design/backend/templates/views/index/components/analytics_section/analytics_data/get_analytics_data.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66aa1b4da2a596_53355410',
+  'unifunc' => 'content_66b06199050875_21029659',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -29,7 +29,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:views/index/components/analytics_section/analytics_data/data_3_6_activity.tpl' => 1,
   ),
 ),false)) {
-function content_66aa1b4da2a596_53355410 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66b06199050875_21029659 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/app/www/app/functions/smarty_plugins/block.hook.php','function'=>'smarty_block_hook',),1=>array('file'=>'/app/www/app/functions/smarty_plugins/modifier.count.php','function'=>'smarty_modifier_count',),2=>array('file'=>'/app/www/app/functions/smarty_plugins/modifier.unset_key.php','function'=>'smarty_modifier_unset_key',),));
 $_smarty_tpl->smarty->_cache['_tag_stack'][] = array('hook', array('name'=>"index:analytics_data"));
 $_block_repeat=true;

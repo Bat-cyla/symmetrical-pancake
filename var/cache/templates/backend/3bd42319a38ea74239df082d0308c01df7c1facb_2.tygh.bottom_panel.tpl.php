@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-07-31 14:08:55
+/* Smarty version 4.1.1, created on 2024-08-01 16:01:25
   from '/app/www/design/backend/templates/components/bottom_panel/bottom_panel.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66aa1b476e3723_26295386',
+  'unifunc' => 'content_66ab872505e952_67040871',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -28,7 +28,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'backend:components/bottom_panel/icons/bp-close.svg' => 1,
   ),
 ),false)) {
-function content_66aa1b476e3723_26295386 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66ab872505e952_67040871 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/app/www/app/functions/smarty_plugins/block.hook.php','function'=>'smarty_block_hook',),1=>array('file'=>'/app/www/app/functions/smarty_plugins/modifier.enum.php','function'=>'smarty_modifier_enum',),2=>array('file'=>'/app/www/app/lib/vendor/smarty/smarty/libs/plugins/modifier.replace.php','function'=>'smarty_modifier_replace',),3=>array('file'=>'/app/www/app/functions/smarty_plugins/function.script.php','function'=>'smarty_function_script',),));
 \Tygh\Languages\Helper::preloadLangVars(array('bottom_panel.change_theme','bottom_panel.change_theme','bottom_panel.edit_layout','bottom_panel.edit_layout','bottom_panel.edit_template','bottom_panel.edit_template','bottom_panel.edit_translations','bottom_panel.edit_translations','bottom_panel.edit_menus','bottom_panel.edit_menus','bottom_panel.edit_product_tabs','bottom_panel.edit_product_tabs','bottom_panel.go_to_home_page','bottom_panel.go_to_dashboard','bottom_panel.storefront','bottom_panel.admin_panel','bottom_panel.vendor_panel','bottom_panel.preview_mode','bottom_panel.text_mode','bottom_panel.theme_mode','bottom_panel.theme_mode.not_available','bottom_panel.build_mode','bottom_panel.build_mode.not_available','bottom_panel.settings','bottom_panel.help','bottom_panel.documentation','bottom_panel.community_forums','bottom_panel.video_tutorials','bottom_panel.faq','bottom_panel.customer_help_desk','bottom_panel.hire_a_developers','bottom_panel.hide_bottom_admin_panel','bottom_panel.show_bottom_admin_panel'));
 $_smarty_tpl->smarty->_cache['_tag_stack'][] = array('hook', array('name'=>"bottom_panel:bottom_panel_main"));

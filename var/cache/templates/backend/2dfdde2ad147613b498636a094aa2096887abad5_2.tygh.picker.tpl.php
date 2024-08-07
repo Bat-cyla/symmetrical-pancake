@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-01 10:35:20
+/* Smarty version 4.1.1, created on 2024-08-02 09:14:49
   from '/app/www/design/backend/templates/pickers/users/picker.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66ab3ab8d1bf04_55137295',
+  'unifunc' => 'content_66ac7959eeee44_02426730',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:pickers/users/js.tpl' => 2,
   ),
 ),false)) {
-function content_66ab3ab8d1bf04_55137295 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66ac7959eeee44_02426730 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/app/www/app/functions/smarty_plugins/function.script.php','function'=>'smarty_function_script',),));
 \Tygh\Languages\Helper::preloadLangVars(array('add_users','choose','choose_user','person_name','no_items'));
 $_smarty_tpl->_assignInScope('rnd', rand());

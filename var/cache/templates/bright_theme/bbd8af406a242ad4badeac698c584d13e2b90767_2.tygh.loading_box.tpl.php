@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-07-31 15:00:56
+/* Smarty version 4.1.1, created on 2024-08-02 10:12:27
   from '/app/www/design/themes/responsive/templates/common/loading_box.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66aa277873c386_09435304',
+  'unifunc' => 'content_66ac86db729ae6_90901922',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'bbd8af406a242ad4badeac698c584d13e2b90767' => 
     array (
       0 => '/app/www/design/themes/responsive/templates/common/loading_box.tpl',
-      1 => 1722424108,
+      1 => 1722513958,
       2 => 'tygh',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66aa277873c386_09435304 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66ac86db729ae6_90901922 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/app/www/app/functions/smarty_plugins/function.set_id.php','function'=>'smarty_function_set_id',),));
 if ($_smarty_tpl->tpl_vars['runtime']->value['customization_mode']['design'] == "Y" && (defined('AREA') ? constant('AREA') : null) == "C") {
 $_smarty_tpl->smarty->ext->_capture->open($_smarty_tpl, "template_content", null, null);?><div id="ajax_overlay" class="ty-ajax-overlay"></div>

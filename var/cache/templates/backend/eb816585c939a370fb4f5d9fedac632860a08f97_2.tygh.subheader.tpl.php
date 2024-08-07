@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-01 10:35:20
+/* Smarty version 4.1.1, created on 2024-08-01 16:02:37
   from '/app/www/design/backend/templates/common/subheader.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66ab3ab89d52b5_68298051',
+  'unifunc' => 'content_66ab876d9054c8_50887971',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:common/help.tpl' => 1,
   ),
 ),false)) {
-function content_66ab3ab89d52b5_68298051 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66ab876d9054c8_50887971 (Smarty_Internal_Template $_smarty_tpl) {
 if ($_smarty_tpl->tpl_vars['notes']->value) {?>
     <?php $_smarty_tpl->_subTemplateRender("tygh:common/help.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('content'=>$_smarty_tpl->tpl_vars['notes']->value,'id'=>$_smarty_tpl->tpl_vars['notes_id']->value), 0, false);
 }?>

@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-07-31 15:00:54
+/* Smarty version 4.1.1, created on 2024-08-01 16:02:29
   from '/app/www/design/backend/templates/views/addons/components/addons/addon_status.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66aa2776876e72_47445091',
+  'unifunc' => 'content_66ab87659fc288_33547773',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:views/addons/components/rating/enjoying_addon_notification.tpl' => 1,
   ),
 ),false)) {
-function content_66aa2776876e72_47445091 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66ab87659fc288_33547773 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/app/www/app/functions/smarty_plugins/modifier.enum.php','function'=>'smarty_modifier_enum',),));
 \Tygh\Languages\Helper::preloadLangVars(array('upgrade','refresh','disable','uninstall'));
 $_smarty_tpl->_assignInScope('show_addon_status', (($tmp = $_smarty_tpl->tpl_vars['show_addon_status']->value ?? null)===null||$tmp==='' ? true ?? null : $tmp));?>

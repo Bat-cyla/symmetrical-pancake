@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-01 10:35:21
+/* Smarty version 4.1.1, created on 2024-08-02 09:14:50
   from '/app/www/design/backend/templates/views/storefronts/components/picker/picker.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66ab3ab9309f64_26601270',
+  'unifunc' => 'content_66ac795a507377_45495098',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:views/storefronts/components/picker/item.tpl' => 1,
   ),
 ),false)) {
-function content_66ab3ab9309f64_26601270 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66ac795a507377_45495098 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/app/www/app/functions/smarty_plugins/modifier.to_json.php','function'=>'smarty_modifier_to_json',),));
 \Tygh\Languages\Helper::preloadLangVars(array('type_to_search_or_click_button','none','advanced_storefronts_search'));
 ?>

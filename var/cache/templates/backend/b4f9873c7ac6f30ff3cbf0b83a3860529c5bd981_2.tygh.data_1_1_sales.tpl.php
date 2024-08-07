@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-07-31 14:09:01
+/* Smarty version 4.1.1, created on 2024-08-05 08:22:33
   from '/app/www/design/backend/templates/views/index/components/analytics_section/analytics_data/data_1_1_sales.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66aa1b4daabda6_26989386',
+  'unifunc' => 'content_66b061990d8724_38527046',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:common/price.tpl' => 1,
   ),
 ),false)) {
-function content_66aa1b4daabda6_26989386 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66b061990d8724_38527046 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/app/www/app/functions/smarty_plugins/modifier.date_format.php','function'=>'smarty_modifier_date_format',),));
 \Tygh\Languages\Helper::preloadLangVars(array('dashboard.analytics_card.sales','dashboard.view_reports'));
 if (!empty($_smarty_tpl->tpl_vars['orders_stat']->value['orders_total']) || !empty($_smarty_tpl->tpl_vars['graphs']->value)) {

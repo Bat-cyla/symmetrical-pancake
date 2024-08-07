@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-01 10:35:20
+/* Smarty version 4.1.1, created on 2024-08-02 09:14:50
   from '/app/www/design/backend/templates/views/order_management/components/products.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66ab3ab8e2f6f2_55694630',
+  'unifunc' => 'content_66ac795a0b3f48_96059112',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -26,7 +26,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:views/products/components/picker/picker.tpl' => 1,
   ),
 ),false)) {
-function content_66ab3ab8e2f6f2_55694630 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66ac795a0b3f48_96059112 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/app/www/app/functions/smarty_plugins/block.hook.php','function'=>'smarty_block_hook',),1=>array('file'=>'/app/www/app/lib/vendor/smarty/smarty/libs/plugins/function.math.php','function'=>'smarty_function_math',),));
 \Tygh\Languages\Helper::preloadLangVars(array('product','price','discount','quantity','options','product','delete','sku','price','free','discount','quantity','options','expand_collapse_list','expand_collapse_list','show_options','expand_collapse_list','expand_collapse_list','hide_options','nocombination'));
 ?>

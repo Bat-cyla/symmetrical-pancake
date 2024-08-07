@@ -170,13 +170,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 
 if ($mode == 'add') {
-
     if (!empty($auth['user_id'])) {
         return array(CONTROLLER_STATUS_REDIRECT, 'profiles.update');
     }
 
     fn_add_breadcrumb(__('registration'));
-
     $user_data = array();
     if (!empty(Tygh::$app['session']['cart']) && !empty(Tygh::$app['session']['cart']['user_data'])) {
         $user_data = Tygh::$app['session']['cart']['user_data'];

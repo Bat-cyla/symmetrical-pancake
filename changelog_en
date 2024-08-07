@@ -1,0 +1,29 @@
+Legend:
+[+] - new functionality
+[*] - minor changes
+[!] - bug fixed
+[-] - deleted removed
+----------------------------
+Version 1.6
+[+] - Smsc.kz service was added.
+[+] - Targetsms.ru service was added.
+
+Version 1.5
+[+] - Smsprofi.ru service was added.
+[+] - Oursms.com service was added.
+[+] - Phone verification by call for services: sms.ru and smsprofi.ru was added.
+[!] - There were issues with the integrated Beeline.ru service. Fixed.
+
+Version 1.4
+[+] - Beeline, SMS Myphone, Melipayamak and Twilio services were added.
+
+Version 1.3
+[+] - Added smsc.ua service.
+
+Version 1.2
+[*] - CS-Cart and Multi-Vendor v. 4.12.1 support was added.
+[*] - Services settings were moved into tabs.
+
+Version 1.1
+[!] - An error occurred when using the smsc.ru service. Fixed.
+

@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-01 10:35:21
+/* Smarty version 4.1.1, created on 2024-08-02 09:14:50
   from '/app/www/design/backend/templates/views/order_management/components/status.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66ab3ab937d960_87802820',
+  'unifunc' => 'content_66ac795a5b7362_37064885',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:common/select_object.tpl' => 1,
   ),
 ),false)) {
-function content_66ab3ab937d960_87802820 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66ac795a5b7362_37064885 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/app/www/app/functions/smarty_plugins/block.hook.php','function'=>'smarty_block_hook',),));
 \Tygh\Languages\Helper::preloadLangVars(array('status'));
 if (fn_check_view_permissions("orders.update_status","POST")) {?>

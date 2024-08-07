@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-07-31 15:00:57
+/* Smarty version 4.1.1, created on 2024-08-02 10:12:31
   from '/app/www/design/themes/responsive/templates/addons/gdpr/componentes/agreement_checkbox.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66aa27794a9bc4_34627518',
+  'unifunc' => 'content_66ac86df467039_43206404',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7a6fd6049bd9d93eed5f92ac9c73e0b5fd8f90d8' => 
     array (
       0 => '/app/www/design/themes/responsive/templates/addons/gdpr/componentes/agreement_checkbox.tpl',
-      1 => 1722424120,
+      1 => 1722513958,
       2 => 'tygh',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:common/popupbox.tpl' => 2,
   ),
 ),false)) {
-function content_66aa27794a9bc4_34627518 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66ac86df467039_43206404 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/app/www/app/functions/smarty_plugins/block.hook.php','function'=>'smarty_block_hook',),1=>array('file'=>'/app/www/app/functions/smarty_plugins/function.set_id.php','function'=>'smarty_function_set_id',),));
 \Tygh\Languages\Helper::preloadLangVars(array('gdpr.full_agreement','gdpr.full_agreement'));
 if ($_smarty_tpl->tpl_vars['runtime']->value['customization_mode']['design'] == "Y" && (defined('AREA') ? constant('AREA') : null) == "C") {
@@ -34,8 +34,8 @@ if ($_smarty_tpl->tpl_vars['suffix']->value) {
 echo "_";
 echo (string)$_smarty_tpl->tpl_vars['suffix']->value;
 }
-$_prefixVariable4=ob_get_clean();
-$_smarty_tpl->_assignInScope('input_id', (($tmp = $_smarty_tpl->tpl_vars['input_id']->value ?? null)===null||$tmp==='' ? "gdpr_agreements_".((string)$_smarty_tpl->tpl_vars['type']->value).$_prefixVariable4 ?? null : $tmp));?>
+$_prefixVariable40=ob_get_clean();
+$_smarty_tpl->_assignInScope('input_id', (($tmp = $_smarty_tpl->tpl_vars['input_id']->value ?? null)===null||$tmp==='' ? "gdpr_agreements_".((string)$_smarty_tpl->tpl_vars['type']->value).$_prefixVariable40 ?? null : $tmp));?>
         <?php $_smarty_tpl->_assignInScope('gdpr_target_elem', ((string)$_smarty_tpl->tpl_vars['input_id']->value)."_label");?>
 
         <div class="ty-gdpr-agreement <?php if ($_smarty_tpl->tpl_vars['hidden']->value) {?>hidden<?php }?>" data-ca-gdpr-agreement="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['input_id']->value, ENT_QUOTES, 'UTF-8');?>
@@ -131,8 +131,8 @@ if ($_smarty_tpl->tpl_vars['suffix']->value) {
 echo "_";
 echo (string)$_smarty_tpl->tpl_vars['suffix']->value;
 }
-$_prefixVariable5=ob_get_clean();
-$_smarty_tpl->_assignInScope('input_id', (($tmp = $_smarty_tpl->tpl_vars['input_id']->value ?? null)===null||$tmp==='' ? "gdpr_agreements_".((string)$_smarty_tpl->tpl_vars['type']->value).$_prefixVariable5 ?? null : $tmp));?>
+$_prefixVariable41=ob_get_clean();
+$_smarty_tpl->_assignInScope('input_id', (($tmp = $_smarty_tpl->tpl_vars['input_id']->value ?? null)===null||$tmp==='' ? "gdpr_agreements_".((string)$_smarty_tpl->tpl_vars['type']->value).$_prefixVariable41 ?? null : $tmp));?>
         <?php $_smarty_tpl->_assignInScope('gdpr_target_elem', ((string)$_smarty_tpl->tpl_vars['input_id']->value)."_label");?>
 
         <div class="ty-gdpr-agreement <?php if ($_smarty_tpl->tpl_vars['hidden']->value) {?>hidden<?php }?>" data-ca-gdpr-agreement="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['input_id']->value, ENT_QUOTES, 'UTF-8');?>

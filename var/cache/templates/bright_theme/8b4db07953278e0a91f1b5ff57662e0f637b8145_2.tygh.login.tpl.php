@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-07-31 15:00:56
+/* Smarty version 4.1.1, created on 2024-08-06 10:53:35
   from '/app/www/design/themes/responsive/templates/buttons/login.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66aa2778e27074_39659001',
+  'unifunc' => 'content_66b1d67fcd4f29_35996485',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8b4db07953278e0a91f1b5ff57662e0f637b8145' => 
     array (
       0 => '/app/www/design/themes/responsive/templates/buttons/login.tpl',
-      1 => 1722424109,
+      1 => 1722513958,
       2 => 'tygh',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:buttons/button.tpl' => 2,
   ),
 ),false)) {
-function content_66aa2778e27074_39659001 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66b1d67fcd4f29_35996485 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/app/www/app/functions/smarty_plugins/function.set_id.php','function'=>'smarty_function_set_id',),));
 \Tygh\Languages\Helper::preloadLangVars(array('sign_in','sign_in'));
 if ($_smarty_tpl->tpl_vars['runtime']->value['customization_mode']['design'] == "Y" && (defined('AREA') ? constant('AREA') : null) == "C") {
