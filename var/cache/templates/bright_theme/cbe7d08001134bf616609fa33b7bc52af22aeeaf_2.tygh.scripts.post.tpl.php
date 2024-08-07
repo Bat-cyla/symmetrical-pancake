@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-06 17:25:23
+/* Smarty version 4.1.1, created on 2024-08-07 17:36:10
   from '/app/www/design/themes/responsive/templates/addons/cp_otp_registration/hooks/index/scripts.post.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66b2325305e2d6_98478533',
+  'unifunc' => 'content_66b3865a5785e3_88622052',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'cbe7d08001134bf616609fa33b7bc52af22aeeaf' => 
     array (
       0 => '/app/www/design/themes/responsive/templates/addons/cp_otp_registration/hooks/index/scripts.post.tpl',
-      1 => 1722954124,
+      1 => 1723041355,
       2 => 'tygh',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66b2325305e2d6_98478533 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66b3865a5785e3_88622052 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/app/www/app/functions/smarty_plugins/function.script.php','function'=>'smarty_function_script',),1=>array('file'=>'/app/www/app/functions/smarty_plugins/function.set_id.php','function'=>'smarty_function_set_id',),));
 \Tygh\Languages\Helper::preloadLangVars(array('cp_otp_already_exists_title','cp_otp_phone_verification','cp_otp_already_exists_title','cp_otp_phone_verification'));
 if ($_smarty_tpl->tpl_vars['runtime']->value['customization_mode']['design'] == "Y" && (defined('AREA') ? constant('AREA') : null) == "C") {
@@ -70,9 +70,15 @@ echo '<script'; ?>
         (function (_, $) {
             $.ceEvent('on', 'ce.commoninit', function(context) {
                 <?php if ($_smarty_tpl->tpl_vars['addons']->value['cp_otp_registration']['required_email'] != "Y") {?>
+                console.log(1111)
                     $('label[for="litecheckout_email"]').removeClass('cm-required');
                 <?php }?>
-                $('label[for="litecheckout_phone"]').addClass('cm-required');
+                <?php if ($_smarty_tpl->tpl_vars['addons']->value['cp_otp_registration']['phone_optional'] != "Y") {?>
+                console.log(11)
+                    $('label[for="litecheckout_phone"]').addClass('cm-required');
+                <?php } else { ?>
+                    $('label[for="phone"]').removeClass('cm-required');
+                <?php }?>
             });
             
             $.ceEvent('on', 'ce.ajaxdone', function(context, inline_scripts, params, data) { 
@@ -179,9 +185,15 @@ echo '<script'; ?>
         (function (_, $) {
             $.ceEvent('on', 'ce.commoninit', function(context) {
                 <?php if ($_smarty_tpl->tpl_vars['addons']->value['cp_otp_registration']['required_email'] != "Y") {?>
+                console.log(1111)
                     $('label[for="litecheckout_email"]').removeClass('cm-required');
                 <?php }?>
-                $('label[for="litecheckout_phone"]').addClass('cm-required');
+                <?php if ($_smarty_tpl->tpl_vars['addons']->value['cp_otp_registration']['phone_optional'] != "Y") {?>
+                console.log(11)
+                    $('label[for="litecheckout_phone"]').addClass('cm-required');
+                <?php } else { ?>
+                    $('label[for="phone"]').removeClass('cm-required');
+                <?php }?>
             });
             
             $.ceEvent('on', 'ce.ajaxdone', function(context, inline_scripts, params, data) { 

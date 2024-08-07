@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-06 17:25:22
+/* Smarty version 4.1.1, created on 2024-08-07 16:34:44
   from '/app/www/design/themes/responsive/templates/addons/cp_otp_registration/components/auth_form.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66b23252b70bf9_52601719',
+  'unifunc' => 'content_66b377f45648d3_01498752',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '26776e5aa72638080579f19144c3f9ae85bd6574' => 
     array (
       0 => '/app/www/design/themes/responsive/templates/addons/cp_otp_registration/components/auth_form.tpl',
-      1 => 1722954124,
+      1 => 1723034486,
       2 => 'tygh',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:addons/cp_otp_registration/components/otp_verification.tpl' => 2,
   ),
 ),false)) {
-function content_66b23252b70bf9_52601719 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66b377f45648d3_01498752 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/app/www/app/functions/smarty_plugins/function.set_id.php','function'=>'smarty_function_set_id',),));
 \Tygh\Languages\Helper::preloadLangVars(array('returning_customer','cp_otp_by_','cp_otp_fast_register_email_text','cp_otp_fast_register_phone_text','email','phone','password','forgot_password_question','forgot_password_question','returning_customer','cp_otp_by_','cp_otp_fast_register_email_text','cp_otp_fast_register_phone_text','email','phone','password','forgot_password_question','forgot_password_question'));
 if ($_smarty_tpl->tpl_vars['runtime']->value['customization_mode']['design'] == "Y" && (defined('AREA') ? constant('AREA') : null) == "C") {

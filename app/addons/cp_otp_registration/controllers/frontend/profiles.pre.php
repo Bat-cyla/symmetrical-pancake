@@ -152,7 +152,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $otp_action = !empty($_REQUEST['otp_action']) ? $_REQUEST['otp_action'] : '';
         $required_email = Registry::get('addons.cp_otp_registration.required_email') == "Y";
 
-        if (empty($_REQUEST['resend'])
+
+
+       /* if (empty($_REQUEST['resend'])
             && $login_type == 'two_factor'
             && (empty($otp_type) || $otp_type != 'register')
         ) {
@@ -161,6 +163,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             } elseif (!empty($_REQUEST['user_data']['phone'])) {
                 $_REQUEST['user_login'] = $user_data['phone'];
             }
+            fn_print_r($_REQUEST);
+            fn_print_die($_POST);
 
             fn_restore_processed_user_password($_REQUEST, $_POST);
             list($status, $user, $user_login, $password, $salt) = fn_auth_routines($_REQUEST, $auth);
@@ -172,6 +176,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 return fn_cp_otp_controller_do_redirect('auth.login_form');
             }
         }
+       */
         if ($otp_action == 'register') {
             Registry::set('runtime.cp_fast_registration', true);
             if (!empty($user_data['phone']) && fn_cp_otp_find_user_by_phone($user_data['phone'])) {

@@ -52,6 +52,18 @@
                         <type>checkbox</type>
                         <default_value>N</default_value>
                     </item>
+                    <item id="auth_by_email">
+                        <type>selectbox</type>
+                        <variants>
+                            <item id="forbid"></item>
+                            <item id="make_required"></item>
+                            <item id="make_optional"></item>
+                        </variants>
+                    </item>
+                    <item id="phone_optional">
+                        <type>checkbox</type>
+                        <default_value>N</default_value>
+                    </item>
                     <item id="use_fake_email">
                         <type>checkbox</type>
                         <default_value>N</default_value>

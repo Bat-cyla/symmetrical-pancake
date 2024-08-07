@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-06 17:25:22
+/* Smarty version 4.1.1, created on 2024-08-07 16:34:44
   from '/app/www/design/themes/responsive/templates/addons/cp_otp_registration/components/otp_verification.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66b23252bd22d7_28578650',
+  'unifunc' => 'content_66b377f45c43b6_27677719',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c1edd2c98320873c8546d947e58b0f01a2b2d4a1' => 
     array (
       0 => '/app/www/design/themes/responsive/templates/addons/cp_otp_registration/components/otp_verification.tpl',
-      1 => 1722954124,
+      1 => 1723034486,
       2 => 'tygh',
     ),
   ),
@@ -24,7 +24,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:buttons/login.tpl' => 2,
   ),
 ),false)) {
-function content_66b23252bd22d7_28578650 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66b377f45c43b6_27677719 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/app/www/app/functions/smarty_plugins/block.hook.php','function'=>'smarty_block_hook',),1=>array('file'=>'/app/www/app/functions/smarty_plugins/function.set_id.php','function'=>'smarty_function_set_id',),));
 \Tygh\Languages\Helper::preloadLangVars(array('sign_in','cp_otp_get_code','register','cp_otp_get_code','email','cp_otp_get_code','create_account','create_account','cp_otp_send_again_after','register','sign_in','continue','remember_me','sign_in','cp_otp_get_code','register','cp_otp_get_code','email','cp_otp_get_code','create_account','create_account','cp_otp_send_again_after','register','sign_in','continue','remember_me'));
 if ($_smarty_tpl->tpl_vars['runtime']->value['customization_mode']['design'] == "Y" && (defined('AREA') ? constant('AREA') : null) == "C") {
@@ -36,14 +36,14 @@ $_smarty_tpl->smarty->ext->_capture->open($_smarty_tpl, "template_content", null
     <?php $_smarty_tpl->_assignInScope('next_dispatch', '');?>
     <?php if ($_smarty_tpl->tpl_vars['otp_type']->value == "login") {?>
         <?php $_smarty_tpl->_assignInScope('but_text', $_smarty_tpl->__("sign_in"));?>
-        <?php if ($_smarty_tpl->tpl_vars['login_type']->value == "otp" || $_smarty_tpl->tpl_vars['login_type']->value == "two_factor") {?>
+        <?php if ($_smarty_tpl->tpl_vars['login_type']->value == "otp") {?>
             <?php $_smarty_tpl->_assignInScope('next_dispatch', "profiles.cp_otp_login");?>
             <?php $_smarty_tpl->_assignInScope('but_name', "dispatch[profiles.cp_check_otp]");?>
             <?php $_smarty_tpl->_assignInScope('but_text', $_smarty_tpl->__("cp_otp_get_code"));?>
         <?php }?>
     <?php } elseif ($_smarty_tpl->tpl_vars['otp_type']->value == "register") {?>
         <?php $_smarty_tpl->_assignInScope('but_text', $_smarty_tpl->__("register"));?>
-        <?php if ($_smarty_tpl->tpl_vars['login_type']->value == "otp" || $_smarty_tpl->tpl_vars['login_type']->value == "two_factor") {?>
+        <?php if ($_smarty_tpl->tpl_vars['login_type']->value == "otp") {?>
             <?php $_smarty_tpl->_assignInScope('next_dispatch', "profiles.update");?>
             <?php $_smarty_tpl->_assignInScope('but_name', "dispatch[profiles.cp_check_otp]");?>
             <?php $_smarty_tpl->_assignInScope('but_text', $_smarty_tpl->__("cp_otp_get_code"));?>
@@ -148,7 +148,7 @@ $_smarty_tpl->smarty->ext->_capture->open($_smarty_tpl, "template_content", null
         </div>
     <?php $_smarty_tpl->smarty->ext->_capture->close($_smarty_tpl);?>
 
-    <?php if ($_smarty_tpl->tpl_vars['login_type']->value == "otp" || $_smarty_tpl->tpl_vars['login_type']->value == "two_factor") {?>
+    <?php if ($_smarty_tpl->tpl_vars['login_type']->value == "otp") {?>
         <div class="buttons-container clearfix <?php if ($_smarty_tpl->tpl_vars['send_in_ses_dif']->value) {?>hidden<?php }?>" id="otp_verification_link2_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['obj_id']->value, ENT_QUOTES, 'UTF-8');?>
 ">
             <div class="ty-float-right">
@@ -209,14 +209,14 @@ echo $_smarty_tpl->smarty->ext->_capture->getBuffer($_smarty_tpl, 'template_cont
     <?php $_smarty_tpl->_assignInScope('next_dispatch', '');?>
     <?php if ($_smarty_tpl->tpl_vars['otp_type']->value == "login") {?>
         <?php $_smarty_tpl->_assignInScope('but_text', $_smarty_tpl->__("sign_in"));?>
-        <?php if ($_smarty_tpl->tpl_vars['login_type']->value == "otp" || $_smarty_tpl->tpl_vars['login_type']->value == "two_factor") {?>
+        <?php if ($_smarty_tpl->tpl_vars['login_type']->value == "otp") {?>
             <?php $_smarty_tpl->_assignInScope('next_dispatch', "profiles.cp_otp_login");?>
             <?php $_smarty_tpl->_assignInScope('but_name', "dispatch[profiles.cp_check_otp]");?>
             <?php $_smarty_tpl->_assignInScope('but_text', $_smarty_tpl->__("cp_otp_get_code"));?>
         <?php }?>
     <?php } elseif ($_smarty_tpl->tpl_vars['otp_type']->value == "register") {?>
         <?php $_smarty_tpl->_assignInScope('but_text', $_smarty_tpl->__("register"));?>
-        <?php if ($_smarty_tpl->tpl_vars['login_type']->value == "otp" || $_smarty_tpl->tpl_vars['login_type']->value == "two_factor") {?>
+        <?php if ($_smarty_tpl->tpl_vars['login_type']->value == "otp") {?>
             <?php $_smarty_tpl->_assignInScope('next_dispatch', "profiles.update");?>
             <?php $_smarty_tpl->_assignInScope('but_name', "dispatch[profiles.cp_check_otp]");?>
             <?php $_smarty_tpl->_assignInScope('but_text', $_smarty_tpl->__("cp_otp_get_code"));?>
@@ -321,7 +321,7 @@ echo $_smarty_tpl->smarty->ext->_capture->getBuffer($_smarty_tpl, 'template_cont
         </div>
     <?php $_smarty_tpl->smarty->ext->_capture->close($_smarty_tpl);?>
 
-    <?php if ($_smarty_tpl->tpl_vars['login_type']->value == "otp" || $_smarty_tpl->tpl_vars['login_type']->value == "two_factor") {?>
+    <?php if ($_smarty_tpl->tpl_vars['login_type']->value == "otp") {?>
         <div class="buttons-container clearfix <?php if ($_smarty_tpl->tpl_vars['send_in_ses_dif']->value) {?>hidden<?php }?>" id="otp_verification_link2_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['obj_id']->value, ENT_QUOTES, 'UTF-8');?>
 ">
             <div class="ty-float-right">

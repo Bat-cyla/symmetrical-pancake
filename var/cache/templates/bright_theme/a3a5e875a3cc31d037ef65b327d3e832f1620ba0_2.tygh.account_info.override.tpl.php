@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-06 17:25:31
+/* Smarty version 4.1.1, created on 2024-08-07 16:34:44
   from '/app/www/design/themes/responsive/templates/addons/cp_otp_registration/hooks/profiles/account_info.override.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66b2325b17f442_93521261',
+  'unifunc' => 'content_66b377f4807b77_84207411',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a3a5e875a3cc31d037ef65b327d3e832f1620ba0' => 
     array (
       0 => '/app/www/design/themes/responsive/templates/addons/cp_otp_registration/hooks/profiles/account_info.override.tpl',
-      1 => 1722954124,
+      1 => 1723034486,
       2 => 'tygh',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:addons/cp_otp_registration/components/phone.tpl' => 2,
   ),
 ),false)) {
-function content_66b2325b17f442_93521261 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66b377f4807b77_84207411 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/app/www/app/functions/smarty_plugins/function.set_id.php','function'=>'smarty_function_set_id',),));
 \Tygh\Languages\Helper::preloadLangVars(array('password','confirm_password','email','password','confirm_password','email'));
 if ($_smarty_tpl->tpl_vars['runtime']->value['customization_mode']['design'] == "Y" && (defined('AREA') ? constant('AREA') : null) == "C") {

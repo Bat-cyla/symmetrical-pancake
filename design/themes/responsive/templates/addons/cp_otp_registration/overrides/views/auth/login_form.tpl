@@ -21,7 +21,6 @@
     <script type="text/javascript">
         (function(_, $) {
             $.ceEvent('on', 'ce.formpost_{$id}_form', function(form, clicked_elm) {
-
                 if (clicked_elm.attr('name') == 'dispatch[profiles.cp_check_otp]') {
                     var action = clicked_elm.data('caOtpAction') || '';
                     form.find('input[name="otp_action"]').val(action);

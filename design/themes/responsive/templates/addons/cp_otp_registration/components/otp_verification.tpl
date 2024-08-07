@@ -5,14 +5,14 @@
     {$next_dispatch = ""}
     {if $otp_type == "login"}
         {$but_text = __("sign_in")}
-        {if $login_type == "otp" || $login_type == "two_factor"}
+        {if $login_type == "otp"}
             {$next_dispatch = "profiles.cp_otp_login"}
             {$but_name = "dispatch[profiles.cp_check_otp]"}
             {$but_text = __("cp_otp_get_code")}
         {/if}
     {elseif $otp_type == "register"}
         {$but_text = __("register")}
-        {if $login_type == "otp" || $login_type == "two_factor"}
+        {if $login_type == "otp"}
             {$next_dispatch = "profiles.update"}
             {$but_name = "dispatch[profiles.cp_check_otp]"}
             {$but_text = __("cp_otp_get_code")}
@@ -93,7 +93,7 @@
         </div>
     {/capture}
 
-    {if $login_type == "otp" || $login_type == "two_factor"}
+    {if $login_type == "otp"}
         <div class="buttons-container clearfix {if $send_in_ses_dif}hidden{/if}" id="otp_verification_link2_{$obj_id}">
             <div class="ty-float-right">
                 {include file="buttons/button.tpl" but_text=$but_text but_name=$but_name but_meta="cm-ajax ty-btn__secondary" but_role="submit"}

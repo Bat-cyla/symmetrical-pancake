@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-02 09:21:21
+/* Smarty version 4.1.1, created on 2024-08-07 16:22:21
   from '/app/www/design/backend/templates/addons/cp_otp_registration/settings/settings_scripts.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66ac7ae1f20909_21389287',
+  'unifunc' => 'content_66b3750de8a9e3_50568805',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0e87f8949943e8257e9995314f023c2b4d868507' => 
     array (
       0 => '/app/www/design/backend/templates/addons/cp_otp_registration/settings/settings_scripts.tpl',
-      1 => 1722579549,
+      1 => 1723036299,
       2 => 'tygh',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66ac7ae1f20909_21389287 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66b3750de8a9e3_50568805 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/app/www/app/functions/smarty_plugins/block.inline_script.php','function'=>'smarty_block_inline_script',),));
 $_smarty_tpl->smarty->_cache['_tag_stack'][] = array('inline_script', array());
 $_block_repeat=true;
@@ -33,7 +33,9 @@ echo '<script'; ?>
         var fast_reg_selector = 'select[id*="cp_otp_registration_login_type"]';
         var excl_email_selector = 'input[id*="cp_otp_registration_exclude_email"]';
         var uniform_input = 'input[id*="addon_option_cp_otp_registration_fast_registration"]';
-        
+        var phone_optional= 'select[id*="cp_otp_registration_auth_by_email"]';
+
+
         $.ceEvent('on', 'ce.commoninit', function(context) {
             context.find(uniform_input).each(function (index, item) {
                 $(item).change();
@@ -43,6 +45,9 @@ echo '<script'; ?>
             });
             context.find(excl_email_selector).each(function (index, item) {
                 fn_cp_otp_check_excl_email_setting($(item));
+            });
+            context.find(phone_optional).each(function(index, item){
+                fn_cp_otp_check_phone_optional_setting($(item));
             });
         });
 
@@ -61,6 +66,9 @@ echo '<script'; ?>
                 $('div[id^="container_addon_option_cp_otp_registration_required_email_"]').show();
             }
         });
+        $(_.doc).on('change', phone_optional, function (e){
+            fn_cp_otp_check_phone_optional_setting($(this));
+        })
 
         function fn_cp_otp_check_excl_email_setting(elm) {
             var disable = elm.prop('checked');
@@ -82,6 +90,19 @@ echo '<script'; ?>
             if (elm.val() == 'otp') {
                 child.show();
             } else {
+
+
+                child.hide();
+            }
+        }
+
+        function fn_cp_otp_check_phone_optional_setting(elm){
+            var child = $('div.control-group[id*="cp_otp_registration_phone_optional"]');
+            var checkbox = $('input[id*="addon_option_cp_otp_registration_phone_optional"]');
+            if(elm.val()=='make_required'){
+                child.show();
+            }else{
+                checkbox.prop('checked', false);
                 child.hide();
             }
         }

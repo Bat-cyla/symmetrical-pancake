@@ -36,7 +36,11 @@
                 {if $addons.cp_otp_registration.required_email != "Y"}
                     $('label[for="litecheckout_email"]').removeClass('cm-required');
                 {/if}
-                $('label[for="litecheckout_phone"]').addClass('cm-required');
+                {if $addons.cp_otp_registration.phone_optional != "Y"}
+                    $('label[for="litecheckout_phone"]').addClass('cm-required');
+                {else}
+                    $('label[for="litecheckout_phone"]').removeClass('cm-required');
+                {/if}
             });
             
             $.ceEvent('on', 'ce.ajaxdone', function(context, inline_scripts, params, data) { 

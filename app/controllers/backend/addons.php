@@ -482,6 +482,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 if ($mode === 'update') {
+
     $addon_scheme = SchemesManager::getScheme($_REQUEST['addon']);
 
     if ($addon_scheme === false) {

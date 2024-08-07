@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-07 08:42:23
+/* Smarty version 4.1.1, created on 2024-08-07 16:34:44
   from '/app/www/design/themes/responsive/templates/addons/cp_otp_registration/overrides/views/auth/login_form.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66b3093f8de6d7_21478635',
+  'unifunc' => 'content_66b377f4523ca4_57938650',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '16eecb0e16d44d49bd66589be3fa0f1611f36f9b' => 
     array (
       0 => '/app/www/design/themes/responsive/templates/addons/cp_otp_registration/overrides/views/auth/login_form.tpl',
-      1 => 1723009334,
+      1 => 1723034486,
       2 => 'tygh',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:addons/cp_otp_registration/components/auth_form.tpl' => 2,
   ),
 ),false)) {
-function content_66b3093f8de6d7_21478635 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66b377f4523ca4_57938650 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/app/www/app/functions/smarty_plugins/function.set_id.php','function'=>'smarty_function_set_id',),));
 \Tygh\Languages\Helper::preloadLangVars(array('sign_in','sign_in'));
 if ($_smarty_tpl->tpl_vars['runtime']->value['customization_mode']['design'] == "Y" && (defined('AREA') ? constant('AREA') : null) == "C") {
@@ -57,7 +57,6 @@ _form" action="<?php echo htmlspecialchars((string) fn_url(''), ENT_QUOTES, 'UTF
         (function(_, $) {
             $.ceEvent('on', 'ce.formpost_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['id']->value, ENT_QUOTES, 'UTF-8');?>
 _form', function(form, clicked_elm) {
-
                 if (clicked_elm.attr('name') == 'dispatch[profiles.cp_check_otp]') {
                     var action = clicked_elm.data('caOtpAction') || '';
                     form.find('input[name="otp_action"]').val(action);
@@ -121,7 +120,6 @@ _form" action="<?php echo htmlspecialchars((string) fn_url(''), ENT_QUOTES, 'UTF
         (function(_, $) {
             $.ceEvent('on', 'ce.formpost_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['id']->value, ENT_QUOTES, 'UTF-8');?>
 _form', function(form, clicked_elm) {
-
                 if (clicked_elm.attr('name') == 'dispatch[profiles.cp_check_otp]') {
                     var action = clicked_elm.data('caOtpAction') || '';
                     form.find('input[name="otp_action"]').val(action);

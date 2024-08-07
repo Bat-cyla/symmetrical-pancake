@@ -164,6 +164,26 @@ msgctxt "SettingsOptions::cp_otp_registration::exclude_email"
 msgid "Exclude Email"
 msgstr "Exclude Email"
 
+msgctxt "SettingsOptions::cp_otp_registration::auth_by_email"
+msgid "Authorization by email"
+msgstr "Authorization by email"
+
+msgctxt "SettingsVariants::cp_otp_registration::auth_by_email::forbid"
+msgid "Forbid"
+msgstr "Forbid"
+
+msgctxt "SettingsVariants::cp_otp_registration::auth_by_email::make_required"
+msgid "Make Required"
+msgstr "Make Required"
+
+msgctxt "SettingsVariants::cp_otp_registration::auth_by_email::make_optional"
+msgid "Make Optional"
+msgstr "Make Optional"
+
+msgctxt "SettingsOptions::cp_otp_registration::phone_optional"
+msgid "Phone number is optional"
+msgstr "Phone number is optional"
+
 msgctxt "SettingsTooltips::cp_otp_registration::exclude_email"
 msgid "Disables authorization by Email option for users. Be careful when enabling this setting, make sure that phone numbers are listed in your clients' profiles, otherwise they will lose access to their accounts."
 msgstr "Disables authorization by Email option for users. Be careful when enabling this setting, make sure that phone numbers are listed in your clients' profiles, otherwise they will lose access to their accounts."
