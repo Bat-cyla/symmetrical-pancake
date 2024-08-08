@@ -1,6 +1,11 @@
 {$login_type = $addons.cp_otp_registration.login_type|default:"password"}
 
-{include file="addons/cp_otp_registration/components/phone.tpl" obj_id=$obj_id}
+{if $addons.cp_otp_registration.phone_optional == "Y"}
+    {$phone_optional = true}
+
+{/if}
+
+{include file="addons/cp_otp_registration/components/phone.tpl" obj_id=$obj_id phone_potional=$phone_optional}
 
 {if $login_type != "otp"}
     <div class="ty-control-group">
@@ -22,6 +27,7 @@
 {/if}
 {if $addons.cp_otp_registration.required_email == "Y"}
     {$email_required = true}
+
 {/if}
 
 <div class="ty-control-group">

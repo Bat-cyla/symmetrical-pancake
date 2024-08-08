@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-02 10:13:47
+/* Smarty version 4.1.1, created on 2024-08-08 08:48:13
   from '/app/www/design/themes/responsive/templates/views/profiles/components/profile_fields.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66ac872bf02bb3_17184083',
+  'unifunc' => 'content_66b45c1d13df92_29503848',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'de8467bf4f7edff7591815cb1ffb64769752532b' => 
     array (
       0 => '/app/www/design/themes/responsive/templates/views/profiles/components/profile_fields.tpl',
-      1 => 1722513958,
+      1 => 1723096062,
       2 => 'tygh',
     ),
   ),
@@ -25,7 +25,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:components/phone.tpl' => 2,
   ),
 ),false)) {
-function content_66ac872bf02bb3_17184083 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66b45c1d13df92_29503848 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/app/www/app/functions/smarty_plugins/modifier.enum.php','function'=>'smarty_modifier_enum',),1=>array('file'=>'/app/www/app/functions/smarty_plugins/block.hook.php','function'=>'smarty_block_hook',),2=>array('file'=>'/app/www/app/functions/smarty_plugins/function.include_ext.php','function'=>'smarty_function_include_ext',),3=>array('file'=>'/app/www/app/functions/smarty_plugins/function.set_id.php','function'=>'smarty_function_set_id',),));
 \Tygh\Languages\Helper::preloadLangVars(array('email','shipping_same_as_billing','text_billing_same_with_shipping','yes','no','select_state','select_country','address_residential','address_commercial','remove_this_item','email','shipping_same_as_billing','text_billing_same_with_shipping','yes','no','select_state','select_country','address_residential','address_commercial','remove_this_item'));
 if ($_smarty_tpl->tpl_vars['runtime']->value['customization_mode']['design'] == "Y" && (defined('AREA') ? constant('AREA') : null) == "C") {
