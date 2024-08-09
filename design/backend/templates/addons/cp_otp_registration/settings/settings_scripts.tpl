@@ -2,14 +2,10 @@
     (function(_, $) {
         var fast_reg_selector = 'select[id*="cp_otp_registration_login_type"]';
         var excl_email_selector = 'input[id*="cp_otp_registration_exclude_email"]';
-        var uniform_input = 'input[id*="addon_option_cp_otp_registration_fast_registration"]';
         var phone_optional= 'select[id*="cp_otp_registration_auth_by_email"]';
 
 
         $.ceEvent('on', 'ce.commoninit', function(context) {
-            context.find(uniform_input).each(function (index, item) {
-                $(item).change();
-            });
             context.find(fast_reg_selector).each(function (index, item) {
                 fn_cp_otp_check_fast_reg_setting($(item));
             });
@@ -27,14 +23,6 @@
 
         $(_.doc).on('click', excl_email_selector, function (e) {
             fn_cp_otp_check_excl_email_setting($(this));
-        });
-        $(_.doc).on('change', uniform_input, function (e) {
-            var is_checked = $(this).prop('checked');
-            if (is_checked) {
-                $('div[id^="container_addon_option_cp_otp_registration_required_email_"]').hide();
-            } else {
-                $('div[id^="container_addon_option_cp_otp_registration_required_email_"]').show();
-            }
         });
         $(_.doc).on('change', phone_optional, function (e){
             fn_cp_otp_check_phone_optional_setting($(this));
@@ -60,8 +48,6 @@
             if (elm.val() == 'otp') {
                 child.show();
             } else {
-
-
                 child.hide();
             }
         }

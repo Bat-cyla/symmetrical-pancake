@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-08 09:53:23
+/* Smarty version 4.1.1, created on 2024-08-08 11:27:32
   from '/app/www/design/themes/responsive/templates/addons/cp_otp_registration/hooks/profiles/account_info.override.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66b46b63e882d9_86213629',
+  'unifunc' => 'content_66b481747b50b1_75395335',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a3a5e875a3cc31d037ef65b327d3e832f1620ba0' => 
     array (
       0 => '/app/www/design/themes/responsive/templates/addons/cp_otp_registration/hooks/profiles/account_info.override.tpl',
-      1 => 1723099940,
+      1 => 1723105479,
       2 => 'tygh',
     ),
   ),
@@ -21,19 +21,14 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:addons/cp_otp_registration/components/phone.tpl' => 2,
   ),
 ),false)) {
-function content_66b46b63e882d9_86213629 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66b481747b50b1_75395335 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/app/www/app/functions/smarty_plugins/function.set_id.php','function'=>'smarty_function_set_id',),));
 \Tygh\Languages\Helper::preloadLangVars(array('password','confirm_password','email','password','confirm_password','email'));
 if ($_smarty_tpl->tpl_vars['runtime']->value['customization_mode']['design'] == "Y" && (defined('AREA') ? constant('AREA') : null) == "C") {
 $_smarty_tpl->smarty->ext->_capture->open($_smarty_tpl, "template_content", null, null);
 $_smarty_tpl->_assignInScope('login_type', (($tmp = $_smarty_tpl->tpl_vars['addons']->value['cp_otp_registration']['login_type'] ?? null)===null||$tmp==='' ? "password" ?? null : $tmp));?>
 
-<?php if ($_smarty_tpl->tpl_vars['addons']->value['cp_otp_registration']['phone_optional'] == "Y") {?>
-    <?php $_smarty_tpl->_assignInScope('phone_optional', true);?>
-
-<?php }?>
-
-<?php $_smarty_tpl->_subTemplateRender("tygh:addons/cp_otp_registration/components/phone.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('obj_id'=>$_smarty_tpl->tpl_vars['obj_id']->value,'phone_potional'=>$_smarty_tpl->tpl_vars['phone_optional']->value), 0, false);
+<?php $_smarty_tpl->_subTemplateRender("tygh:addons/cp_otp_registration/components/phone.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('obj_id'=>$_smarty_tpl->tpl_vars['obj_id']->value), 0, false);
 ?>
 
 <?php if ($_smarty_tpl->tpl_vars['login_type']->value != "otp") {?>
@@ -55,9 +50,8 @@ if ($_smarty_tpl->tpl_vars['addons']->value['step_by_step_checkout']['status'] =
     <?php $_smarty_tpl->_assignInScope('email_required', true);
 }
 if ($_smarty_tpl->tpl_vars['addons']->value['cp_otp_registration']['required_email'] == "Y") {?>
-    <?php $_smarty_tpl->_assignInScope('email_required', true);?>
-
-<?php }?>
+    <?php $_smarty_tpl->_assignInScope('email_required', true);
+}?>
 
 <div class="ty-control-group">
     <label for="email" class="ty-control-group__title cm-email cm-trim <?php if ($_smarty_tpl->tpl_vars['email_required']->value) {?>cm-required<?php }?>"><?php echo $_smarty_tpl->__("email");?>
@@ -76,12 +70,7 @@ echo $_smarty_tpl->smarty->ext->_capture->getBuffer($_smarty_tpl, 'template_cont
 } else {
 $_smarty_tpl->_assignInScope('login_type', (($tmp = $_smarty_tpl->tpl_vars['addons']->value['cp_otp_registration']['login_type'] ?? null)===null||$tmp==='' ? "password" ?? null : $tmp));?>
 
-<?php if ($_smarty_tpl->tpl_vars['addons']->value['cp_otp_registration']['phone_optional'] == "Y") {?>
-    <?php $_smarty_tpl->_assignInScope('phone_optional', true);?>
-
-<?php }?>
-
-<?php $_smarty_tpl->_subTemplateRender("tygh:addons/cp_otp_registration/components/phone.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('obj_id'=>$_smarty_tpl->tpl_vars['obj_id']->value,'phone_potional'=>$_smarty_tpl->tpl_vars['phone_optional']->value), 0, true);
+<?php $_smarty_tpl->_subTemplateRender("tygh:addons/cp_otp_registration/components/phone.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('obj_id'=>$_smarty_tpl->tpl_vars['obj_id']->value), 0, true);
 ?>
 
 <?php if ($_smarty_tpl->tpl_vars['login_type']->value != "otp") {?>
@@ -103,9 +92,8 @@ if ($_smarty_tpl->tpl_vars['addons']->value['step_by_step_checkout']['status'] =
     <?php $_smarty_tpl->_assignInScope('email_required', true);
 }
 if ($_smarty_tpl->tpl_vars['addons']->value['cp_otp_registration']['required_email'] == "Y") {?>
-    <?php $_smarty_tpl->_assignInScope('email_required', true);?>
-
-<?php }?>
+    <?php $_smarty_tpl->_assignInScope('email_required', true);
+}?>
 
 <div class="ty-control-group">
     <label for="email" class="ty-control-group__title cm-email cm-trim <?php if ($_smarty_tpl->tpl_vars['email_required']->value) {?>cm-required<?php }?>"><?php echo $_smarty_tpl->__("email");?>

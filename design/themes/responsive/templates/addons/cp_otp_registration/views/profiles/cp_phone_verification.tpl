@@ -1,4 +1,5 @@
 {if $smarty.request.cp_guest_order}
+    {$smarty.request.cp_guest_order|fn_print_die}
     {$but_name = "dispatch[checkout.cp_phone_verification]"}
 {else}
     {$but_name = "dispatch[profiles.cp_phone_verification]"}

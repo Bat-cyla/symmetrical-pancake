@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-07 16:34:44
+/* Smarty version 4.1.1, created on 2024-08-08 11:26:51
   from '/app/www/design/themes/responsive/templates/addons/cp_otp_registration/components/otp_fail_message.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66b377f45deef7_34531397',
+  'unifunc' => 'content_66b4814b08eea2_62421288',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'aef3ec22305bd13c428a05275689e574a8b05ab4' => 
     array (
       0 => '/app/www/design/themes/responsive/templates/addons/cp_otp_registration/components/otp_fail_message.tpl',
-      1 => 1723034486,
+      1 => 1723105479,
       2 => 'tygh',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66b377f45deef7_34531397 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66b4814b08eea2_62421288 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/app/www/app/functions/smarty_plugins/function.set_id.php','function'=>'smarty_function_set_id',),));
 if ($_smarty_tpl->tpl_vars['runtime']->value['customization_mode']['design'] == "Y" && (defined('AREA') ? constant('AREA') : null) == "C") {
 $_smarty_tpl->smarty->ext->_capture->open($_smarty_tpl, "template_content", null, null);

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-07 11:31:20
+/* Smarty version 4.1.1, created on 2024-08-08 14:13:44
   from '/app/www/design/themes/responsive/templates/addons/cp_otp_registration/components/phone_verification.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66b330d8106b52_56553126',
+  'unifunc' => 'content_66b4a8686f4539_30834274',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8d0984be629cbe469064465daed37461ddc7561e' => 
     array (
       0 => '/app/www/design/themes/responsive/templates/addons/cp_otp_registration/components/phone_verification.tpl',
-      1 => 1722954124,
+      1 => 1723105479,
       2 => 'tygh',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:buttons/button.tpl' => 2,
   ),
 ),false)) {
-function content_66b330d8106b52_56553126 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66b4a8686f4539_30834274 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/app/www/app/functions/smarty_plugins/function.set_id.php','function'=>'smarty_function_set_id',),));
 \Tygh\Languages\Helper::preloadLangVars(array('cp_otp_confirm','cp_otp_confirm'));
 if ($_smarty_tpl->tpl_vars['runtime']->value['customization_mode']['design'] == "Y" && (defined('AREA') ? constant('AREA') : null) == "C") {

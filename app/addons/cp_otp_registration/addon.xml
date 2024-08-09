@@ -44,14 +44,6 @@
                         <type>checkbox</type>
                         <default_value>N</default_value>
                     </item>
-                    <item id="required_email">
-                        <type>checkbox</type>
-                        <default_value>N</default_value>
-                    </item>
-                    <item id="exclude_email">
-                        <type>checkbox</type>
-                        <default_value>N</default_value>
-                    </item>
                     <item id="auth_by_email">
                         <type>selectbox</type>
                         <variants>

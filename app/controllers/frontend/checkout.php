@@ -405,7 +405,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $cart['user_data']['email'] =  $user_data['email'];
             }
         }
-
+fn_print_die(1111);
         $status = fn_checkout_place_order($cart, $auth, $_REQUEST);
 
         if ($status == PLACE_ORDER_STATUS_TO_CART) {

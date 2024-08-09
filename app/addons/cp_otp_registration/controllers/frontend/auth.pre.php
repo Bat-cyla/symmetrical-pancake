@@ -39,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 
 if ($mode == 'recover_password') {
-    if (Registry::get('addons.cp_otp_registration.exclude_email') == 'Y') {
+    if (Registry::get('addons.cp_otp_registration.auth_by_email') == 'forbid') {
         return [CONTROLLER_STATUS_REDIRECT, 'auth.login_form'];
     }
 }

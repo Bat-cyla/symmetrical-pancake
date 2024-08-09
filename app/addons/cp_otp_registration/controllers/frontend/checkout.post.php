@@ -40,6 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 if ($mode == 'checkout') {
     if (defined('AJAX_REQUEST') && !empty(Tygh::$app['session']['cart']['user_data']['user_exists'])) {
         $ajax_vars = Tygh::$app['ajax']->getAssignedVars();
+
         if (!empty($ajax_vars['cp_show_login'])) {
             Tygh::$app['session']['cart']['user_data']['user_exists'] = false;
             fn_delete_notification('default_checkout_exists_popup');

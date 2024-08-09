@@ -118,15 +118,18 @@ function fn_cp_otp_registration_is_user_exists_post($user_id, $user_data, &$is_e
     $allow_modes = ['update_steps','customer_info','place_order'];
     $cart = Tygh::$app['session']['cart'];
     $skip_next = false;
+
     if (
         AREA == 'C' 
-        && Registry::get('addons.cp_otp_registration.guest_order') == 'Y' && Registry::get('addons.cp_otp_registration.guest_order_verify') == 'N' 
+        && Registry::get('addons.cp_otp_registration.guest_order') == 'Y' && Registry::get('addons.cp_otp_registration.guest_order_verify') == 'N'
         && Registry::get('runtime.controller') == 'checkout' && in_array(Registry::get('runtime.mode'), $allow_modes)
     ) {
+
         if (!isset($cart['guest_checkout'])) {
             $is_anonymous_checkout_allowed = Registry::get('settings.Checkout.disable_anonymous_checkout') !== 'Y';
             $cart['guest_checkout'] = $is_anonymous_checkout_allowed && !$user_id;
         }
+
         if (!empty($cart['guest_checkout']) ) {
             $is_exist = 0;
             $skip_next = true;
@@ -140,8 +143,11 @@ function fn_cp_otp_registration_is_user_exists_post($user_id, $user_data, &$is_e
             $is_exist = true;
         } else {
             if (empty($user_id)) {
+
                 $show_login = defined('AJAX_REQUEST') && Registry::get('runtime.controller') == 'checkout' ? true : false;
+
                 $exists_user_id = fn_cp_otp_find_user_by_phone($user_phone);
+
                 if (!empty($exists_user_id)) {
                     if ($show_login) {
                         Tygh::$app['ajax']->assign('phone', $user_phone);
@@ -152,11 +158,13 @@ function fn_cp_otp_registration_is_user_exists_post($user_id, $user_data, &$is_e
                     $is_exist = true;
                 } else {
                     $exists_user_id = fn_cp_otp_find_user_by_email($user_data['email']);
+
                     if (!empty($exists_user_id) && $show_login) {
                         Tygh::$app['ajax']->assign('email', $user_data['email']);
                         Tygh::$app['ajax']->assign('cp_show_login', true);
                         $is_exist = true;
                     } elseif ($show_login && Registry::get('addons.cp_otp_registration.guest_order_verify') == 'Y') {
+
                         Tygh::$app['ajax']->assign('phone', $user_phone);
                         Tygh::$app['ajax']->assign('cp_guest_order', true);
                         Tygh::$app['ajax']->assign('cp_show_login', true);
@@ -457,7 +465,9 @@ function fn_cp_otp_get_verify_fail_reason($type = 'register')
     if (!empty($otp_data['fail_reason'])) {
         $fail_reason = $otp_data['fail_reason'];
         $otp_data['fail_reason'] = '';
+
         return $fail_reason;
+
     } else {
         return '';
     }
@@ -539,9 +549,11 @@ function fn_cp_otp_display_popup_notification($otp_type = '')
     }
     $fail_reason = !empty($otp_type) ? fn_cp_otp_get_verify_fail_reason($otp_type) : '';
     $notifications = & Tygh::$app['session']['notifications'];
+
     if (!empty($fail_reason)) {
         $message =  __('cp_otp_verification_fail_' . $fail_reason);
     } else {
+
         foreach ($notifications as $n_key => $notif) {
             if (!empty($notif['type']) && $notif['type'] == 'E') {
                 $message = $notif['message'];

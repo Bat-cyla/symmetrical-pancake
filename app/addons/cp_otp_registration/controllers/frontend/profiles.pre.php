@@ -150,7 +150,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $login_type = Registry::get('addons.cp_otp_registration.login_type');
         $otp_type = !empty($_REQUEST['otp_type']) ? $_REQUEST['otp_type'] : 'register';
         $otp_action = !empty($_REQUEST['otp_action']) ? $_REQUEST['otp_action'] : '';
-        $required_email = Registry::get('addons.cp_otp_registration.required_email') == "Y";
+        $required_email = Registry::get('addons.cp_otp_registration.auth_by_email') == "make_required";
         $phone_optional = Registry::get('addons.cp_otp_registration.phone_optional');
 
 

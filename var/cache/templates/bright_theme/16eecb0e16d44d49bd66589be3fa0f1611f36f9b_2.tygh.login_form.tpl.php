@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-07 16:34:44
+/* Smarty version 4.1.1, created on 2024-08-08 11:43:09
   from '/app/www/design/themes/responsive/templates/addons/cp_otp_registration/overrides/views/auth/login_form.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66b377f4523ca4_57938650',
+  'unifunc' => 'content_66b4851ddd9006_34798567',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '16eecb0e16d44d49bd66589be3fa0f1611f36f9b' => 
     array (
       0 => '/app/www/design/themes/responsive/templates/addons/cp_otp_registration/overrides/views/auth/login_form.tpl',
-      1 => 1723034486,
+      1 => 1723106578,
       2 => 'tygh',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:addons/cp_otp_registration/components/auth_form.tpl' => 2,
   ),
 ),false)) {
-function content_66b377f4523ca4_57938650 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66b4851ddd9006_34798567 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/app/www/app/functions/smarty_plugins/function.set_id.php','function'=>'smarty_function_set_id',),));
 \Tygh\Languages\Helper::preloadLangVars(array('sign_in','sign_in'));
 if ($_smarty_tpl->tpl_vars['runtime']->value['customization_mode']['design'] == "Y" && (defined('AREA') ? constant('AREA') : null) == "C") {
@@ -35,7 +35,7 @@ if ($_REQUEST['custom_id']) {?>
     <?php $_smarty_tpl->_assignInScope('login_type', (($tmp = $_smarty_tpl->tpl_vars['addons']->value['cp_otp_registration']['login_type'] ?? null)===null||$tmp==='' ? "password" ?? null : $tmp));?>
     <?php $_smarty_tpl->_assignInScope('auth_field', (($tmp = (($tmp = $_REQUEST['auth_field'] ?? null)===null||$tmp==='' ? $_smarty_tpl->tpl_vars['addons']->value['cp_otp_registration']['default_auth_method'] ?? null : $tmp) ?? null)===null||$tmp==='' ? "phone" ?? null : $tmp));?>
     <?php $_smarty_tpl->_assignInScope('no_email', false);?>
-    <?php if ($_smarty_tpl->tpl_vars['addons']->value['cp_otp_registration']['exclude_email'] == "Y") {?>
+    <?php if ($_smarty_tpl->tpl_vars['addons']->value['cp_otp_registration']['auth_by_email'] == "forbid") {?>
         <?php $_smarty_tpl->_assignInScope('no_email', true);?>
     <?php }?>
 
@@ -98,7 +98,7 @@ if ($_REQUEST['custom_id']) {?>
     <?php $_smarty_tpl->_assignInScope('login_type', (($tmp = $_smarty_tpl->tpl_vars['addons']->value['cp_otp_registration']['login_type'] ?? null)===null||$tmp==='' ? "password" ?? null : $tmp));?>
     <?php $_smarty_tpl->_assignInScope('auth_field', (($tmp = (($tmp = $_REQUEST['auth_field'] ?? null)===null||$tmp==='' ? $_smarty_tpl->tpl_vars['addons']->value['cp_otp_registration']['default_auth_method'] ?? null : $tmp) ?? null)===null||$tmp==='' ? "phone" ?? null : $tmp));?>
     <?php $_smarty_tpl->_assignInScope('no_email', false);?>
-    <?php if ($_smarty_tpl->tpl_vars['addons']->value['cp_otp_registration']['exclude_email'] == "Y") {?>
+    <?php if ($_smarty_tpl->tpl_vars['addons']->value['cp_otp_registration']['auth_by_email'] == "forbid") {?>
         <?php $_smarty_tpl->_assignInScope('no_email', true);?>
     <?php }?>
 

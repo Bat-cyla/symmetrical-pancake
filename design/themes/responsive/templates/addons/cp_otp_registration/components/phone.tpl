@@ -21,7 +21,7 @@
         {$cntr_code=false}
     {/if}
     <div class="ty-control-group ty-shipping-phone cm-phone">
-        <label for="phone" class="ty-control-group__title {if !$phone_optional} cm-required {/if} cm-mask-phone-label cm-trim">{__("phone")}</label>
+        <label for="phone" class="ty-control-group__title cm-required cm-mask-phone-label cm-trim">{__("phone")}</label>
         <input type="text" id="phone" class="ty-input-text cm-focus cm-mask-phone cp-phone" maxlength="25" value="{if $phone}{$phone}{elseif !$placeholder}{elseif $cntr_code}{else}+{/if}" data-ca-verification="phone_verification_info_{$obj_id}" name="{$inp_name}[phone]" autocomplete="n" {if $placeholder}placeholder="{$placeholder}"{/if}>
         {if $inp_name == "call_data"}
             {$from_call=true}
