@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-02 09:14:50
+/* Smarty version 4.1.1, created on 2024-08-09 12:27:03
   from '/app/www/design/backend/templates/addons/reward_points/hooks/order_management/totals_extra.pre.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66ac795a41a560_54617873',
+  'unifunc' => 'content_66b5e0e79740b8_02283043',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2e30aa0e31cc868d9f402076272dd2baeebf02dd' => 
     array (
       0 => '/app/www/design/backend/templates/addons/reward_points/hooks/order_management/totals_extra.pre.tpl',
-      1 => 1693486476,
+      1 => 1723194964,
       2 => 'tygh',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66ac795a41a560_54617873 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66b5e0e79740b8_02283043 (Smarty_Internal_Template $_smarty_tpl) {
 \Tygh\Languages\Helper::preloadLangVars(array('points_to_use','available','maximum'));
 if ($_smarty_tpl->tpl_vars['cart']->value['points_info']['total_price'] && $_smarty_tpl->tpl_vars['user_points']->value) {?>
 <div class="control-group">

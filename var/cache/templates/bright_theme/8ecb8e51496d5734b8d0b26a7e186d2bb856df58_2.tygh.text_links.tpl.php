@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-02 10:12:31
+/* Smarty version 4.1.1, created on 2024-08-09 12:27:20
   from '/app/www/design/themes/bright_theme/templates/addons/blog/blocks/text_links.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66ac86df105851_41081914',
+  'unifunc' => 'content_66b5e0f83cad34_83144128',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8ecb8e51496d5734b8d0b26a7e186d2bb856df58' => 
     array (
       0 => '/app/www/design/themes/bright_theme/templates/addons/blog/blocks/text_links.tpl',
-      1 => 1722513958,
+      1 => 1723194964,
       2 => 'tygh',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66ac86df105851_41081914 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66b5e0f83cad34_83144128 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/app/www/app/functions/smarty_plugins/modifier.date_format.php','function'=>'smarty_modifier_date_format',),1=>array('file'=>'/app/www/app/functions/smarty_plugins/function.set_id.php','function'=>'smarty_function_set_id',),));
 \Tygh\Languages\Helper::preloadLangVars(array('view_all','view_all'));
 if ($_smarty_tpl->tpl_vars['runtime']->value['customization_mode']['design'] == "Y" && (defined('AREA') ? constant('AREA') : null) == "C") {

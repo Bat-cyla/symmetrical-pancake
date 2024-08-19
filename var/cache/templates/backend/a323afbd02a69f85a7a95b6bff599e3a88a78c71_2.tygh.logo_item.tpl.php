@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-06 13:54:14
+/* Smarty version 4.1.1, created on 2024-08-14 12:18:08
   from '/app/www/design/backend/templates/views/themes/components/logo_item.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66b200d61da801_63356695',
+  'unifunc' => 'content_66bc7650986f82_62867696',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a323afbd02a69f85a7a95b6bff599e3a88a78c71' => 
     array (
       0 => '/app/www/design/backend/templates/views/themes/components/logo_item.tpl',
-      1 => 1693486476,
+      1 => 1723194964,
       2 => 'tygh',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:common/fileuploader.tpl' => 1,
   ),
 ),false)) {
-function content_66b200d61da801_63356695 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66bc7650986f82_62867696 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/app/www/app/functions/smarty_plugins/function.include_ext.php','function'=>'smarty_function_include_ext',),));
 \Tygh\Languages\Helper::preloadLangVars(array('logo_section.','no_image','alt_text'));
 $_smarty_tpl->_assignInScope('id', (($tmp = $_smarty_tpl->tpl_vars['logo']->value['logo_id'] ?? null)===null||$tmp==='' ? 0 ?? null : $tmp));

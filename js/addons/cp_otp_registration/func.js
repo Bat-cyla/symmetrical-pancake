@@ -29,6 +29,26 @@
             }, 1000);
         });
 
+        $.ceEvent('on', 'ce.formpost_litecheckout_payments_form', function(form,elm) {
+            if (!_.user_id)
+            {
+            let phone = $('#litecheckout_phone').val()
+            let main_container = form[0];
+            $('#phone_verification_').remove();
+            let container = $('<div id="phone_verification"></div>').appendTo(main_container);
+            $(container).ceDialog('open', {
+                'href': fn_url('checkout.cp_phone_verification?phone=' + phone),
+                'title': _.tr('cp_otp_phone_verification'),
+                'width': 400,
+                'height': 'auto',
+                onClose: function () {
+                    fn_cp_otp_registration_close_popup();
+                }
+            });
+            return false
+        }
+        });
+
         if (typeof _.cp_otp_registration != 'undefined') {
             var countries = (typeof _.cp_otp_registration.countries_list != 'undefined') ? _.cp_otp_registration.countries_list : [];
             var defaultCountry = (typeof _.cp_otp_registration.default_country != 'undefined') ? _.cp_otp_registration.default_country : '';
@@ -44,6 +64,7 @@
     });
 
     $.ceEvent('on', 'ce.ajaxdone', function(context, scripts, params, data) {
+
         if (typeof data.cp_otp_fail != "undefined"
             && typeof params.form != "undefined"
         ) {
@@ -69,6 +90,8 @@
     $(_.doc).on('blur keydown', '.cp-phone', function(e) {
 
         var phone = $(this).val().replace(/[^0-9,+]/gim, '');
+
+        console.log(phone)
         var verificationBlock = $(this).data('caVerification');
         if (typeof verificationBlock != 'undefined' && $('#' + verificationBlock).length) {
             var link = $('#' + verificationBlock).find('.cp-verification-link');
@@ -77,11 +100,14 @@
             }
             var verPhone = $('#' + verificationBlock).find('.cp-phone-confirmed');
             if (verPhone && verPhone.length > 0 && verPhone.data('caPhone')) {
-                var ca_phone = verPhone.data('caPhone').toString().replace(/[^0-9]/gim, '');
+                var ca_phone = verPhone.data('caPhone').toString().replace(/[^0-9,+]/gim, '');
             } else {
                 var ca_phone = '';
             }
-            
+            var ca_phone="+" + ca_phone
+
+            //console.log(phone)
+            //console.log(ca_phone)
             if (ca_phone != phone && link.is(':hidden')) {
                 verPhone.hide();
                 link.show();
@@ -103,6 +129,7 @@
             }
         }
     });
+
 
     $(_.doc).on('click', '.cp-get-auth-field', function(e) {
         var url = $(this).attr('href');
@@ -181,7 +208,40 @@
         }
         
     });
+
+    function ajaxGetModal(data)
+    {
+        $.ceAjax('request', fn_url('checkout.cp_phone_verification'), {
+            method: 'get',
+            caching: false,
+            hidden: true,
+            data: {'phone': data},
+            force_exec: true,
+            callback: function() {
+                let main_container = $("#litecheckout_payments_form")[0];
+                $('#phone_verification_').remove();
+                let container = $('<div id="phone_verification"></div>').appendTo(main_container);
+                $(container).ceDialog('open', {
+                    'href': fn_url('checkout.cp_phone_verification'),
+                    'title': _.tr('cp_otp_phone_verification'),
+                    'width': 400,
+                    'height': 'auto',
+                    onClose: function () {
+                        fn_cp_otp_registration_close_popup();
+                    }
+                });
+            }
+        });
+
+    }
+    function fn_cp_otp_registration_close_popup() {
+        $('#phone_verification_').remove()
+    }
 })(Tygh, Tygh.$);
+
+
+
+
 
 function cpConvertSecondsToTime(num) {
     var mins = Math.floor(num / 60);
@@ -204,6 +264,7 @@ function cpValidatePhone(evt, area) {
         if(theEvent.preventDefault) theEvent.preventDefault();
     }
 }
+
 
 function cpChangePhone(val, key) {
     var cpReference = "+", prevVal = '';

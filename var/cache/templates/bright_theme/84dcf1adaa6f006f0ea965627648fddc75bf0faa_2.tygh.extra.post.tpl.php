@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-02 10:13:16
+/* Smarty version 4.1.1, created on 2024-08-09 14:54:54
   from '/app/www/design/themes/responsive/templates/addons/hybrid_auth/hooks/auth_info/extra.post.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66ac870c8da451_95181546',
+  'unifunc' => 'content_66b6038e5abae8_46357850',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '84dcf1adaa6f006f0ea965627648fddc75bf0faa' => 
     array (
       0 => '/app/www/design/themes/responsive/templates/addons/hybrid_auth/hooks/auth_info/extra.post.tpl',
-      1 => 1722513958,
+      1 => 1723194964,
       2 => 'tygh',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66ac870c8da451_95181546 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66b6038e5abae8_46357850 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/app/www/app/functions/smarty_plugins/function.set_id.php','function'=>'smarty_function_set_id',),));
 \Tygh\Languages\Helper::preloadLangVars(array('hybrid_auth.connect_social_title','hybrid_auth.text_connect_social','hybrid_auth.specify_email_title','hybrid_auth.text_specify_email','hybrid_auth.connect_social_title','hybrid_auth.text_connect_social','hybrid_auth.specify_email_title','hybrid_auth.text_specify_email'));
 if ($_smarty_tpl->tpl_vars['runtime']->value['customization_mode']['design'] == "Y" && (defined('AREA') ? constant('AREA') : null) == "C") {

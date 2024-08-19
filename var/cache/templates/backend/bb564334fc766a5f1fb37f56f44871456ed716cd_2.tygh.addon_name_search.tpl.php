@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-01 16:02:29
+/* Smarty version 4.1.1, created on 2024-08-14 09:06:02
   from '/app/www/design/backend/templates/views/addons/components/manage/addon_name_search.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66ab8765e23414_40573329',
+  'unifunc' => 'content_66bc494a42bac4_60028395',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'bb564334fc766a5f1fb37f56f44871456ed716cd' => 
     array (
       0 => '/app/www/design/backend/templates/views/addons/components/manage/addon_name_search.tpl',
-      1 => 1693486476,
+      1 => 1723194964,
       2 => 'tygh',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66ab8765e23414_40573329 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66bc494a42bac4_60028395 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/app/www/app/functions/smarty_plugins/function.include_ext.php','function'=>'smarty_function_include_ext',),));
 \Tygh\Languages\Helper::preloadLangVars(array('admin_search_field','remove','addons.search_description'));
 ?>

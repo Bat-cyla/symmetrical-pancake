@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-02 10:12:27
+/* Smarty version 4.1.1, created on 2024-08-09 12:25:08
   from '/app/www/design/themes/responsive/templates/views/block_manager/render/grid.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66ac86dbe987c0_34279273',
+  'unifunc' => 'content_66b5e07413d689_96154696',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '4d4b09c3d018f17a8207efe556bf3b354d7eec43' => 
     array (
       0 => '/app/www/design/themes/responsive/templates/views/block_manager/render/grid.tpl',
-      1 => 1722513958,
+      1 => 1723194965,
       2 => 'tygh',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:views/block_manager/extract_nested_forms.tpl' => 1,
   ),
 ),false)) {
-function content_66ac86dbe987c0_34279273 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66b5e07413d689_96154696 (Smarty_Internal_Template $_smarty_tpl) {
 if ($_smarty_tpl->tpl_vars['runtime']->value['customization_mode']['block_manager'] && $_smarty_tpl->tpl_vars['location_data']->value['is_frontend_editing_allowed']) {?>
     <?php $_smarty_tpl->_subTemplateRender("backend:views/block_manager/frontend_render/grid.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 } else { ?>

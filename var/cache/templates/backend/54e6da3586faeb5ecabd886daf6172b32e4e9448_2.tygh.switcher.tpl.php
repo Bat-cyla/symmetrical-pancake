@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-01 16:35:23
+/* Smarty version 4.1.1, created on 2024-08-14 09:05:48
   from '/app/www/design/backend/templates/common/switcher.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66ab8f1b5266a4_25447237',
+  'unifunc' => 'content_66bc493c9c7f60_52680786',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '54e6da3586faeb5ecabd886daf6172b32e4e9448' => 
     array (
       0 => '/app/www/design/backend/templates/common/switcher.tpl',
-      1 => 1693486476,
+      1 => 1723194964,
       2 => 'tygh',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66ab8f1b5266a4_25447237 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66bc493c9c7f60_52680786 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/app/www/app/functions/smarty_plugins/modifier.render_tag_attrs.php','function'=>'smarty_modifier_render_tag_attrs',),));
 ?>
 <div class="switch-mini ty-switch-checkbox cm-switch-checkbox list-btns <?php if ($_smarty_tpl->tpl_vars['meta']->value) {

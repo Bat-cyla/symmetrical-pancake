@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-05 16:40:32
+/* Smarty version 4.1.1, created on 2024-08-14 12:18:08
   from '/app/www/design/backend/templates/common/notify_checkboxes.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66b0d65091b002_16206546',
+  'unifunc' => 'content_66bc7650886ed7_82651361',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '4f72a8c4c5a6e56302338303f15b466167be263e' => 
     array (
       0 => '/app/www/design/backend/templates/common/notify_checkboxes.tpl',
-      1 => 1693486476,
+      1 => 1723194964,
       2 => 'tygh',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66b0d65091b002_16206546 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66bc7650886ed7_82651361 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/app/www/app/functions/smarty_plugins/block.hook.php','function'=>'smarty_block_hook',),1=>array('file'=>'/app/www/app/functions/smarty_plugins/modifier.enum.php','function'=>'smarty_modifier_enum',),));
 \Tygh\Languages\Helper::preloadLangVars(array('notify_customer','notify_orders_department','notify_vendor'));
 $_smarty_tpl->smarty->_cache['_tag_stack'][] = array('hook', array('name'=>"select_popup:notify_checkboxes"));

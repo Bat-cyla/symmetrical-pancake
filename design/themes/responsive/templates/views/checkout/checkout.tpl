@@ -9,6 +9,7 @@
 {$show_customer_fields_first = $contact_info_section_position < $shipping_section_position}
 
 {* login popup *}
+
 {if !$auth.user_id}
     <div id="litecheckout_login_block" class="hidden" title="{__("sign_in")}">
         <div class="ty-login-popup">

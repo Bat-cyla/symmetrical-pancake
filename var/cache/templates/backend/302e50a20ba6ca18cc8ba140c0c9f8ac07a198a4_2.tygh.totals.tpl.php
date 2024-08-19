@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-02 09:14:50
+/* Smarty version 4.1.1, created on 2024-08-09 12:27:03
   from '/app/www/design/backend/templates/views/order_management/components/totals.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66ac795a44d168_59395856',
+  'unifunc' => 'content_66b5e0e79afe47_02082877',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '302e50a20ba6ca18cc8ba140c0c9f8ac07a198a4' => 
     array (
       0 => '/app/www/design/backend/templates/views/order_management/components/totals.tpl',
-      1 => 1693486476,
+      1 => 1723194964,
       2 => 'tygh',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:buttons/button.tpl' => 1,
   ),
 ),false)) {
-function content_66ac795a44d168_59395856 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66b5e0e79afe47_02082877 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/app/www/app/functions/smarty_plugins/modifier.enum.php','function'=>'smarty_modifier_enum',),1=>array('file'=>'/app/www/app/functions/smarty_plugins/block.hook.php','function'=>'smarty_block_hook',),2=>array('file'=>'/app/www/app/functions/smarty_plugins/function.include_ext.php','function'=>'smarty_function_include_ext',),));
 \Tygh\Languages\Helper::preloadLangVars(array('totals','subtotal','including_discount','order_discount','manually_set_tax_rates','included','coupon','payment_surcharge','total_cost','recalculate_totals'));
 ?>

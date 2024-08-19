@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-02 09:14:50
+/* Smarty version 4.1.1, created on 2024-08-09 12:27:03
   from '/app/www/design/backend/templates/views/order_management/components/status.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66ac795a5b7362_37064885',
+  'unifunc' => 'content_66b5e0e7b050a5_32953488',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c0c5282f518369a8bb0fb71c0701ea0a385dc675' => 
     array (
       0 => '/app/www/design/backend/templates/views/order_management/components/status.tpl',
-      1 => 1693486476,
+      1 => 1723194964,
       2 => 'tygh',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:common/select_object.tpl' => 1,
   ),
 ),false)) {
-function content_66ac795a5b7362_37064885 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66b5e0e7b050a5_32953488 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/app/www/app/functions/smarty_plugins/block.hook.php','function'=>'smarty_block_hook',),));
 \Tygh\Languages\Helper::preloadLangVars(array('status'));
 if (fn_check_view_permissions("orders.update_status","POST")) {?>

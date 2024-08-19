@@ -122,7 +122,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if (!empty($auth['user_id']) && $user_id == $auth['user_id']) {
             fn_cp_otp_assign_phone_verified($user_id);
         }
+
         Tygh::$app['view']->assign('obj_id', !empty($_REQUEST['obj_id']) ? $_REQUEST['obj_id'] : '');
+
         Tygh::$app['view']->display('addons/cp_otp_registration/components/phone.tpl');
         exit;
     }
@@ -153,31 +155,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $required_email = Registry::get('addons.cp_otp_registration.auth_by_email') == "make_required";
         $phone_optional = Registry::get('addons.cp_otp_registration.phone_optional');
 
-
-
-       /* if (empty($_REQUEST['resend'])
-            && $login_type == 'two_factor'
-            && (empty($otp_type) || $otp_type != 'register')
-        ) {
-            if (!empty($user_data['email'])) {
-                $_REQUEST['user_login'] = $user_data['email'];
-            } elseif (!empty($_REQUEST['user_data']['phone'])) {
-                $_REQUEST['user_login'] = $user_data['phone'];
-            }
-            fn_print_r($_REQUEST);
-            fn_print_die($_POST);
-
-            fn_restore_processed_user_password($_REQUEST, $_POST);
-            list($status, $user, $user_login, $password, $salt) = fn_auth_routines($_REQUEST, $auth);
-            if (empty($user) || empty($password)
-                || !fn_cp_otp_user_password_verify($user, $password, $salt)
-            ) {
-                fn_set_notification('E', __('error'), __('error_incorrect_login'));
-
-                return fn_cp_otp_controller_do_redirect('auth.login_form');
-            }
-        }
-       */
         if ($otp_action == 'register') {
             Registry::set('runtime.cp_fast_registration', true);
             if (!empty($user_data['phone']) && fn_cp_otp_find_user_by_phone($user_data['phone'])) {
@@ -252,6 +229,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 
 if ($mode == 'cp_phone_verification') {
+
     if (!defined('AJAX_REQUEST')) {
         return array(CONTROLLER_STATUS_NO_PAGE);
     }
@@ -271,7 +249,6 @@ if ($mode == 'cp_phone_verification') {
 
         $user_data = array('phone' => $phone);
         $otp_type = !empty($_REQUEST['otp_type']) ? $_REQUEST['otp_type'] : 'register';
-
         $send_result = fn_cp_otp_send_code($user_data, $otp_type, $send_error);
         if (empty($send_result)) {
             fn_set_notification('E', __('error'), __('cp_otp_send_fail'));

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-07 14:16:19
+/* Smarty version 4.1.1, created on 2024-08-19 09:12:05
   from '/app/www/design/backend/templates/views/addons/components/marketplace/marketplace_search.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66b35783aa5a28_61859406',
+  'unifunc' => 'content_66c2e2355ee162_24290833',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f5bfd67365862fd5f443996b6f53613266431f6f' => 
     array (
       0 => '/app/www/design/backend/templates/views/addons/components/marketplace/marketplace_search.tpl',
-      1 => 1693486476,
+      1 => 1723194964,
       2 => 'tygh',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:buttons/search.tpl' => 1,
   ),
 ),false)) {
-function content_66b35783aa5a28_61859406 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66c2e2355ee162_24290833 (Smarty_Internal_Template $_smarty_tpl) {
 \Tygh\Languages\Helper::preloadLangVars(array('cscart_marketplace.search','cscart_marketplace.search_description'));
 ?>
 <div class="sidebar-row addons-marketplace-search">

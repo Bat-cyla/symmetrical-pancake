@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-02 09:21:22
+/* Smarty version 4.1.1, created on 2024-08-14 09:05:48
   from '/app/www/design/backend/templates/views/addons/components/detailed_page/tabs/addon_subscription.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66ac7ae20b0717_60104442',
+  'unifunc' => 'content_66bc493c75e1a0_04226052',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'cd021bc6b99f87db1a1b9d13ca9f17a764225fd1' => 
     array (
       0 => '/app/www/design/backend/templates/views/addons/components/detailed_page/tabs/addon_subscription.tpl',
-      1 => 1693486476,
+      1 => 1723194964,
       2 => 'tygh',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:common/subheader.tpl' => 1,
   ),
 ),false)) {
-function content_66ac7ae20b0717_60104442 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66bc493c75e1a0_04226052 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/app/www/app/functions/smarty_plugins/block.hook.php','function'=>'smarty_block_hook',),));
 \Tygh\Languages\Helper::preloadLangVars(array('license','license_number','addon_license_key_tooltip'));
 $_smarty_tpl->smarty->_cache['_tag_stack'][] = array('hook', array('name'=>"addons:subscription_tab"));

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-08 11:26:51
+/* Smarty version 4.1.1, created on 2024-08-19 13:53:28
   from '/app/www/design/themes/responsive/templates/addons/cp_otp_registration/hooks/index/scripts.post.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66b4814b3f0d28_55480670',
+  'unifunc' => 'content_66c32428e65b40_51245836',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'cbe7d08001134bf616609fa33b7bc52af22aeeaf' => 
     array (
       0 => '/app/www/design/themes/responsive/templates/addons/cp_otp_registration/hooks/index/scripts.post.tpl',
-      1 => 1723105479,
+      1 => 1724064789,
       2 => 'tygh',
     ),
   ),
@@ -20,9 +20,9 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66b4814b3f0d28_55480670 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66c32428e65b40_51245836 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/app/www/app/functions/smarty_plugins/function.script.php','function'=>'smarty_function_script',),1=>array('file'=>'/app/www/app/functions/smarty_plugins/function.set_id.php','function'=>'smarty_function_set_id',),));
-\Tygh\Languages\Helper::preloadLangVars(array('cp_otp_already_exists_title','cp_otp_phone_verification','cp_otp_already_exists_title','cp_otp_phone_verification'));
+\Tygh\Languages\Helper::preloadLangVars(array('cp_otp_phone_verification','cp_otp_already_exists_title','cp_otp_already_exists_title','cp_otp_phone_verification','cp_otp_phone_verification','cp_otp_already_exists_title','cp_otp_already_exists_title','cp_otp_phone_verification'));
 if ($_smarty_tpl->tpl_vars['runtime']->value['customization_mode']['design'] == "Y" && (defined('AREA') ? constant('AREA') : null) == "C") {
 $_smarty_tpl->smarty->ext->_capture->open($_smarty_tpl, "template_content", null, null);
 echo '<script'; ?>
@@ -37,8 +37,10 @@ echo '<script'; ?>
         });
         window.localStorage.setItem('phoneMasks', JSON.stringify(phoneMasks));
         $(document).on('focus blur', '.cp-phone', function(){
-            $(this).val($(this).val().replace(/[^0-9]/g,""));
+
+           $(this).val($(this).val().replace(/[^0-9,+]/g,""));
         });
+
     }(Tygh, Tygh.$));
 <?php echo '</script'; ?>
 >
@@ -73,9 +75,22 @@ echo '<script'; ?>
                     $('label[for="litecheckout_email"]').removeClass('cm-required');
                 <?php }?>
                 $('label[for="litecheckout_phone"]').addClass('cm-required');
+                _.tr({
+                    'cp_otp_phone_verification': '<?php echo strtr((string)$_smarty_tpl->__("cp_otp_phone_verification"), array("\\" => "\\\\", "'" => "\\'", "\"" => "\\\"", "\r" => "\\r", "\n" => "\\n", "</" => "<\/", "<!--" => "<\!--", "<s" => "<\s", "<S" => "<\S" ));?>
+',
+                });
+               _.user_id = '<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['cart']->value['user_data']['user_id'], ENT_QUOTES, 'UTF-8');?>
+';
+
             });
+
             
-            $.ceEvent('on', 'ce.ajaxdone', function(context, inline_scripts, params, data) { 
+            $.ceEvent('on', 'ce.ajaxdone', function(context, inline_scripts, params, data) {
+                _.tr({
+                    'cp_otp_already_exists_title': '<?php echo strtr((string)$_smarty_tpl->__("cp_otp_already_exists_title"), array("\\" => "\\\\", "'" => "\\'", "\"" => "\\\"", "\r" => "\\r", "\n" => "\\n", "</" => "<\/", "<!--" => "<\!--", "<s" => "<\s", "<S" => "<\S" ));?>
+',
+                });
+
                 var title = '<?php echo $_smarty_tpl->__("cp_otp_already_exists_title");?>
 ';
                 var block_id = 'litecheckout_login_block';
@@ -146,8 +161,10 @@ echo '<script'; ?>
         });
         window.localStorage.setItem('phoneMasks', JSON.stringify(phoneMasks));
         $(document).on('focus blur', '.cp-phone', function(){
-            $(this).val($(this).val().replace(/[^0-9]/g,""));
+
+           $(this).val($(this).val().replace(/[^0-9,+]/g,""));
         });
+
     }(Tygh, Tygh.$));
 <?php echo '</script'; ?>
 >
@@ -182,9 +199,22 @@ echo '<script'; ?>
                     $('label[for="litecheckout_email"]').removeClass('cm-required');
                 <?php }?>
                 $('label[for="litecheckout_phone"]').addClass('cm-required');
+                _.tr({
+                    'cp_otp_phone_verification': '<?php echo strtr((string)$_smarty_tpl->__("cp_otp_phone_verification"), array("\\" => "\\\\", "'" => "\\'", "\"" => "\\\"", "\r" => "\\r", "\n" => "\\n", "</" => "<\/", "<!--" => "<\!--", "<s" => "<\s", "<S" => "<\S" ));?>
+',
+                });
+               _.user_id = '<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['cart']->value['user_data']['user_id'], ENT_QUOTES, 'UTF-8');?>
+';
+
             });
+
             
-            $.ceEvent('on', 'ce.ajaxdone', function(context, inline_scripts, params, data) { 
+            $.ceEvent('on', 'ce.ajaxdone', function(context, inline_scripts, params, data) {
+                _.tr({
+                    'cp_otp_already_exists_title': '<?php echo strtr((string)$_smarty_tpl->__("cp_otp_already_exists_title"), array("\\" => "\\\\", "'" => "\\'", "\"" => "\\\"", "\r" => "\\r", "\n" => "\\n", "</" => "<\/", "<!--" => "<\!--", "<s" => "<\s", "<S" => "<\S" ));?>
+',
+                });
+
                 var title = '<?php echo $_smarty_tpl->__("cp_otp_already_exists_title");?>
 ';
                 var block_id = 'litecheckout_login_block';

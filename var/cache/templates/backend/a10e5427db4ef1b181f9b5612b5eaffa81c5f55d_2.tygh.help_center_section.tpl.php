@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-01 16:01:25
+/* Smarty version 4.1.1, created on 2024-08-09 12:27:04
   from '/app/www/design/backend/templates/addons/help_center/templates/help_center_section.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66ab8725d1de81_75880616',
+  'unifunc' => 'content_66b5e0e86bfe85_75672904',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a10e5427db4ef1b181f9b5612b5eaffa81c5f55d' => 
     array (
       0 => '/app/www/design/backend/templates/addons/help_center/templates/help_center_section.tpl',
-      1 => 1693486476,
+      1 => 1723194964,
       2 => 'tygh',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66ab8725d1de81_75880616 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66b5e0e86bfe85_75672904 (Smarty_Internal_Template $_smarty_tpl) {
 echo '<script'; ?>
  type="text/template" data-ca-help-center="section" data-no-defer="true" data-no-execute="§"
     ><div class="help-center-section ${data.isShow ? '' : 'hidden'} ${data.class ? data.class : ''} help-center-section--${data.id}"

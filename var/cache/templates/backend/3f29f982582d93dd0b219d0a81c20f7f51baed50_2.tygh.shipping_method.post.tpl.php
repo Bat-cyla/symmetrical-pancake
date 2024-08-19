@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-02 09:14:50
+/* Smarty version 4.1.1, created on 2024-08-09 12:27:03
   from '/app/www/design/backend/templates/addons/rus_boxberry/hooks/order_management/shipping_method.post.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66ac795a7a25f6_31453380',
+  'unifunc' => 'content_66b5e0e7d4b3c6_07836302',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3f29f982582d93dd0b219d0a81c20f7f51baed50' => 
     array (
       0 => '/app/www/design/backend/templates/addons/rus_boxberry/hooks/order_management/shipping_method.post.tpl',
-      1 => 1693486476,
+      1 => 1723194964,
       2 => 'tygh',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:common/subheader.tpl' => 1,
   ),
 ),false)) {
-function content_66ac795a7a25f6_31453380 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66b5e0e7d4b3c6_07836302 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/app/www/app/functions/smarty_plugins/function.script.php','function'=>'smarty_function_script',),));
 \Tygh\Languages\Helper::preloadLangVars(array('rus_boxberry.pickuppoint'));
 echo smarty_function_script(array('src'=>"js/addons/rus_boxberry/boxberry.js"),$_smarty_tpl);?>

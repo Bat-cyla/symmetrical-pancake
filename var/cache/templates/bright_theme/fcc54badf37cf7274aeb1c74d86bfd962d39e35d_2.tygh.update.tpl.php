@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-02 10:13:47
+/* Smarty version 4.1.1, created on 2024-08-19 10:05:25
   from '/app/www/design/themes/responsive/templates/views/profiles/update.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66ac872be18f91_32564754',
+  'unifunc' => 'content_66c2eeb5665e28_81472237',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fcc54badf37cf7274aeb1c74d86bfd962d39e35d' => 
     array (
       0 => '/app/www/design/themes/responsive/templates/views/profiles/update.tpl',
-      1 => 1722513958,
+      1 => 1724051122,
       2 => 'tygh',
     ),
   ),
@@ -30,7 +30,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:common/tabsbox.tpl' => 2,
   ),
 ),false)) {
-function content_66ac872be18f91_32564754 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66c2eeb5665e28_81472237 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/app/www/app/functions/smarty_plugins/modifier.enum.php','function'=>'smarty_modifier_enum',),1=>array('file'=>'/app/www/app/functions/smarty_plugins/block.hook.php','function'=>'smarty_block_hook',),2=>array('file'=>'/app/www/app/functions/smarty_plugins/function.set_id.php','function'=>'smarty_function_set_id',),));
 \Tygh\Languages\Helper::preloadLangVars(array('register_new_account','contact_information','text_multiprofile_notice','billing_address','shipping_address','shipping_address','billing_address','revert','delete_my_account_description','delete_my_account','delete_my_account','delete_my_account','usergroup','status','action','active','remove','available','join','declined','join','pending','cancel','profile_details','register_new_account','contact_information','text_multiprofile_notice','billing_address','shipping_address','shipping_address','billing_address','revert','delete_my_account_description','delete_my_account','delete_my_account','delete_my_account','usergroup','status','action','active','remove','available','join','declined','join','pending','cancel','profile_details'));
 if ($_smarty_tpl->tpl_vars['runtime']->value['customization_mode']['design'] == "Y" && (defined('AREA') ? constant('AREA') : null) == "C") {

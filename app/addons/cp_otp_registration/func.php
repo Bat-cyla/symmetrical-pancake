@@ -61,6 +61,17 @@ function fn_cp_otp_registration_get_user_short_info_pre($user_id, &$fields, $con
 
 function fn_cp_otp_registration_update_user_pre($user_id, &$user_data, $auth, $ship_to_another, &$notify_user)
 {
+    if (!empty($user_data['phone'])) {
+        $user_data['phone'] = fn_cp_otp_phone_only_numbers($user_data['phone']);
+
+        if (AREA == 'A' && !empty($user_id)) {
+            $current_phone = db_get_field('SELECT phone FROM ?:users WHERE user_id = ?i', $user_id);
+            if ($user_data['phone'] != $current_phone) {
+                $user_data['cp_phone_verified'] = 'Y';
+            }
+        }
+    }
+
     if (!empty($user_data['email']) && fn_checkout_is_email_address_fake($user_data['email'])) {
         if (Registry::get('addons.cp_otp_registration.use_fake_email') != 'Y') {
             $user_data['email'] = '';
@@ -72,16 +83,6 @@ function fn_cp_otp_registration_update_user_pre($user_id, &$user_data, $auth, $s
         $user_data['cp_phone_verified'] = 'Y';
     }
 
-    if (!empty($user_data['phone'])) {
-        $user_data['phone'] = fn_cp_otp_phone_only_numbers($user_data['phone']);
-
-        if (AREA == 'A' && !empty($user_id)) {
-            $current_phone = db_get_field('SELECT phone FROM ?:users WHERE user_id = ?i', $user_id);
-            if ($user_data['phone'] != $current_phone) {
-                $user_data['cp_phone_verified'] = 'Y';
-            }
-        }   
-    }
 }
 
 function fn_cp_otp_registration_send_order_notification($order_info, $edp_data, &$force_notification, $notified, $send_order_notification)
@@ -121,7 +122,7 @@ function fn_cp_otp_registration_is_user_exists_post($user_id, $user_data, &$is_e
 
     if (
         AREA == 'C' 
-        && Registry::get('addons.cp_otp_registration.guest_order') == 'Y' && Registry::get('addons.cp_otp_registration.guest_order_verify') == 'N'
+        && Registry::get('addons.cp_otp_registration.guest_order') == 'Y'
         && Registry::get('runtime.controller') == 'checkout' && in_array(Registry::get('runtime.mode'), $allow_modes)
     ) {
 
@@ -232,6 +233,7 @@ function fn_cp_otp_registration_set_notification_pre(&$type, &$title, &$message,
         }
     }
 }
+
 
 function fn_cp_otp_registration_pre_place_order(&$cart, $allow, $product_groups)
 {

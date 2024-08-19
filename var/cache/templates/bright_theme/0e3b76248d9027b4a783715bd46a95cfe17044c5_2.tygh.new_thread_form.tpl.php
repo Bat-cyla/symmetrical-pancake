@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-08 13:33:03
+/* Smarty version 4.1.1, created on 2024-08-09 12:27:33
   from '/app/www/design/themes/responsive/templates/addons/vendor_communication/views/vendor_communication/components/new_thread_form.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66b49edff23d17_34925749',
+  'unifunc' => 'content_66b5e105d02b56_57449847',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0e3b76248d9027b4a783715bd46a95cfe17044c5' => 
     array (
       0 => '/app/www/design/themes/responsive/templates/addons/vendor_communication/views/vendor_communication/components/new_thread_form.tpl',
-      1 => 1722513958,
+      1 => 1723194965,
       2 => 'tygh',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:buttons/button.tpl' => 2,
   ),
 ),false)) {
-function content_66b49edff23d17_34925749 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66b5e105d02b56_57449847 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/app/www/app/functions/smarty_plugins/modifier.enum.php','function'=>'smarty_modifier_enum',),1=>array('file'=>'/app/www/app/functions/smarty_plugins/block.hook.php','function'=>'smarty_block_hook',),2=>array('file'=>'/app/www/app/functions/smarty_plugins/function.set_id.php','function'=>'smarty_function_set_id',),));
 \Tygh\Languages\Helper::preloadLangVars(array('vendor_communication.contact_vendor_name','vendor_communication.contact_vendor','vendor_communication.your_message_to_vendor_name','vendor_communication.your_message_to_admin','send','vendor_communication.contact_vendor_name','vendor_communication.contact_vendor','vendor_communication.your_message_to_vendor_name','vendor_communication.your_message_to_admin','send'));
 if ($_smarty_tpl->tpl_vars['runtime']->value['customization_mode']['design'] == "Y" && (defined('AREA') ? constant('AREA') : null) == "C") {

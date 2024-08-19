@@ -18,6 +18,8 @@
 ******************************************************************************/
 
 use Tygh\Registry;
+use Tygh\Enum\YesNo;
+use Tygh\Tygh;
 use Tygh\Storage;
 use Tygh\Session;
 
@@ -63,16 +65,27 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 if (empty($cart['user_data']['email']) || fn_checkout_is_email_address_fake($cart['user_data']['email'])) {
     $cart['user_data']['email'] = '';
 }
-
 if ($mode == 'cp_phone_verification') {
-    if (defined('AJAX_REQUEST')) {
-        $phone = !empty($_REQUEST['phone']) ? $_REQUEST['phone'] : '';
-        $send_result = fn_cp_otp_send_code(['phone' => $phone], 'register');
-        if (empty($send_result)) {
-            fn_set_notification('E', __('error'), __('cp_otp_send_fail'));
-            return fn_cp_otp_controller_do_redirect('checkout.checkout', true, false);
+    if(Registry::get('addons.cp_otp_registration.guest_order_verify') == YesNo::YES) {
+        if (defined('AJAX_REQUEST')) {
+            if(Tygh::$app['session']['auth']['user_id']==0){
+                Tygh::$app['ajax']->assign('cp_guest_order', true);
+            }
+            $phone = !empty($_REQUEST['phone']) ? $_REQUEST['phone'] : '';
+            $send_result = fn_cp_otp_send_code(['phone' => $phone], 'register');
+            if (empty($send_result)) {
+                fn_set_notification('E', __('error'), __('cp_otp_send_fail'));
+                return fn_cp_otp_controller_do_redirect('checkout.checkout', true, false);
+            }
+            if(Tygh::$app['session']['auth']['user_id']==0){
+                Tygh::$app['view']->assign('phone', $phone);
+                Tygh::$app['view']->assign('guest_order', true);
+                Tygh::$app['view']->assign('otp_type', 'register');
+                Tygh::$app['view']->assign('but_name', 'dispatch[checkout.cp_phone_verification]');
+                Tygh::$app['view']->assign('no_info_text', false);
+            }
+            Tygh::$app['view']->display('addons/cp_otp_registration/components/phone_verification.tpl');
+            exit;
         }
-        Registry::get('view')->display('addons/cp_otp_registration/views/profiles/cp_phone_verification.tpl');
-        exit;
     }
 }

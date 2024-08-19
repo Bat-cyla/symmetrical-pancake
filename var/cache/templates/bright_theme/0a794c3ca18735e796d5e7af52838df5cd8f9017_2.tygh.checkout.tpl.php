@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-08 15:15:04
+/* Smarty version 4.1.1, created on 2024-08-16 15:42:12
   from '/app/www/design/themes/responsive/templates/views/checkout/checkout.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66b4b6c8c701a4_36293626',
+  'unifunc' => 'content_66bf4924062481_81370470',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0a794c3ca18735e796d5e7af52838df5cd8f9017' => 
     array (
       0 => '/app/www/design/themes/responsive/templates/views/checkout/checkout.tpl',
-      1 => 1723116633,
+      1 => 1723811646,
       2 => 'tygh',
     ),
   ),
@@ -25,7 +25,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:views/checkout/components/final_section.tpl' => 2,
   ),
 ),false)) {
-function content_66b4b6c8c701a4_36293626 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66bf4924062481_81370470 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/app/www/app/functions/smarty_plugins/function.script.php','function'=>'smarty_function_script',),1=>array('file'=>'/app/www/app/functions/smarty_plugins/modifier.enum.php','function'=>'smarty_modifier_enum',),2=>array('file'=>'/app/www/app/functions/smarty_plugins/function.set_id.php','function'=>'smarty_function_set_id',),));
 \Tygh\Languages\Helper::preloadLangVars(array('sign_in','sign_in'));
 if ($_smarty_tpl->tpl_vars['runtime']->value['customization_mode']['design'] == "Y" && (defined('AREA') ? constant('AREA') : null) == "C") {
@@ -42,6 +42,7 @@ echo smarty_function_script(array('src'=>"js/tygh/checkout.js"),$_smarty_tpl);?>
 <?php $_smarty_tpl->_assignInScope('contact_info_section_position', $_smarty_tpl->tpl_vars['profile_field_sections']->value[smarty_modifier_enum("ProfileFieldSections::CONTACT_INFORMATION")]["position"]);
 $_smarty_tpl->_assignInScope('shipping_section_position', $_smarty_tpl->tpl_vars['profile_field_sections']->value[smarty_modifier_enum("ProfileFieldSections::SHIPPING_ADDRESS")]["position"]);
 $_smarty_tpl->_assignInScope('show_customer_fields_first', $_smarty_tpl->tpl_vars['contact_info_section_position']->value < $_smarty_tpl->tpl_vars['shipping_section_position']->value);?>
+
 
 <?php if (!$_smarty_tpl->tpl_vars['auth']->value['user_id']) {?>
     <div id="litecheckout_login_block" class="hidden" title="<?php echo $_smarty_tpl->__("sign_in");?>
@@ -106,6 +107,7 @@ echo smarty_function_script(array('src'=>"js/tygh/checkout.js"),$_smarty_tpl);?>
 <?php $_smarty_tpl->_assignInScope('contact_info_section_position', $_smarty_tpl->tpl_vars['profile_field_sections']->value[smarty_modifier_enum("ProfileFieldSections::CONTACT_INFORMATION")]["position"]);
 $_smarty_tpl->_assignInScope('shipping_section_position', $_smarty_tpl->tpl_vars['profile_field_sections']->value[smarty_modifier_enum("ProfileFieldSections::SHIPPING_ADDRESS")]["position"]);
 $_smarty_tpl->_assignInScope('show_customer_fields_first', $_smarty_tpl->tpl_vars['contact_info_section_position']->value < $_smarty_tpl->tpl_vars['shipping_section_position']->value);?>
+
 
 <?php if (!$_smarty_tpl->tpl_vars['auth']->value['user_id']) {?>
     <div id="litecheckout_login_block" class="hidden" title="<?php echo $_smarty_tpl->__("sign_in");?>

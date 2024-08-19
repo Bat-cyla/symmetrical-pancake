@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-08 13:33:15
+/* Smarty version 4.1.1, created on 2024-08-09 12:28:00
   from '/app/www/design/themes/responsive/templates/addons/store_locator/hooks/checkout/shipping_method.post.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66b49eeb952d63_31879939',
+  'unifunc' => 'content_66b5e120924083_54655779',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a7eb5170b3a894795a1ee7847778373978824bc7' => 
     array (
       0 => '/app/www/design/themes/responsive/templates/addons/store_locator/hooks/checkout/shipping_method.post.tpl',
-      1 => 1722513958,
+      1 => 1723194965,
       2 => 'tygh',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:addons/store_locator/views/checkout/components/shippings/list_pickup.tpl' => 2,
   ),
 ),false)) {
-function content_66b49eeb952d63_31879939 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66b5e120924083_54655779 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/app/www/app/functions/smarty_plugins/function.script.php','function'=>'smarty_function_script',),1=>array('file'=>'/app/www/app/functions/smarty_plugins/modifier.count.php','function'=>'smarty_modifier_count',),2=>array('file'=>'/app/www/app/functions/smarty_plugins/block.hook.php','function'=>'smarty_block_hook',),3=>array('file'=>'/app/www/app/functions/smarty_plugins/function.set_id.php','function'=>'smarty_function_set_id',),));
 \Tygh\Languages\Helper::preloadLangVars(array('lite_checkout.select_pickup_item','lite_checkout.select_pickup_item'));
 if ($_smarty_tpl->tpl_vars['runtime']->value['customization_mode']['design'] == "Y" && (defined('AREA') ? constant('AREA') : null) == "C") {

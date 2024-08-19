@@ -7,7 +7,7 @@
     {$login_type = $addons.cp_otp_registration.login_type|default:"password"}
     {$auth_field = $smarty.request.auth_field|default:$addons.cp_otp_registration.default_auth_method|default:"phone"}
     {$no_email = false}
-    {if $addons.cp_otp_registration.auth_by_email == "forbid"}
+    {if $addons.cp_otp_registration.exclude_email == "Y"}
         {$no_email = true}
     {/if}
 

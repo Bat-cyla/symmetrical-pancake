@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-08 13:33:15
+/* Smarty version 4.1.1, created on 2024-08-14 12:14:19
   from '/app/www/design/themes/responsive/templates/views/checkout/components/shipping_rates.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66b49eeb33ebc9_16922383',
+  'unifunc' => 'content_66bc756b1f0b84_40398137',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '907b950cefc1fa3eed07bb3164e34c9ea80d42dc' => 
     array (
       0 => '/app/www/design/themes/responsive/templates/views/checkout/components/shipping_rates.tpl',
-      1 => 1722513958,
+      1 => 1723626807,
       2 => 'tygh',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:common/image.tpl' => 2,
   ),
 ),false)) {
-function content_66b49eeb33ebc9_16922383 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66bc756b1f0b84_40398137 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/app/www/app/functions/smarty_plugins/block.hook.php','function'=>'smarty_block_hook',),1=>array('file'=>'/app/www/app/functions/smarty_plugins/modifier.enum.php','function'=>'smarty_modifier_enum',),2=>array('file'=>'/app/www/app/functions/smarty_plugins/modifier.count.php','function'=>'smarty_modifier_count',),3=>array('file'=>'/app/www/app/functions/smarty_plugins/function.set_id.php','function'=>'smarty_function_set_id',),));
 \Tygh\Languages\Helper::preloadLangVars(array('lite_checkout.click_here_to_update_shipping','lite_checkout.shipping_method_for','na','free','lite_checkout.not_available','no_shipping_required','text_no_shipping_methods','text_no_shipping_methods','lite_checkout.click_here_to_update_shipping','lite_checkout.shipping_method_for','na','free','lite_checkout.not_available','no_shipping_required','text_no_shipping_methods','text_no_shipping_methods'));
 if ($_smarty_tpl->tpl_vars['runtime']->value['customization_mode']['design'] == "Y" && (defined('AREA') ? constant('AREA') : null) == "C") {
@@ -33,6 +33,7 @@ $_smarty_tpl->smarty->ext->_capture->open($_smarty_tpl, "template_content", null
      data-ca-lite-checkout-overlay-class="litecheckout__overlay--active"
      data-ca-lite-checkout-element="shipping-methods"
      id="shipping_rates_list">
+
 <?php $_smarty_tpl->smarty->_cache['_tag_stack'][] = array('hook', array('name'=>"checkout:shipping_rates"));
 $_block_repeat=true;
 echo smarty_block_hook(array('name'=>"checkout:shipping_rates"), null, $_smarty_tpl, $_block_repeat);
@@ -317,6 +318,7 @@ echo $_smarty_tpl->smarty->ext->_capture->getBuffer($_smarty_tpl, 'template_cont
      data-ca-lite-checkout-overlay-class="litecheckout__overlay--active"
      data-ca-lite-checkout-element="shipping-methods"
      id="shipping_rates_list">
+
 <?php $_smarty_tpl->smarty->_cache['_tag_stack'][] = array('hook', array('name'=>"checkout:shipping_rates"));
 $_block_repeat=true;
 echo smarty_block_hook(array('name'=>"checkout:shipping_rates"), null, $_smarty_tpl, $_block_repeat);

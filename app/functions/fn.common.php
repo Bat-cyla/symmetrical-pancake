@@ -305,6 +305,7 @@ function fn_redirect($location, $allow_external_redirect = false, $is_permanent 
     }
 
     if ($external_redirect === false) {
+
         fn_set_hook('redirect', $location);
 
         $protocol_changed = (defined('HTTPS') && $protocol === 'http') || (!defined('HTTPS') && $protocol === 'https');

@@ -32,5 +32,5 @@ fn_register_hooks(
     'pre_place_order',
     'user_logout_after',
     'create_company_admin',
-    'settings_variants_image_verification_use_for'
+    'settings_variants_image_verification_use_for',
 );

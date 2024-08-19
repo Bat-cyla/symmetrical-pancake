@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-01 16:02:29
+/* Smarty version 4.1.1, created on 2024-08-14 09:06:02
   from '/app/www/design/backend/templates/views/addons/components/manage/manage_adv_buttons.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66ab8765ec7702_46607739',
+  'unifunc' => 'content_66bc494a5abe98_73418845',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3236ae7d60dc11b94fd42043457c224bd0d656ac' => 
     array (
       0 => '/app/www/design/backend/templates/views/addons/components/manage/manage_adv_buttons.tpl',
-      1 => 1693486476,
+      1 => 1723194964,
       2 => 'tygh',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:buttons/button.tpl' => 1,
   ),
 ),false)) {
-function content_66ab8765ec7702_46607739 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66bc494a5abe98_73418845 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/app/www/app/functions/smarty_plugins/block.hook.php','function'=>'smarty_block_hook',),));
 \Tygh\Languages\Helper::preloadLangVars(array('visit_marketplace'));
 $_smarty_tpl->smarty->_cache['_tag_stack'][] = array('hook', array('name'=>"addons:adv_buttons"));

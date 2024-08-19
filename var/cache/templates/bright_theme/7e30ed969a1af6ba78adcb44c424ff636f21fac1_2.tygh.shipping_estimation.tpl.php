@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-08 13:33:03
+/* Smarty version 4.1.1, created on 2024-08-09 12:27:33
   from '/app/www/design/themes/responsive/templates/addons/geo_maps/views/geo_maps/shipping_estimation.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66b49edf693f85_32561019',
+  'unifunc' => 'content_66b5e105798004_41912035',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7e30ed969a1af6ba78adcb44c424ff636f21fac1' => 
     array (
       0 => '/app/www/design/themes/responsive/templates/addons/geo_maps/views/geo_maps/shipping_estimation.tpl',
-      1 => 1722513958,
+      1 => 1723194964,
       2 => 'tygh',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:buttons/close.tpl' => 2,
   ),
 ),false)) {
-function content_66b49edf693f85_32561019 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66b5e105798004_41912035 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/app/www/app/functions/smarty_plugins/modifier.enum.php','function'=>'smarty_modifier_enum',),1=>array('file'=>'/app/www/app/functions/smarty_plugins/block.hook.php','function'=>'smarty_block_hook',),2=>array('file'=>'/app/www/app/functions/smarty_plugins/function.include_ext.php','function'=>'smarty_function_include_ext',),3=>array('file'=>'/app/www/app/functions/smarty_plugins/function.script.php','function'=>'smarty_function_script',),4=>array('file'=>'/app/www/app/functions/smarty_plugins/function.set_id.php','function'=>'smarty_function_set_id',),));
 \Tygh\Languages\Helper::preloadLangVars(array('geo_maps.shipping_time_and_rates','geo_maps.shipping_group_','geo_maps.from_pickup_points','geo_maps.shipping_about','geo_maps.shipping_from','geo_maps.no_shippings_short','geo_maps.no_shippings','shipping_methods','geo_maps.shipping_time_and_rates','shipping_method','geo_maps.shipping_time','cost','geo_maps.from_pickup_points','geo_maps.no_shippings','geo_maps.shipping_time_and_rates','geo_maps.shipping_group_','geo_maps.from_pickup_points','geo_maps.shipping_about','geo_maps.shipping_from','geo_maps.no_shippings_short','geo_maps.no_shippings','shipping_methods','geo_maps.shipping_time_and_rates','shipping_method','geo_maps.shipping_time','cost','geo_maps.from_pickup_points','geo_maps.no_shippings'));
 if ($_smarty_tpl->tpl_vars['runtime']->value['customization_mode']['design'] == "Y" && (defined('AREA') ? constant('AREA') : null) == "C") {

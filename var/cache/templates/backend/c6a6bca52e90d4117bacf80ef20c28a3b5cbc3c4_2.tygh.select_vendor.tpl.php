@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-05 16:40:32
+/* Smarty version 4.1.1, created on 2024-08-15 08:59:09
   from '/app/www/design/backend/templates/common/select_vendor.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66b0d65036a5d9_04254120',
+  'unifunc' => 'content_66bd992d283ca5_48377714',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c6a6bca52e90d4117bacf80ef20c28a3b5cbc3c4' => 
     array (
       0 => '/app/www/design/backend/templates/common/select_vendor.tpl',
-      1 => 1693486476,
+      1 => 1723194964,
       2 => 'tygh',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:common/ajax_select_object.tpl' => 1,
   ),
 ),false)) {
-function content_66b0d65036a5d9_04254120 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66bd992d283ca5_48377714 (Smarty_Internal_Template $_smarty_tpl) {
 \Tygh\Languages\Helper::preloadLangVars(array('search_by_vendor','search_by_owner','all_vendors'));
 $_smarty_tpl->_assignInScope('id', (($tmp = $_smarty_tpl->tpl_vars['id']->value ?? null)===null||$tmp==='' ? "company_id" ?? null : $tmp));
 $_smarty_tpl->_assignInScope('name', (($tmp = $_smarty_tpl->tpl_vars['name']->value ?? null)===null||$tmp==='' ? "company_id" ?? null : $tmp));?>

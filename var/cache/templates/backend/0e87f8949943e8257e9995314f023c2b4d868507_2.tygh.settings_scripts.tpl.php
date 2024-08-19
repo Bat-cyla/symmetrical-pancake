@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-08 11:15:41
+/* Smarty version 4.1.1, created on 2024-08-14 09:05:48
   from '/app/www/design/backend/templates/addons/cp_otp_registration/settings/settings_scripts.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66b47ead9b04d2_47320748',
+  'unifunc' => 'content_66bc493c623c63_96040524',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0e87f8949943e8257e9995314f023c2b4d868507' => 
     array (
       0 => '/app/www/design/backend/templates/addons/cp_otp_registration/settings/settings_scripts.tpl',
-      1 => 1723104938,
+      1 => 1723194964,
       2 => 'tygh',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66b47ead9b04d2_47320748 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66bc493c623c63_96040524 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/app/www/app/functions/smarty_plugins/block.inline_script.php','function'=>'smarty_block_inline_script',),));
 $_smarty_tpl->smarty->_cache['_tag_stack'][] = array('inline_script', array());
 $_block_repeat=true;

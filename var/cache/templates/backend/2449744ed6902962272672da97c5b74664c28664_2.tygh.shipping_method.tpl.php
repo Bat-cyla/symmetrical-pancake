@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-02 09:14:50
+/* Smarty version 4.1.1, created on 2024-08-09 12:27:03
   from '/app/www/design/backend/templates/views/order_management/components/shipping_method.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66ac795a6f3a75_77544887',
+  'unifunc' => 'content_66b5e0e7ca7494_12607654',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2449744ed6902962272672da97c5b74664c28664' => 
     array (
       0 => '/app/www/design/backend/templates/views/order_management/components/shipping_method.tpl',
-      1 => 1693486476,
+      1 => 1723194964,
       2 => 'tygh',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:common/price.tpl' => 1,
   ),
 ),false)) {
-function content_66ac795a6f3a75_77544887 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66b5e0e7ca7494_12607654 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/app/www/app/functions/smarty_plugins/block.hook.php','function'=>'smarty_block_hook',),));
 \Tygh\Languages\Helper::preloadLangVars(array('shipping_method','none','no_shipping_required','text_no_shipping_methods','text_no_shipping_methods'));
 $_smarty_tpl->smarty->_cache['_tag_stack'][] = array('hook', array('name'=>"order_management:shipping_method"));

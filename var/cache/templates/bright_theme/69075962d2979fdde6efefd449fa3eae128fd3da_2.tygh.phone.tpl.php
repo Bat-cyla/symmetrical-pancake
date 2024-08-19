@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-08 15:14:54
+/* Smarty version 4.1.1, created on 2024-08-09 12:27:41
   from '/app/www/design/themes/responsive/templates/components/phone.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66b4b6be8c92b9_64457140',
+  'unifunc' => 'content_66b5e10ddd0898_18213847',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '69075962d2979fdde6efefd449fa3eae128fd3da' => 
     array (
       0 => '/app/www/design/themes/responsive/templates/components/phone.tpl',
-      1 => 1723117492,
+      1 => 1723194965,
       2 => 'tygh',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:common/select_object.tpl' => 2,
   ),
 ),false)) {
-function content_66b4b6be8c92b9_64457140 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66b5e10ddd0898_18213847 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/app/www/app/lib/vendor/smarty/smarty/libs/plugins/modifier.replace.php','function'=>'smarty_modifier_replace',),1=>array('file'=>'/app/www/app/functions/smarty_plugins/modifier.render_tag_attrs.php','function'=>'smarty_modifier_render_tag_attrs',),2=>array('file'=>'/app/www/app/functions/smarty_plugins/function.set_id.php','function'=>'smarty_function_set_id',),));
 \Tygh\Languages\Helper::preloadLangVars(array('phone_mask_label','phone_mask_label','phone_mask_label','phone_mask_label'));
 if ($_smarty_tpl->tpl_vars['runtime']->value['customization_mode']['design'] == "Y" && (defined('AREA') ? constant('AREA') : null) == "C") {

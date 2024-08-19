@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-02 09:14:50
+/* Smarty version 4.1.1, created on 2024-08-09 12:27:03
   from '/app/www/design/backend/templates/addons/reward_points/hooks/order_management/totals.post.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66ac795a4e4da8_05851715',
+  'unifunc' => 'content_66b5e0e7a4eb61_78922501',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '4aad5ca889a38af645bbb01d8329d5f577245e6f' => 
     array (
       0 => '/app/www/design/backend/templates/addons/reward_points/hooks/order_management/totals.post.tpl',
-      1 => 1693486476,
+      1 => 1723194964,
       2 => 'tygh',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:common/price.tpl' => 1,
   ),
 ),false)) {
-function content_66ac795a4e4da8_05851715 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66b5e0e7a4eb61_78922501 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/app/www/app/functions/smarty_plugins/function.include_ext.php','function'=>'smarty_function_include_ext',),));
 \Tygh\Languages\Helper::preloadLangVars(array('points','points_in_use','points_lowercase','delete'));
 if ($_smarty_tpl->tpl_vars['cart']->value['points_info']['reward']) {?>

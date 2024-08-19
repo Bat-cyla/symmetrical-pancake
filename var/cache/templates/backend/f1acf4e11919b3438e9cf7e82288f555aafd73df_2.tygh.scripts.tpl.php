@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-01 16:01:26
+/* Smarty version 4.1.1, created on 2024-08-09 12:26:48
   from '/app/www/design/backend/templates/common/scripts.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66ab872632f9a4_49757822',
+  'unifunc' => 'content_66b5e0d888a4f4_33011654',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f1acf4e11919b3438e9cf7e82288f555aafd73df' => 
     array (
       0 => '/app/www/design/backend/templates/common/scripts.tpl',
-      1 => 1693486476,
+      1 => 1723194964,
       2 => 'tygh',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66ab872632f9a4_49757822 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66b5e0d888a4f4_33011654 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/app/www/app/functions/smarty_plugins/block.scripts.php','function'=>'smarty_block_scripts',),1=>array('file'=>'/app/www/app/functions/smarty_plugins/function.script.php','function'=>'smarty_function_script',),2=>array('file'=>'/app/www/app/functions/smarty_plugins/block.inline_script.php','function'=>'smarty_block_inline_script',),3=>array('file'=>'/app/www/app/functions/smarty_plugins/modifier.to_json.php','function'=>'smarty_modifier_to_json',),4=>array('file'=>'/app/www/app/functions/smarty_plugins/block.hook.php','function'=>'smarty_block_hook',),));
 \Tygh\Languages\Helper::preloadLangVars(array('no_data','text_nothing_found','bulk_edit.unable_to_delete_all_categories','cannot_buy','no_products_selected','error_no_items_selected','text_select_vendor','delete_confirmation','text_out_of_stock','items','text_required_group_product','save','close','loading','notice','warning','error','text_are_you_sure_to_proceed','text_invalid_url','error_validator_email','error_validator_phone','error_validator_phone_mask','error_validator_phone_mask_with_phone','error_validator_phone_phone_number_with_country_selection','error_validator_integer','error_validator_multiple','error_validator_password','error_validator_required','error_validator_zipcode','error_validator_message','error_validator_color','text_page_loading','error_ajax','text_changes_not_saved','text_data_changed','text_block_trial_notice','text_expired_license','file_browser','editing_block','editing_grid','adding_grid','adding_block_to_grid','manage_blocks','add_block','text_position_updating','more','browse','enter_new_lang_code','no_image','cookie_is_disabled','insert_image','image_url','manage','file_uploading_in_progress_please_wait','please_copy_api_key','select_block','block_manager'));
 $_smarty_tpl->_assignInScope('jquery_version', "3.5.1");

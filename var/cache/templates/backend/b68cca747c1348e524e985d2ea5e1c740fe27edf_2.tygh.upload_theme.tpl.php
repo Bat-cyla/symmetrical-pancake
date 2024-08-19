@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-06 13:54:14
+/* Smarty version 4.1.1, created on 2024-08-14 12:18:08
   from '/app/www/design/backend/templates/views/themes/components/upload_theme.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66b200d609ce20_08436286',
+  'unifunc' => 'content_66bc765074aa27_74729583',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b68cca747c1348e524e985d2ea5e1c740fe27edf' => 
     array (
       0 => '/app/www/design/backend/templates/views/themes/components/upload_theme.tpl',
-      1 => 1693486476,
+      1 => 1723194964,
       2 => 'tygh',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:buttons/save_cancel.tpl' => 1,
   ),
 ),false)) {
-function content_66b200d609ce20_08436286 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66bc765074aa27_74729583 (Smarty_Internal_Template $_smarty_tpl) {
 \Tygh\Languages\Helper::preloadLangVars(array('install_theme_text','marketplace_find_more','upload'));
 ?>
 <div class="install-addon" id="theme_upload_container">

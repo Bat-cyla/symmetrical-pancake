@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-01 16:02:37
+/* Smarty version 4.1.1, created on 2024-08-14 09:06:49
   from '/app/www/design/backend/templates/views/addons/components/correct_permissions.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66ab876d8da9b7_43673044',
+  'unifunc' => 'content_66bc4979d9c1b0_84547973',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '42f576d7e54cceb142d0542980b3ef0c415e4f6e' => 
     array (
       0 => '/app/www/design/backend/templates/views/addons/components/correct_permissions.tpl',
-      1 => 1693486476,
+      1 => 1723194964,
       2 => 'tygh',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:common/subheader.tpl' => 1,
   ),
 ),false)) {
-function content_66ab876d8da9b7_43673044 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66bc4979d9c1b0_84547973 (Smarty_Internal_Template $_smarty_tpl) {
 \Tygh\Languages\Helper::preloadLangVars(array('non_writable_directories','recheck','ftp_server_options','host','login','password','ftp_directory','cancel','upload_via_ftp'));
 ?>
 <div id="addon_upload_container">

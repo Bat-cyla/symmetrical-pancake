@@ -8,8 +8,10 @@
         });
         window.localStorage.setItem('phoneMasks', JSON.stringify(phoneMasks));
         $(document).on('focus blur', '.cp-phone', function(){
-            $(this).val($(this).val().replace(/[^0-9]/g,""));
+
+           $(this).val($(this).val().replace(/[^0-9,+]/g,""));
         });
+
     }(Tygh, Tygh.$));
 </script>
 
@@ -37,9 +39,19 @@
                     $('label[for="litecheckout_email"]').removeClass('cm-required');
                 {/if}
                 $('label[for="litecheckout_phone"]').addClass('cm-required');
+                _.tr({
+                    'cp_otp_phone_verification': '{__("cp_otp_phone_verification")|escape:"javascript"}',
+                });
+               _.user_id = '{$cart.user_data.user_id}';
+
             });
+
             
-            $.ceEvent('on', 'ce.ajaxdone', function(context, inline_scripts, params, data) { 
+            $.ceEvent('on', 'ce.ajaxdone', function(context, inline_scripts, params, data) {
+                _.tr({
+                    'cp_otp_already_exists_title': '{__("cp_otp_already_exists_title")|escape:"javascript"}',
+                });
+
                 var title = '{__("cp_otp_already_exists_title")}';
                 var block_id = 'litecheckout_login_block';
               

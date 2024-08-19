@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-06 10:10:44
+/* Smarty version 4.1.1, created on 2024-08-15 11:18:51
   from '/app/www/design/backend/templates/addons/gdpr/hooks/profiles/list_extra_links.post.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66b1cc74a458c2_21870012',
+  'unifunc' => 'content_66bdb9ebcaf353_60797227',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c4e9f45611975ff7576bb852ef4ae9a27feecd3f' => 
     array (
       0 => '/app/www/design/backend/templates/addons/gdpr/hooks/profiles/list_extra_links.post.tpl',
-      1 => 1693486476,
+      1 => 1723194964,
       2 => 'tygh',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66b1cc74a458c2_21870012 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66bdb9ebcaf353_60797227 (Smarty_Internal_Template $_smarty_tpl) {
 \Tygh\Languages\Helper::preloadLangVars(array('gdpr.text_anonymize_question','gdpr.anonymize'));
 if ($_smarty_tpl->tpl_vars['user']->value['user_type'] == "C" && $_smarty_tpl->tpl_vars['user']->value['anonymized'] != "Y") {?>
     <li><?php ob_start();

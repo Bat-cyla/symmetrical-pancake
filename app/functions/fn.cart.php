@@ -1518,7 +1518,6 @@ function fn_place_order(&$cart, &$auth, $action = '', $issuer_id = null, $parent
     }
 
     $allow = fn_allow_place_order($cart, $auth, $parent_order_id);
-
     fn_set_hook('pre_place_order', $cart, $allow, $cart['product_groups']);
 
     if ($allow === false) {
@@ -6250,7 +6249,9 @@ function fn_order_placement_routines($action = '', $order_id = 0, $force_notific
             fn_redirect('checkout.checkout');
         }
     } elseif (in_array($action, array('save', 'repay', 'route')) && !empty($order_id)) {
+
         $cart = &Tygh::$app['session']['cart'];
+
         $order_info = fn_get_order_info($order_id, true);
 
         $display_notification = true;
@@ -6276,7 +6277,9 @@ function fn_order_placement_routines($action = '', $order_id = 0, $force_notific
                 $status = reset($child_orders);
                 $child_orders = array_keys($child_orders);
             } else {
+
                 $status = $order_info['status'];
+
             }
             if (in_array($status, fn_get_order_paid_statuses())) {
                 if ($action == 'repay') {

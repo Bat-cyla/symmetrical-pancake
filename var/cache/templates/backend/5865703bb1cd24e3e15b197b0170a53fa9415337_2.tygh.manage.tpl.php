@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-05 16:40:31
+/* Smarty version 4.1.1, created on 2024-08-15 08:59:08
   from '/app/www/design/backend/templates/views/orders/manage.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66b0d64ff18dc7_27047248',
+  'unifunc' => 'content_66bd992cf2cd70_59429218',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5865703bb1cd24e3e15b197b0170a53fa9415337' => 
     array (
       0 => '/app/www/design/backend/templates/views/orders/manage.tpl',
-      1 => 1693486476,
+      1 => 1723194964,
       2 => 'tygh',
     ),
   ),
@@ -31,7 +31,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:common/mainbox.tpl' => 1,
   ),
 ),false)) {
-function content_66b0d64ff18dc7_27047248 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66bd992cf2cd70_59429218 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/app/www/app/functions/smarty_plugins/block.hook.php','function'=>'smarty_block_hook',),1=>array('file'=>'/app/www/app/functions/smarty_plugins/modifier.date_format.php','function'=>'smarty_modifier_date_format',),2=>array('file'=>'/app/www/app/functions/smarty_plugins/modifier.enum.php','function'=>'smarty_modifier_enum',),));
 \Tygh\Languages\Helper::preloadLangVars(array('text_admin_new_orders','orders','id','phone','id','order','invoice','credit_memo','status','date','customer','phone','tools','view','edit','copy','delete','total','no_data','for_this_page_orders','gross_total','totally_paid','for_all_found_orders','gross_total','totally_paid','add_order','view_purchased_products','export_selected'));
 $_smarty_tpl->smarty->ext->_capture->open($_smarty_tpl, "mainbox", null, null);?>

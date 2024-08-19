@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-02 09:21:21
+/* Smarty version 4.1.1, created on 2024-08-09 14:28:11
   from '/app/www/design/backend/templates/common/settings_section.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66ac7ae1de25e0_05630057',
+  'unifunc' => 'content_66b5fd4bedb355_33882078',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '04e0108fdf35b90f0534ec141f93c7ab9c445053' => 
     array (
       0 => '/app/www/design/backend/templates/common/settings_section.tpl',
-      1 => 1693486476,
+      1 => 1723194964,
       2 => 'tygh',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:common/settings_fields.tpl' => 1,
   ),
 ),false)) {
-function content_66ac7ae1de25e0_05630057 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66b5fd4bedb355_33882078 (Smarty_Internal_Template $_smarty_tpl) {
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['items']->value, 'item', false, 'name', 'fe_data', array (
   'iteration' => true,
   'total' => true,
@@ -47,8 +47,8 @@ echo (string)$_smarty_tpl->tpl_vars['parent_item']->value['name'];
 echo "_";
 echo (string)$_smarty_tpl->tpl_vars['parent_item']->value['object_id'];
 }
-$_prefixVariable3=ob_get_clean();
-$_smarty_tpl->_assignInScope('parent_item_html_id', strtolower(((string)$_smarty_tpl->tpl_vars['html_id_prefix']->value)."_".((string)$_smarty_tpl->tpl_vars['section_name']->value)."_".$_prefixVariable3));?>
+$_prefixVariable1=ob_get_clean();
+$_smarty_tpl->_assignInScope('parent_item_html_id', strtolower(((string)$_smarty_tpl->tpl_vars['html_id_prefix']->value)."_".((string)$_smarty_tpl->tpl_vars['section_name']->value)."_".$_prefixVariable1));?>
     <?php }?>
 
     <?php $_smarty_tpl->_assignInScope('input_html_name', ((string)$_smarty_tpl->tpl_vars['html_name']->value)."[".((string)$_smarty_tpl->tpl_vars['item']->value['object_id'])."]");?>

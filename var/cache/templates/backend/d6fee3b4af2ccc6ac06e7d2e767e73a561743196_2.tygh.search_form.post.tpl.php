@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-05 16:40:32
+/* Smarty version 4.1.1, created on 2024-08-15 08:59:09
   from '/app/www/design/backend/templates/addons/gift_certificates/hooks/orders/search_form.post.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66b0d65063fde0_87507259',
+  'unifunc' => 'content_66bd992d475fa0_30432562',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd6fee3b4af2ccc6ac06e7d2e767e73a561743196' => 
     array (
       0 => '/app/www/design/backend/templates/addons/gift_certificates/hooks/orders/search_form.post.tpl',
-      1 => 1693486476,
+      1 => 1723194964,
       2 => 'tygh',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66b0d65063fde0_87507259 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66bd992d475fa0_30432562 (Smarty_Internal_Template $_smarty_tpl) {
 \Tygh\Languages\Helper::preloadLangVars(array('gift_cert_code','purchased','used'));
 ?>
 <label class="control-label" for="gift_cert_code"><?php echo $_smarty_tpl->__("gift_cert_code");?>

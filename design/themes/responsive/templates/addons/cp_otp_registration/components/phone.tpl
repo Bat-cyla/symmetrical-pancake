@@ -1,4 +1,5 @@
 <div class="cp-phone-verified-wrap" id="phone_verification_info_{$obj_id}">
+    {$is_phone_number_with_country_selection = ($settings.Appearance.phone_validation_mode === "phone_number_with_country_selection")}
     {if !$inp_name}
         {$inp_name="user_data"}
     {/if}
@@ -20,9 +21,10 @@
     {else}
         {$cntr_code=false}
     {/if}
+    {$cntr_code|fn_print_r}
     <div class="ty-control-group ty-shipping-phone cm-phone">
         <label for="phone" class="ty-control-group__title cm-required cm-mask-phone-label cm-trim">{__("phone")}</label>
-        <input type="text" id="phone" class="ty-input-text cm-focus cm-mask-phone cp-phone" maxlength="25" value="{if $phone}{$phone}{elseif !$placeholder}{elseif $cntr_code}{else}+{/if}" data-ca-verification="phone_verification_info_{$obj_id}" name="{$inp_name}[phone]" autocomplete="n" {if $placeholder}placeholder="{$placeholder}"{/if}>
+        <input type="text" id="phone" class="ty-input-text cm-focus cm-mask-phone cp-phone" maxlength="25" value="+{if $phone}{$phone}{elseif !$placeholder}{elseif $cntr_code}{else}+{/if}" data-ca-verification="phone_verification_info_{$obj_id}" name="{$inp_name}[phone]" autocomplete="n" {if $placeholder}placeholder="{$placeholder}"{/if}>
         {if $inp_name == "call_data"}
             {$from_call=true}
         {else}

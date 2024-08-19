@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-02 09:14:49
+/* Smarty version 4.1.1, created on 2024-08-09 12:27:02
   from '/app/www/design/backend/templates/views/order_management/update.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66ac7959ba8af8_12801000',
+  'unifunc' => 'content_66b5e0e6d97e33_23444021',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2a3d66c897445592c4b61ca87f73a6dd02407e95' => 
     array (
       0 => '/app/www/design/backend/templates/views/order_management/update.tpl',
-      1 => 1693486476,
+      1 => 1723194964,
       2 => 'tygh',
     ),
   ),
@@ -32,7 +32,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:common/mainbox.tpl' => 1,
   ),
 ),false)) {
-function content_66ac7959ba8af8_12801000 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66b5e0e6d97e33_23444021 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/app/www/app/functions/smarty_plugins/function.script.php','function'=>'smarty_function_script',),1=>array('file'=>'/app/www/app/functions/smarty_plugins/block.hook.php','function'=>'smarty_block_hook',),2=>array('file'=>'/app/www/app/functions/smarty_plugins/modifier.date_format.php','function'=>'smarty_modifier_date_format',),));
 \Tygh\Languages\Helper::preloadLangVars(array('products_required','storefront','customer_notes','staff_only_notes','notify_customer','notify_orders_department','notify_vendor','create','create_process_payment','create_new_order','save','save_process_payment','editing_order','cancel','add_new_order','editing_order','total','invoice','credit_memo','by'));
 $_smarty_tpl->_assignInScope('result_ids', "om_ajax_*");

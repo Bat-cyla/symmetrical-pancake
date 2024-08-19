@@ -4,6 +4,7 @@
      data-ca-lite-checkout-overlay-class="litecheckout__overlay--active"
      data-ca-lite-checkout-element="shipping-methods"
      id="shipping_rates_list">
+
 {hook name="checkout:shipping_rates"}
 
     <input type="hidden"

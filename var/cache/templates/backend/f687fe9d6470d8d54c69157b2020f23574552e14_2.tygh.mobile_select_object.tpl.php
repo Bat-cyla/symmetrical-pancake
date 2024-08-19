@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-01 16:01:26
+/* Smarty version 4.1.1, created on 2024-08-09 12:27:04
   from '/app/www/design/backend/templates/components/notifications_center/mobile_select_object.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66ab872619b8f3_18820778',
+  'unifunc' => 'content_66b5e0e8c8a1b8_89365915',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f687fe9d6470d8d54c69157b2020f23574552e14' => 
     array (
       0 => '/app/www/design/backend/templates/components/notifications_center/mobile_select_object.tpl',
-      1 => 1693486476,
+      1 => 1723194964,
       2 => 'tygh',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66ab872619b8f3_18820778 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66b5e0e8c8a1b8_89365915 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/app/www/app/functions/smarty_plugins/block.inline_script.php','function'=>'smarty_block_inline_script',),));
 \Tygh\Languages\Helper::preloadLangVars(array('notifications','notifications','notifications_center.notifications','notifications_center.notifications','loading','loading','show_more','show_less','notifications_center.no_notifications','notifications_center.notifications'));
 ?>

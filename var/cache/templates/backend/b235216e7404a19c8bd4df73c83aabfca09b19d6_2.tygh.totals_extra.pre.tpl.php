@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-02 09:14:50
+/* Smarty version 4.1.1, created on 2024-08-09 12:27:03
   from '/app/www/design/backend/templates/addons/gift_certificates/hooks/order_management/totals_extra.pre.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66ac795a40c952_48767334',
+  'unifunc' => 'content_66b5e0e7964283_07258635',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b235216e7404a19c8bd4df73c83aabfca09b19d6' => 
     array (
       0 => '/app/www/design/backend/templates/addons/gift_certificates/hooks/order_management/totals_extra.pre.tpl',
-      1 => 1693486476,
+      1 => 1723194964,
       2 => 'tygh',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66ac795a40c952_48767334 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66b5e0e7964283_07258635 (Smarty_Internal_Template $_smarty_tpl) {
 \Tygh\Languages\Helper::preloadLangVars(array('gift_cert_code'));
 ?>
 <div class="control-group">

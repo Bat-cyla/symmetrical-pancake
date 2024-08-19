@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-08 13:33:01
+/* Smarty version 4.1.1, created on 2024-08-09 12:27:31
   from '/app/www/design/themes/responsive/templates/buttons/add_to_compare_list.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66b49edd5e0fe6_31654874',
+  'unifunc' => 'content_66b5e103eb0098_70399402',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '309d95284474f4d4a23661a1292ddf3ecebf5274' => 
     array (
       0 => '/app/www/design/themes/responsive/templates/buttons/add_to_compare_list.tpl',
-      1 => 1722513958,
+      1 => 1723194965,
       2 => 'tygh',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:buttons/button.tpl' => 2,
   ),
 ),false)) {
-function content_66b49edd5e0fe6_31654874 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66b5e103eb0098_70399402 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/app/www/app/functions/smarty_plugins/function.set_id.php','function'=>'smarty_function_set_id',),));
 \Tygh\Languages\Helper::preloadLangVars(array('add_to_comparison_list','add_to_comparison_list','add_to_comparison_list','add_to_comparison_list'));
 if ($_smarty_tpl->tpl_vars['runtime']->value['customization_mode']['design'] == "Y" && (defined('AREA') ? constant('AREA') : null) == "C") {
