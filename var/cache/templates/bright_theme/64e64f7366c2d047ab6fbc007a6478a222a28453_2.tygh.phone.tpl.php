@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-19 15:37:36
+/* Smarty version 4.1.1, created on 2024-08-21 08:58:57
   from '/app/www/design/themes/responsive/templates/addons/cp_otp_registration/components/phone.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66c33c90157738_98051122',
+  'unifunc' => 'content_66c5822115ad54_81967651',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '64e64f7366c2d047ab6fbc007a6478a222a28453' => 
     array (
       0 => '/app/www/design/themes/responsive/templates/addons/cp_otp_registration/components/phone.tpl',
-      1 => 1724071053,
+      1 => 1724164550,
       2 => 'tygh',
     ),
   ),
@@ -20,17 +20,47 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66c33c90157738_98051122 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66c5822115ad54_81967651 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/app/www/app/functions/smarty_plugins/function.set_id.php','function'=>'smarty_function_set_id',),));
 \Tygh\Languages\Helper::preloadLangVars(array('phone','cp_otp_phone_verification','cp_otp_phone_confirm','cp_otp_phone_need_confirm','cp_otp_phone_verification','cp_phone_confirmed','phone','cp_otp_phone_verification','cp_otp_phone_confirm','cp_otp_phone_need_confirm','cp_otp_phone_verification','cp_phone_confirmed'));
 if ($_smarty_tpl->tpl_vars['runtime']->value['customization_mode']['design'] == "Y" && (defined('AREA') ? constant('AREA') : null) == "C") {
 $_smarty_tpl->smarty->ext->_capture->open($_smarty_tpl, "template_content", null, null);?><div class="cp-phone-verified-wrap" id="phone_verification_info_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['obj_id']->value, ENT_QUOTES, 'UTF-8');?>
 ">
-    <?php $_smarty_tpl->_assignInScope('is_phone_number_with_country_selection', ($_smarty_tpl->tpl_vars['settings']->value['Appearance']['phone_validation_mode'] === "phone_number_with_country_selection"));?>
     <?php if (!$_smarty_tpl->tpl_vars['inp_name']->value) {?>
         <?php $_smarty_tpl->_assignInScope('inp_name', "user_data");?>
     <?php }?>
-    <?php $_smarty_tpl->_assignInScope('placeholder', (($tmp = $_smarty_tpl->tpl_vars['placeholder']->value ?? null)===null||$tmp==='' ? $_smarty_tpl->tpl_vars['addons']->value['cp_otp_registration']['no_mask_placeholder'] ?? null : $tmp));?>
+    <?php $_smarty_tpl->_assignInScope('phone_appearance_setting', $_smarty_tpl->tpl_vars['settings']->value['Appearance']['phone_validation_mode']);?>
+    <?php echo htmlspecialchars((string) fn_print_r($_smarty_tpl->tpl_vars['phone_appearance_setting']->value), ENT_QUOTES, 'UTF-8');?>
+
+    <?php if ($_smarty_tpl->tpl_vars['phone_appearance_setting']->value === 'any_digits' || $_smarty_tpl->tpl_vars['phone_appearance_setting']->value === 'any_symbols') {?>
+        <?php $_smarty_tpl->_assignInScope('placeholder', (($tmp = $_smarty_tpl->tpl_vars['placeholder']->value ?? null)===null||$tmp==='' ? $_smarty_tpl->tpl_vars['addons']->value['cp_otp_registration']['no_mask_placeholder'] ?? null : $tmp));?>
+    <?php } elseif ($_smarty_tpl->tpl_vars['phone_appearance_setting']->value === "phone_number_with_country_selection") {?>
+        <?php if ($_smarty_tpl->tpl_vars['addons']->value['cp_otp_registration']['use_country_prefix'] == "Y") {?>
+            <?php if ($_smarty_tpl->tpl_vars['addons']->value['cp_otp_registration']['default_country']) {?>
+            <?php $_smarty_tpl->_assignInScope('countries', fn_get_simple_phone_country_codes(1));?>
+            <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['countries']->value, 'country');
+$_smarty_tpl->tpl_vars['country']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['country']->value) {
+$_smarty_tpl->tpl_vars['country']->do_else = false;
+?>
+                <?php if ($_smarty_tpl->tpl_vars['country']->value['phone_code'] === $_smarty_tpl->tpl_vars['addons']->value['cp_otp_registration']['default_country']) {?>
+                    <?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['country_code']->value, ENT_QUOTES, 'UTF-8');?>
+===<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['country']->value['phone_code'], ENT_QUOTES, 'UTF-8');?>
+
+                <?php }?>
+            <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+            <?php }?>
+            <?php $_smarty_tpl->_assignInScope('cntr_code', true);?>
+        <?php } else { ?>
+            <?php $_smarty_tpl->_assignInScope('cntr_codes', true);?>
+            <?php $_smarty_tpl->_assignInScope('countries', fn_get_simple_phone_country_codes(1));?>
+
+        <?php }?>
+    <?php }?>
+
     <?php $_smarty_tpl->_assignInScope('phone', '');?>
     <?php if ($_smarty_tpl->tpl_vars['user_data']->value['phone']) {?>
         <?php $_smarty_tpl->_assignInScope('phone', $_smarty_tpl->tpl_vars['user_data']->value['phone']);?>
@@ -43,21 +73,16 @@ $_smarty_tpl->smarty->ext->_capture->open($_smarty_tpl, "template_content", null
         <?php $_smarty_tpl->_assignInScope('phone', $_smarty_tpl->tpl_vars['otp_data']->value['to']);?>
         <?php $_smarty_tpl->_assignInScope('phone_verified', $_smarty_tpl->tpl_vars['otp_data']->value['verified']);?>
     <?php }?>
-    <?php if ($_smarty_tpl->tpl_vars['addons']->value['cp_otp_registration']['use_country_prefix'] == "Y" && $_smarty_tpl->tpl_vars['addons']->value['cp_otp_registration']['default_country']) {?>
-        <?php $_smarty_tpl->_assignInScope('cntr_code', true);?>
-    <?php } else { ?>
-        <?php $_smarty_tpl->_assignInScope('cntr_code', false);?>
-    <?php }?>
-    <?php echo htmlspecialchars((string) fn_print_r($_smarty_tpl->tpl_vars['cntr_code']->value), ENT_QUOTES, 'UTF-8');?>
 
     <div class="ty-control-group ty-shipping-phone cm-phone">
         <label for="phone" class="ty-control-group__title cm-required cm-mask-phone-label cm-trim"><?php echo $_smarty_tpl->__("phone");?>
 </label>
-        <input type="text" id="phone" class="ty-input-text cm-focus cm-mask-phone cp-phone" maxlength="25" value="+<?php if ($_smarty_tpl->tpl_vars['phone']->value) {
-echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['phone']->value, ENT_QUOTES, 'UTF-8');
+        <input type="text" id="phone" class="ty-input-text cm-focus cm-mask-phone cp-phone" maxlength="25" value="<?php if ($_smarty_tpl->tpl_vars['phone']->value) {?>+<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['phone']->value, ENT_QUOTES, 'UTF-8');
 } elseif (!$_smarty_tpl->tpl_vars['placeholder']->value) {
-} elseif ($_smarty_tpl->tpl_vars['cntr_code']->value) {
-} else { ?>+<?php }?>" data-ca-verification="phone_verification_info_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['obj_id']->value, ENT_QUOTES, 'UTF-8');?>
+} elseif ($_smarty_tpl->tpl_vars['cntr_code']->value) {?>+<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['country_code']->value, ENT_QUOTES, 'UTF-8');
+} elseif ($_smarty_tpl->tpl_vars['cntr_codes']->value) {
+echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['countries']->value, ENT_QUOTES, 'UTF-8');
+}?>" data-ca-verification="phone_verification_info_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['obj_id']->value, ENT_QUOTES, 'UTF-8');?>
 " name="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['inp_name']->value, ENT_QUOTES, 'UTF-8');?>
 [phone]" autocomplete="n" <?php if ($_smarty_tpl->tpl_vars['placeholder']->value) {?>placeholder="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['placeholder']->value, ENT_QUOTES, 'UTF-8');?>
 "<?php }?>>
@@ -143,11 +168,41 @@ echo $_smarty_tpl->smarty->ext->_capture->getBuffer($_smarty_tpl, 'template_cont
 }
 } else { ?><div class="cp-phone-verified-wrap" id="phone_verification_info_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['obj_id']->value, ENT_QUOTES, 'UTF-8');?>
 ">
-    <?php $_smarty_tpl->_assignInScope('is_phone_number_with_country_selection', ($_smarty_tpl->tpl_vars['settings']->value['Appearance']['phone_validation_mode'] === "phone_number_with_country_selection"));?>
     <?php if (!$_smarty_tpl->tpl_vars['inp_name']->value) {?>
         <?php $_smarty_tpl->_assignInScope('inp_name', "user_data");?>
     <?php }?>
-    <?php $_smarty_tpl->_assignInScope('placeholder', (($tmp = $_smarty_tpl->tpl_vars['placeholder']->value ?? null)===null||$tmp==='' ? $_smarty_tpl->tpl_vars['addons']->value['cp_otp_registration']['no_mask_placeholder'] ?? null : $tmp));?>
+    <?php $_smarty_tpl->_assignInScope('phone_appearance_setting', $_smarty_tpl->tpl_vars['settings']->value['Appearance']['phone_validation_mode']);?>
+    <?php echo htmlspecialchars((string) fn_print_r($_smarty_tpl->tpl_vars['phone_appearance_setting']->value), ENT_QUOTES, 'UTF-8');?>
+
+    <?php if ($_smarty_tpl->tpl_vars['phone_appearance_setting']->value === 'any_digits' || $_smarty_tpl->tpl_vars['phone_appearance_setting']->value === 'any_symbols') {?>
+        <?php $_smarty_tpl->_assignInScope('placeholder', (($tmp = $_smarty_tpl->tpl_vars['placeholder']->value ?? null)===null||$tmp==='' ? $_smarty_tpl->tpl_vars['addons']->value['cp_otp_registration']['no_mask_placeholder'] ?? null : $tmp));?>
+    <?php } elseif ($_smarty_tpl->tpl_vars['phone_appearance_setting']->value === "phone_number_with_country_selection") {?>
+        <?php if ($_smarty_tpl->tpl_vars['addons']->value['cp_otp_registration']['use_country_prefix'] == "Y") {?>
+            <?php if ($_smarty_tpl->tpl_vars['addons']->value['cp_otp_registration']['default_country']) {?>
+            <?php $_smarty_tpl->_assignInScope('countries', fn_get_simple_phone_country_codes(1));?>
+            <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['countries']->value, 'country');
+$_smarty_tpl->tpl_vars['country']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['country']->value) {
+$_smarty_tpl->tpl_vars['country']->do_else = false;
+?>
+                <?php if ($_smarty_tpl->tpl_vars['country']->value['phone_code'] === $_smarty_tpl->tpl_vars['addons']->value['cp_otp_registration']['default_country']) {?>
+                    <?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['country_code']->value, ENT_QUOTES, 'UTF-8');?>
+===<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['country']->value['phone_code'], ENT_QUOTES, 'UTF-8');?>
+
+                <?php }?>
+            <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+            <?php }?>
+            <?php $_smarty_tpl->_assignInScope('cntr_code', true);?>
+        <?php } else { ?>
+            <?php $_smarty_tpl->_assignInScope('cntr_codes', true);?>
+            <?php $_smarty_tpl->_assignInScope('countries', fn_get_simple_phone_country_codes(1));?>
+
+        <?php }?>
+    <?php }?>
+
     <?php $_smarty_tpl->_assignInScope('phone', '');?>
     <?php if ($_smarty_tpl->tpl_vars['user_data']->value['phone']) {?>
         <?php $_smarty_tpl->_assignInScope('phone', $_smarty_tpl->tpl_vars['user_data']->value['phone']);?>
@@ -160,21 +215,16 @@ echo $_smarty_tpl->smarty->ext->_capture->getBuffer($_smarty_tpl, 'template_cont
         <?php $_smarty_tpl->_assignInScope('phone', $_smarty_tpl->tpl_vars['otp_data']->value['to']);?>
         <?php $_smarty_tpl->_assignInScope('phone_verified', $_smarty_tpl->tpl_vars['otp_data']->value['verified']);?>
     <?php }?>
-    <?php if ($_smarty_tpl->tpl_vars['addons']->value['cp_otp_registration']['use_country_prefix'] == "Y" && $_smarty_tpl->tpl_vars['addons']->value['cp_otp_registration']['default_country']) {?>
-        <?php $_smarty_tpl->_assignInScope('cntr_code', true);?>
-    <?php } else { ?>
-        <?php $_smarty_tpl->_assignInScope('cntr_code', false);?>
-    <?php }?>
-    <?php echo htmlspecialchars((string) fn_print_r($_smarty_tpl->tpl_vars['cntr_code']->value), ENT_QUOTES, 'UTF-8');?>
 
     <div class="ty-control-group ty-shipping-phone cm-phone">
         <label for="phone" class="ty-control-group__title cm-required cm-mask-phone-label cm-trim"><?php echo $_smarty_tpl->__("phone");?>
 </label>
-        <input type="text" id="phone" class="ty-input-text cm-focus cm-mask-phone cp-phone" maxlength="25" value="+<?php if ($_smarty_tpl->tpl_vars['phone']->value) {
-echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['phone']->value, ENT_QUOTES, 'UTF-8');
+        <input type="text" id="phone" class="ty-input-text cm-focus cm-mask-phone cp-phone" maxlength="25" value="<?php if ($_smarty_tpl->tpl_vars['phone']->value) {?>+<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['phone']->value, ENT_QUOTES, 'UTF-8');
 } elseif (!$_smarty_tpl->tpl_vars['placeholder']->value) {
-} elseif ($_smarty_tpl->tpl_vars['cntr_code']->value) {
-} else { ?>+<?php }?>" data-ca-verification="phone_verification_info_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['obj_id']->value, ENT_QUOTES, 'UTF-8');?>
+} elseif ($_smarty_tpl->tpl_vars['cntr_code']->value) {?>+<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['country_code']->value, ENT_QUOTES, 'UTF-8');
+} elseif ($_smarty_tpl->tpl_vars['cntr_codes']->value) {
+echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['countries']->value, ENT_QUOTES, 'UTF-8');
+}?>" data-ca-verification="phone_verification_info_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['obj_id']->value, ENT_QUOTES, 'UTF-8');?>
 " name="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['inp_name']->value, ENT_QUOTES, 'UTF-8');?>
 [phone]" autocomplete="n" <?php if ($_smarty_tpl->tpl_vars['placeholder']->value) {?>placeholder="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['placeholder']->value, ENT_QUOTES, 'UTF-8');?>
 "<?php }?>>

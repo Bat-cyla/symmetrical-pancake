@@ -91,7 +91,6 @@
 
         var phone = $(this).val().replace(/[^0-9,+]/gim, '');
 
-        console.log(phone)
         var verificationBlock = $(this).data('caVerification');
         if (typeof verificationBlock != 'undefined' && $('#' + verificationBlock).length) {
             var link = $('#' + verificationBlock).find('.cp-verification-link');

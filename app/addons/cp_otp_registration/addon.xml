@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <addon scheme="3.0">
     <id>cp_otp_registration</id>
-    <version>2.10</version>
+    <version>2.9</version>
     <priority>4000</priority>
     <position>100</position>
     <status>disabled</status>

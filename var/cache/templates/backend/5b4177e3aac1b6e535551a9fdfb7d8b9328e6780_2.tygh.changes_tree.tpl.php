@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-06 17:22:21
+/* Smarty version 4.1.1, created on 2024-08-20 13:24:18
   from '/app/www/design/backend/templates/views/tools/components/changes_tree.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66b2319d2231d1_59482317',
+  'unifunc' => 'content_66c46ed232cc28_16155901',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5b4177e3aac1b6e535551a9fdfb7d8b9328e6780' => 
     array (
       0 => '/app/www/design/backend/templates/views/tools/components/changes_tree.tpl',
-      1 => 1693486476,
+      1 => 1723194964,
       2 => 'tygh',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:views/tools/components/changes_tree.tpl' => 2,
   ),
 ),false)) {
-function content_66b2319d2231d1_59482317 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66c46ed232cc28_16155901 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/app/www/app/lib/vendor/smarty/smarty/libs/plugins/function.math.php','function'=>'smarty_function_math',),));
 \Tygh\Languages\Helper::preloadLangVars(array('expand_sublist_of_items','expand_sublist_of_items','collapse_sublist_of_items','collapse_sublist_of_items'));
 if ($_smarty_tpl->tpl_vars['parent_id']->value) {?>

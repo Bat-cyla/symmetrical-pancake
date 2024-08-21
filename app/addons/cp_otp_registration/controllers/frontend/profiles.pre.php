@@ -51,6 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     if ($mode == 'cp_otp_login') {
+
         $otp_action = !empty($_REQUEST['otp_action']) ? $_REQUEST['otp_action'] : '';
         $check_type = 'login';
         if ($otp_action == 'register') {
@@ -108,7 +109,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
 
         $redirect_url = !empty($_REQUEST['return_url']) ? $_REQUEST['return_url'] : '';
-        return fn_cp_otp_controller_do_redirect($redirect_url, true);
+        $data=$_REQUEST['user_data']['phone'];
+        return fn_cp_otp_controller_do_redirect($redirect_url, true, false, $data);
     }
 
     if ($mode == 'cp_phone_verification') {

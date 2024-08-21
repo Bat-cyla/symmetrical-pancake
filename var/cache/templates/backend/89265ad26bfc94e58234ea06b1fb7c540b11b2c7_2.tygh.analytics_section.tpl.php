@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-05 08:22:33
+/* Smarty version 4.1.1, created on 2024-08-20 11:56:31
   from '/app/www/design/backend/templates/views/index/components/analytics_section/analytics_section.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66b061990317e3_06980201',
+  'unifunc' => 'content_66c45a3f9a38b6_08499987',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '89265ad26bfc94e58234ea06b1fb7c540b11b2c7' => 
     array (
       0 => '/app/www/design/backend/templates/views/index/components/analytics_section/analytics_section.tpl',
-      1 => 1693486476,
+      1 => 1723194964,
       2 => 'tygh',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:views/index/components/analytics_section/analytics_card/analytics_card.tpl' => 3,
   ),
 ),false)) {
-function content_66b061990317e3_06980201 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66c45a3f9a38b6_08499987 (Smarty_Internal_Template $_smarty_tpl) {
 \Tygh\Languages\Helper::preloadLangVars(array('dashboard.analytics_section_title','no_data'));
 $_smarty_tpl->_assignInScope('show_analytics_section', (($tmp = $_smarty_tpl->tpl_vars['show_analytics_section']->value ?? null)===null||$tmp==='' ? true ?? null : $tmp));
 if ($_smarty_tpl->tpl_vars['show_analytics_section']->value) {

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-05 08:22:33
+/* Smarty version 4.1.1, created on 2024-08-20 11:56:31
   from '/app/www/design/backend/templates/views/index/components/analytics_section/analytics_card/bar_chart.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66b0619929c938_07556938',
+  'unifunc' => 'content_66c45a3febf375_64847617',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '57ffe4902ca0716a05795f231f33843513090f15' => 
     array (
       0 => '/app/www/design/backend/templates/views/index/components/analytics_section/analytics_card/bar_chart.tpl',
-      1 => 1693486476,
+      1 => 1723194964,
       2 => 'tygh',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:common/price.tpl' => 2,
   ),
 ),false)) {
-function content_66b0619929c938_07556938 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66c45a3febf375_64847617 (Smarty_Internal_Template $_smarty_tpl) {
 \Tygh\Languages\Helper::preloadLangVars(array('dashboard.analytics_card.unlimited'));
 if ($_smarty_tpl->tpl_vars['bar_chart']->value && $_smarty_tpl->tpl_vars['bar_chart']->value['content']) {?><div class="analytics-card-bar-chart" data-ca-analytics-card="barChart" data-ca-analytics-card-id="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['analytics_card']->value['id'], ENT_QUOTES, 'UTF-8');?>
 _<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['bar_chart']->value['id'], ENT_QUOTES, 'UTF-8');?>

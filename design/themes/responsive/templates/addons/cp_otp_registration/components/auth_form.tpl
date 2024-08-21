@@ -45,7 +45,7 @@
             </div>
         {else}
             {$placeholder = $placeholder|default:$addons.cp_otp_registration.no_mask_placeholder}
-            <div class=" ty-control-group cm-phone cp-otp-auth-field">
+            <div class="ty-control-group cm-phone cp-otp-auth-field">
                 <label for="login_phone_{$obj_id}" class="ty-login__filed-label ty-control-group__label cm-mask-phone-label cm-required cm-trim">{__("phone")}</label>
                 <input type="text" id="login_phone_{$obj_id}" name="user_data[phone]" size="30" value="{$login_phone}" class="ty-login__input cm-focus cm-mask-phone cp-phone" {if $placeholder}placeholder="{$placeholder}"{/if} />
             </div>

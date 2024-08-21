@@ -1,9 +1,29 @@
 <div class="cp-phone-verified-wrap" id="phone_verification_info_{$obj_id}">
-    {$is_phone_number_with_country_selection = ($settings.Appearance.phone_validation_mode === "phone_number_with_country_selection")}
     {if !$inp_name}
         {$inp_name="user_data"}
     {/if}
-    {$placeholder = $placeholder|default:$addons.cp_otp_registration.no_mask_placeholder}
+    {$phone_appearance_setting=$settings.Appearance.phone_validation_mode}
+    {$phone_appearance_setting|fn_print_r}
+    {if $phone_appearance_setting==='any_digits' || $phone_appearance_setting === 'any_symbols'}
+        {$placeholder = $placeholder|default:$addons.cp_otp_registration.no_mask_placeholder}
+    {elseif $phone_appearance_setting==="phone_number_with_country_selection"}
+        {if $addons.cp_otp_registration.use_country_prefix == "Y"}
+            {if $addons.cp_otp_registration.default_country}
+            {$countries = 1|fn_get_simple_phone_country_codes}
+            {foreach from=$countries item=country}
+                {if $country.phone_code===$addons.cp_otp_registration.default_country}
+                    {$country_code}==={$country.phone_code}
+                {/if}
+            {/foreach}
+            {/if}
+            {$cntr_code=true}
+        {else}
+            {$cntr_codes=true}
+            {$countries = 1|fn_get_simple_phone_country_codes}
+
+        {/if}
+    {/if}
+
     {$phone = ""}
     {if $user_data.phone}
         {$phone = $user_data.phone}
@@ -16,15 +36,10 @@
         {$phone = $otp_data.to}
         {$phone_verified = $otp_data.verified}
     {/if}
-    {if $addons.cp_otp_registration.use_country_prefix == "Y" && $addons.cp_otp_registration.default_country}
-        {$cntr_code=true}
-    {else}
-        {$cntr_code=false}
-    {/if}
-    {$cntr_code|fn_print_r}
+
     <div class="ty-control-group ty-shipping-phone cm-phone">
         <label for="phone" class="ty-control-group__title cm-required cm-mask-phone-label cm-trim">{__("phone")}</label>
-        <input type="text" id="phone" class="ty-input-text cm-focus cm-mask-phone cp-phone" maxlength="25" value="+{if $phone}{$phone}{elseif !$placeholder}{elseif $cntr_code}{else}+{/if}" data-ca-verification="phone_verification_info_{$obj_id}" name="{$inp_name}[phone]" autocomplete="n" {if $placeholder}placeholder="{$placeholder}"{/if}>
+        <input type="text" id="phone" class="ty-input-text cm-focus cm-mask-phone cp-phone" maxlength="25" value="{if $phone}+{$phone}{elseif !$placeholder}{elseif $cntr_code}+{$country_code}{elseif $cntr_codes}{$countries}{/if}" data-ca-verification="phone_verification_info_{$obj_id}" name="{$inp_name}[phone]" autocomplete="n" {if $placeholder}placeholder="{$placeholder}"{/if}>
         {if $inp_name == "call_data"}
             {$from_call=true}
         {else}

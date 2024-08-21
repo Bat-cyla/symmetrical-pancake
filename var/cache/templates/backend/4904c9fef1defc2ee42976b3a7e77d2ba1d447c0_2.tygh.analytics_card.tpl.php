@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-05 08:22:33
+/* Smarty version 4.1.1, created on 2024-08-20 11:56:31
   from '/app/www/design/backend/templates/views/index/components/analytics_section/analytics_card/analytics_card.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66b06199268c67_86762292',
+  'unifunc' => 'content_66c45a3fe65b24_93523159',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '4904c9fef1defc2ee42976b3a7e77d2ba1d447c0' => 
     array (
       0 => '/app/www/design/backend/templates/views/index/components/analytics_section/analytics_card/analytics_card.tpl',
-      1 => 1693486476,
+      1 => 1723194964,
       2 => 'tygh',
     ),
   ),
@@ -25,7 +25,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:views/index/components/analytics_section/analytics_card/resource_list_tabs.tpl' => 1,
   ),
 ),false)) {
-function content_66b06199268c67_86762292 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66c45a3fe65b24_93523159 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/app/www/app/functions/smarty_plugins/function.script.php','function'=>'smarty_function_script',),));
 \Tygh\Languages\Helper::preloadLangVars(array('dashboard.view'));
 if ($_smarty_tpl->tpl_vars['analytics_card']->value) {?><div class="analytics-card" data-ca-analytics-card="main" data-ca-analytics-card-id="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['analytics_card']->value['id'], ENT_QUOTES, 'UTF-8');?>

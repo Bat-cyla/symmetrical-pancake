@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-05 08:22:32
+/* Smarty version 4.1.1, created on 2024-08-20 11:56:31
   from '/app/www/design/backend/templates/views/index/components/simple_dashboard.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66b06198e0eff3_27324485',
+  'unifunc' => 'content_66c45a3f4b1a49_82445870',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3b23354948dc6c0f43f7e5e62762a56d7675fb25' => 
     array (
       0 => '/app/www/design/backend/templates/views/index/components/simple_dashboard.tpl',
-      1 => 1693486476,
+      1 => 1723194964,
       2 => 'tygh',
     ),
   ),
@@ -24,7 +24,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:common/daterange_picker.tpl' => 1,
   ),
 ),false)) {
-function content_66b06198e0eff3_27324485 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66c45a3f4b1a49_82445870 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/app/www/app/functions/smarty_plugins/block.hook.php','function'=>'smarty_block_hook',),1=>array('file'=>'/app/www/app/functions/smarty_plugins/modifier.enum.php','function'=>'smarty_modifier_enum',),2=>array('file'=>'/app/www/app/functions/smarty_plugins/function.script.php','function'=>'smarty_function_script',),));
 $_smarty_tpl->smarty->_cache['_tag_stack'][] = array('hook', array('name'=>"index:simple_dashboard"));
 $_block_repeat=true;

@@ -61,7 +61,6 @@
     {else}
         {$input_phone_container_class = "`$input_phone_container_class` ty-input-phone-container--default"}
     {/if}
-
     {* Get countries list *}
     {$country_code = $profile_data.s_country|default:$settings.Checkout.default_country}
     {$countries = 1|fn_get_simple_phone_country_codes}

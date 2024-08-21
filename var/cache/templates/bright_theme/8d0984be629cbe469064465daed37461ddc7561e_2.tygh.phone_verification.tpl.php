@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-16 16:21:40
+/* Smarty version 4.1.1, created on 2024-08-20 13:31:19
   from '/app/www/design/themes/responsive/templates/addons/cp_otp_registration/components/phone_verification.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66bf5264f36ff3_43713807',
+  'unifunc' => 'content_66c47077f2d918_92787802',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8d0984be629cbe469064465daed37461ddc7561e' => 
     array (
       0 => '/app/www/design/themes/responsive/templates/addons/cp_otp_registration/components/phone_verification.tpl',
-      1 => 1723814475,
+      1 => 1724149494,
       2 => 'tygh',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:buttons/button.tpl' => 2,
   ),
 ),false)) {
-function content_66bf5264f36ff3_43713807 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66c47077f2d918_92787802 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/app/www/app/functions/smarty_plugins/function.set_id.php','function'=>'smarty_function_set_id',),));
 \Tygh\Languages\Helper::preloadLangVars(array('cp_otp_confirm','cp_otp_confirm'));
 if ($_smarty_tpl->tpl_vars['runtime']->value['customization_mode']['design'] == "Y" && (defined('AREA') ? constant('AREA') : null) == "C") {
@@ -50,7 +50,7 @@ $_smarty_tpl->smarty->ext->_capture->open($_smarty_tpl, "template_content", null
 
             <div class="buttons-container ty-center clearfix">
                 <?php ob_start();
-if (!$_smarty_tpl->tpl_vars['guest_order']->value) {
+if (!$_REQUEST['cp_guest_order']) {
 echo "cm-ajax";
 }
 $_prefixVariable1=ob_get_clean();
@@ -93,7 +93,7 @@ echo $_smarty_tpl->smarty->ext->_capture->getBuffer($_smarty_tpl, 'template_cont
 
             <div class="buttons-container ty-center clearfix">
                 <?php ob_start();
-if (!$_smarty_tpl->tpl_vars['guest_order']->value) {
+if (!$_REQUEST['cp_guest_order']) {
 echo "cm-ajax";
 }
 $_prefixVariable2=ob_get_clean();

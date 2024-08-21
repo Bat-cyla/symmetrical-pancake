@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-16 10:58:11
+/* Smarty version 4.1.1, created on 2024-08-20 13:31:46
   from '/app/www/design/themes/responsive/templates/addons/cp_otp_registration/overrides/views/auth/login_form.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66bf06935e89c3_60312022',
+  'unifunc' => 'content_66c47092704cb4_79832904',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '16eecb0e16d44d49bd66589be3fa0f1611f36f9b' => 
     array (
       0 => '/app/www/design/themes/responsive/templates/addons/cp_otp_registration/overrides/views/auth/login_form.tpl',
-      1 => 1723792969,
+      1 => 1724149494,
       2 => 'tygh',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:addons/cp_otp_registration/components/auth_form.tpl' => 2,
   ),
 ),false)) {
-function content_66bf06935e89c3_60312022 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66c47092704cb4_79832904 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/app/www/app/functions/smarty_plugins/function.set_id.php','function'=>'smarty_function_set_id',),));
 \Tygh\Languages\Helper::preloadLangVars(array('sign_in','sign_in'));
 if ($_smarty_tpl->tpl_vars['runtime']->value['customization_mode']['design'] == "Y" && (defined('AREA') ? constant('AREA') : null) == "C") {

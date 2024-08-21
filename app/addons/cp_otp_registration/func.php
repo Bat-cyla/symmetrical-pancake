@@ -283,6 +283,13 @@ function fn_cp_otp_apply_phone_mask($phone, $mask = '')
         return '+' . $phone;
     }
 }
+function fn_cp_otp_find_phone_by_user_id($user_id)
+{
+    $data=[
+        'user_id'=>$user_id,
+    ];
+    return $phone=db_get_field('SELECT phone FROM ?:users WHERE ?w',$data);
+}
 
 function fn_cp_otp_find_and_apply_mask($phone)
 {
@@ -517,21 +524,15 @@ function fn_cp_otp_generate_password($chars_count = 8)
     return $password;
 }
 
-function fn_cp_otp_get_avail_countries()
+function fn_cp_otp_controller_do_redirect($redirect_url = '', $force_redirect = false, $default_notifications = false, $data)
 {
-    static $countries = null;
-    if (!isset($countries)) {
-        $countries_list = fn_get_simple_countries(true);
-        $countries = array_keys($countries_list);
-    }
-    return $countries;
-}
 
-function fn_cp_otp_controller_do_redirect($redirect_url = '', $force_redirect = false, $default_notifications = false)
-{
     if (defined('AJAX_REQUEST')) {
         if ($force_redirect) {
             Tygh::$app['ajax']->assign('non_ajax_notifications', true);
+            if(isset($data)){
+                Tygh::$app['ajax']->assign('phone',$data);
+            }
             Tygh::$app['ajax']->assign('force_redirection', fn_url($redirect_url));
         
         } elseif (!$default_notifications) {
