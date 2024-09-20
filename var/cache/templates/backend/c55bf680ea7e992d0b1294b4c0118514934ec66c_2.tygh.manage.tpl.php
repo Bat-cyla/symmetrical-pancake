@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-09 12:27:04
+/* Smarty version 4.1.1, created on 2024-09-19 14:08:48
   from '/app/www/design/backend/templates/addons/help_center/views/help_center/manage.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66b5e0e86696e4_57204114',
+  'unifunc' => 'content_66ec0640860fe5_07918620',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -27,7 +27,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:common/mainbox.tpl' => 1,
   ),
 ),false)) {
-function content_66b5e0e86696e4_57204114 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66ec0640860fe5_07918620 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/app/www/app/functions/smarty_plugins/function.script.php','function'=>'smarty_function_script',),));
 \Tygh\Languages\Helper::preloadLangVars(array('help_center.no_data_relevant','help_center.no_data','help_center.loading','help_center.growth_center'));
 $_smarty_tpl->smarty->ext->_capture->open($_smarty_tpl, "mainbox", null, null);?>

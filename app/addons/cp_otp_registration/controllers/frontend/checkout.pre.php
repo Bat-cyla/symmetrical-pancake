@@ -31,6 +31,7 @@ if (empty(Tygh::$app['session']['cart'])) {
 $cart = & Tygh::$app['session']['cart'];
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
     if ($mode == 'place_order'
         && Registry::get('addons.step_by_step_checkout.status') == 'A' 
     ) {
@@ -66,24 +67,28 @@ if (empty($cart['user_data']['email']) || fn_checkout_is_email_address_fake($car
     $cart['user_data']['email'] = '';
 }
 if ($mode == 'cp_phone_verification') {
-    if(Registry::get('addons.cp_otp_registration.guest_order_verify') == YesNo::YES) {
+
+    if(Registry::get('addons.cp_otp_registration.guest_order_verify') == YesNo::YES ) {
+
         if (defined('AJAX_REQUEST')) {
-            if(Tygh::$app['session']['auth']['user_id']==0){
-                Tygh::$app['ajax']->assign('cp_guest_order', true);
-            }
             $phone = !empty($_REQUEST['phone']) ? $_REQUEST['phone'] : '';
+            $phone=preg_replace('# #','+',$phone);
             $send_result = fn_cp_otp_send_code(['phone' => $phone], 'register');
             if (empty($send_result)) {
                 fn_set_notification('E', __('error'), __('cp_otp_send_fail'));
                 return fn_cp_otp_controller_do_redirect('checkout.checkout', true, false);
             }
+
             if(Tygh::$app['session']['auth']['user_id']==0){
-                Tygh::$app['view']->assign('phone', $phone);
-                Tygh::$app['view']->assign('guest_order', true);
-                Tygh::$app['view']->assign('otp_type', 'register');
-                Tygh::$app['view']->assign('but_name', 'dispatch[checkout.cp_phone_verification]');
-                Tygh::$app['view']->assign('no_info_text', false);
+                Tygh::$app['view']->assign('cp_guest_order', true);
             }
+            if($phone!==$cart['user_data']['phone']){
+                Tygh::$app['view']->assign('cp_phone_update', true);
+            }
+            Tygh::$app['view']->assign('phone', $phone);
+            Tygh::$app['view']->assign('otp_type', 'register');
+            Tygh::$app['view']->assign('no_info_text', false);
+            Tygh::$app['view']->assign('but_name', 'dispatch[checkout.cp_phone_verification]');
             Tygh::$app['view']->display('addons/cp_otp_registration/components/phone_verification.tpl');
             exit;
         }

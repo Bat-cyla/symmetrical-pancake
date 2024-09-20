@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-09 12:27:03
+/* Smarty version 4.1.1, created on 2024-09-20 07:36:02
   from '/app/www/design/backend/templates/views/order_management/components/discounts.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66b5e0e78df011_79361837',
+  'unifunc' => 'content_66ecfbb27cf2b6_23245782',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66b5e0e78df011_79361837 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66ecfbb27cf2b6_23245782 (Smarty_Internal_Template $_smarty_tpl) {
 \Tygh\Languages\Helper::preloadLangVars(array('discounts','discount_coupon_code'));
 ?>
 <div class="orders-discounts">

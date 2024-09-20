@@ -31,6 +31,7 @@
     <input type="hidden" class="cm-no-hide-input" name="user_type" value="{$smarty.request.user_type}" />
 
     <div id="content_general">
+
         {hook name="profiles:general_content"}
             {include file="views/profiles/components/profiles_account.tpl"}
 

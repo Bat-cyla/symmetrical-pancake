@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-09 12:27:03
+/* Smarty version 4.1.1, created on 2024-09-19 14:08:48
   from '/app/www/design/backend/templates/views/storefronts/components/picker/picker.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66b5e0e7a71377_07883823',
+  'unifunc' => 'content_66ec064006fdb7_15880043',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:views/storefronts/components/picker/item.tpl' => 1,
   ),
 ),false)) {
-function content_66b5e0e7a71377_07883823 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66ec064006fdb7_15880043 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/app/www/app/functions/smarty_plugins/modifier.to_json.php','function'=>'smarty_modifier_to_json',),));
 \Tygh\Languages\Helper::preloadLangVars(array('type_to_search_or_click_button','none','advanced_storefronts_search'));
 ?>
@@ -55,8 +55,8 @@ $_smarty_tpl->_assignInScope('search_data', (($tmp = $_smarty_tpl->tpl_vars['sea
 ">
                 <?php ob_start();
 echo $_smarty_tpl->__("advanced_storefronts_search");
-$_prefixVariable21=ob_get_clean();
-$_smarty_tpl->_subTemplateRender("tygh:pickers/storefronts/picker.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('picker_id'=>"object_picker_advanced_".((string)$_smarty_tpl->tpl_vars['picker_id']->value),'data_id'=>"om",'no_container'=>true,'icon'=>"icon-reorder",'but_text'=>$_prefixVariable21,'show_but_text'=>false,'view_mode'=>"button",'meta'=>"object-picker__advanced-btn object-picker__advanced-btn--storefronts ".((string)$_smarty_tpl->tpl_vars['object_picker_advanced_btn_class']->value)), 0, false);
+$_prefixVariable26=ob_get_clean();
+$_smarty_tpl->_subTemplateRender("tygh:pickers/storefronts/picker.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('picker_id'=>"object_picker_advanced_".((string)$_smarty_tpl->tpl_vars['picker_id']->value),'data_id'=>"om",'no_container'=>true,'icon'=>"icon-reorder",'but_text'=>$_prefixVariable26,'show_but_text'=>false,'view_mode'=>"button",'meta'=>"object-picker__advanced-btn object-picker__advanced-btn--storefronts ".((string)$_smarty_tpl->tpl_vars['object_picker_advanced_btn_class']->value)), 0, false);
 ?>
             </div>
         <?php }?>
@@ -110,11 +110,11 @@ $_smarty_tpl->_subTemplateRender("tygh:pickers/storefronts/picker.tpl", $_smarty
 "
                         data-ca-object-picker-predefined-variants="<?php ob_start();
 echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['empty_variant_text']->value, ENT_QUOTES, 'UTF-8');
-$_prefixVariable22 = ob_get_clean();
+$_prefixVariable27 = ob_get_clean();
 ob_start();
 echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['empty_variant_text']->value, ENT_QUOTES, 'UTF-8');
-$_prefixVariable23 = ob_get_clean();
-echo htmlspecialchars((string) smarty_modifier_to_json(array(array("id"=>0,"text"=>$_prefixVariable22,"data"=>array("name"=>$_prefixVariable23)))), ENT_QUOTES, 'UTF-8');?>
+$_prefixVariable28 = ob_get_clean();
+echo htmlspecialchars((string) smarty_modifier_to_json(array(array("id"=>0,"text"=>$_prefixVariable27,"data"=>array("name"=>$_prefixVariable28)))), ENT_QUOTES, 'UTF-8');?>
 "
                     <?php }?>
                     <?php if ($_smarty_tpl->tpl_vars['disabled']->value) {?>
@@ -143,11 +143,11 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     <div class="cm-object-picker-object object-picker__selection <?php if ($_smarty_tpl->tpl_vars['type']->value == "list") {?>object-picker__selection--list<?php }?> object-picker__selection--storefronts">
         <?php ob_start();
 echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['selection_title_pre']->value, ENT_QUOTES, 'UTF-8');
-$_prefixVariable24 = ob_get_clean();
+$_prefixVariable29 = ob_get_clean();
 ob_start();
 echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['selection_title_post']->value, ENT_QUOTES, 'UTF-8');
-$_prefixVariable25 = ob_get_clean();
-$_smarty_tpl->_subTemplateRender("tygh:views/storefronts/components/picker/item.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('type'=>"selection",'title_pre'=>$_prefixVariable24,'title_post'=>$_prefixVariable25), 0, false);
+$_prefixVariable30 = ob_get_clean();
+$_smarty_tpl->_subTemplateRender("tygh:views/storefronts/components/picker/item.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('type'=>"selection",'title_pre'=>$_prefixVariable29,'title_post'=>$_prefixVariable30), 0, false);
 ?>
     </div>
 <?php echo '</script'; ?>

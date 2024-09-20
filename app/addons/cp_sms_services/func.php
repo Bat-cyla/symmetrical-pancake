@@ -19,6 +19,7 @@
 
 use Tygh\Registry;
 
+
 if (!defined('BOOTSTRAP')) { die('Access denied'); }
 
 function fn_cp_sms_send_by_service($phones, $message = '')
@@ -26,17 +27,21 @@ function fn_cp_sms_send_by_service($phones, $message = '')
     if (!function_exists('___cp')) {
         return false;
     }
+
     $service_name = Registry::get(___cp('YWRkb25zLmXwP3Xtc19zZPJ2aWXlcy5zZPJ2aWXl'));
     if (empty($phones) || empty($message) || empty($service_name)) {
         return false;
     }
-    
+
     $phones = call_user_func(___cp('Zm5fY3Bfc21zP3ByZPBhcmVfcGhvbmVz'), $phones);
     $service_class = 'Tygh\Addons\CpSmsServices\\' . fn_cp_sms_to_camel_case($service_name);
+
     if (class_exists($service_class)) {
         $params = array();
         $service_object = new $service_class($params);
+
         $result = $service_object->send($phones, $message);
+
         return $result;
     }
     return false;

@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-09 12:27:04
+/* Smarty version 4.1.1, created on 2024-09-19 14:08:48
   from '/app/www/design/backend/templates/views/companies/components/picker/picker.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66b5e0e88849c0_87925468',
+  'unifunc' => 'content_66ec0640adfc90_88646140',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:views/companies/components/picker/item.tpl' => 1,
   ),
 ),false)) {
-function content_66b5e0e88849c0_87925468 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66ec0640adfc90_88646140 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/app/www/app/functions/smarty_plugins/modifier.to_json.php','function'=>'smarty_modifier_to_json',),));
 \Tygh\Languages\Helper::preloadLangVars(array('type_to_search_or_click_button','none'));
 ?>
@@ -148,11 +148,11 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     <div class="cm-object-picker-object object-picker__selection <?php if ($_smarty_tpl->tpl_vars['type']->value == "list") {?>object-picker__selection--list<?php }?> object-picker__selection--companies">
         <?php ob_start();
 echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['selection_title_pre']->value, ENT_QUOTES, 'UTF-8');
-$_prefixVariable35 = ob_get_clean();
+$_prefixVariable39 = ob_get_clean();
 ob_start();
 echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['selection_title_post']->value, ENT_QUOTES, 'UTF-8');
-$_prefixVariable36 = ob_get_clean();
-$_smarty_tpl->_subTemplateRender("tygh:views/companies/components/picker/item.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('type'=>"selection",'title_pre'=>$_prefixVariable35,'title_post'=>$_prefixVariable36), 0, false);
+$_prefixVariable40 = ob_get_clean();
+$_smarty_tpl->_subTemplateRender("tygh:views/companies/components/picker/item.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('type'=>"selection",'title_pre'=>$_prefixVariable39,'title_post'=>$_prefixVariable40), 0, false);
 ?>
     </div>
 <?php echo '</script'; ?>

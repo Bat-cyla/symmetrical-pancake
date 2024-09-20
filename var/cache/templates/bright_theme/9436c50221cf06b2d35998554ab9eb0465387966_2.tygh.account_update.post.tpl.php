@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-09 12:25:47
+/* Smarty version 4.1.1, created on 2024-09-19 14:09:16
   from '/app/www/design/themes/responsive/templates/addons/hybrid_auth/hooks/profiles/account_update.post.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66b5e09b7e6403_59062146',
+  'unifunc' => 'content_66ec065ce84748_17233503',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9436c50221cf06b2d35998554ab9eb0465387966' => 
     array (
       0 => '/app/www/design/themes/responsive/templates/addons/hybrid_auth/hooks/profiles/account_update.post.tpl',
-      1 => 1723194964,
+      1 => 1726744066,
       2 => 'tygh',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:addons/hybrid_auth/views/auth/components/login_buttons.tpl' => 2,
   ),
 ),false)) {
-function content_66b5e09b7e6403_59062146 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66ec065ce84748_17233503 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/app/www/app/functions/smarty_plugins/block.hook.php','function'=>'smarty_block_hook',),1=>array('file'=>'/app/www/app/functions/smarty_plugins/function.include_ext.php','function'=>'smarty_function_include_ext',),2=>array('file'=>'/app/www/app/functions/smarty_plugins/function.set_id.php','function'=>'smarty_function_set_id',),));
 \Tygh\Languages\Helper::preloadLangVars(array('hybrid_auth.link_provider','hybrid_auth.text_link_provider','hybrid_auth.linked_provider','hybrid_auth.not_linked_provider','hybrid_auth.link_provider','hybrid_auth.text_link_provider','hybrid_auth.linked_provider','hybrid_auth.not_linked_provider'));
 if ($_smarty_tpl->tpl_vars['runtime']->value['customization_mode']['design'] == "Y" && (defined('AREA') ? constant('AREA') : null) == "C") {

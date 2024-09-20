@@ -11,7 +11,7 @@
             {include file="addons/cp_otp_registration/components/otp_fail_message.tpl"}
 
             <div class="buttons-container ty-center clearfix">
-                {include file="buttons/button.tpl" but_meta="ty-btn__secondary {if !$smarty.request.cp_guest_order}cm-ajax{/if} " but_text=__("cp_otp_confirm") but_name="{$but_name}" but_role="submit"}
+                {include file="buttons/button.tpl" but_meta="ty-btn__secondary {if !$cp_guest_order && !$cp_phone_update}cm-ajax{/if} " but_text=__("cp_otp_confirm") but_name="{$but_name}" but_role="submit"}
             </div>
         </form>
     <!--phone_verification_content_{$obj_id}--></div>

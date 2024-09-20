@@ -12,7 +12,15 @@
                 {$cp_location = "checkout"}
             {/if}
         {/if}
-
+        {if $addons.cp_otp_registration.auth_by_email==='forbid'}
+            {$no_email = true}
+        {/if}
+        {if $addons.cp_otp_registration.auth_by_email==='make_optional'}
+            {$email_optional = true}
+        {/if}
+        {if $addons.cp_otp_registration.phone_optional==='N'}
+            {$phone_required = true}
+        {/if}
         {if !$no_email}
             {$auth_methods = ["phone", "email"]}
             {if $addons.cp_otp_registration.default_auth_method == "email"}
@@ -21,7 +29,7 @@
             <div class="ty-tabs clearfix">
                 <ul class="ty-tabs__list">
                     {foreach from=$auth_methods item="method"}
-                        <li class="ty-tabs__item {if $auth_field == $method} active{/if}">
+                        <li class="ty-tabs__item {$method} active">
                             <a class="ty-tabs__a cm-ajax cm-ajax-full-render" data-ca-target-id="cp_auth_form_wrap_{$obj_id}" href="{"auth.login_form?auth_field=`$method`&custom_id=`$obj_id`&cp_location=`$cp_location`&otp_action=`$otp_action`&email=`$login_email`&phone=`$login_phone`"|fn_url}">{__("cp_otp_by_`$method`")}</a>
                         </li>
                     {/foreach}
@@ -40,14 +48,21 @@
         {/if}
         {if $auth_field == "email" && !$no_email}
             <div class="ty-control-group cp-otp-auth-field">
-                <label for="login_email_{$obj_id}" class="ty-login__filed-label ty-control-group__label cm-required cm-trim cm-email">{__("email")}</label>
+                <label for="login_email_{$obj_id}" class="ty-login__filed-label ty-control-group__label {if !$email_optional}cm-required{/if} cm-trim cm-email">{__("email")}</label>
                 <input type="text" id="login_email_{$obj_id}" name="user_data[email]" size="30" value="{$login_email}" class="ty-login__input cm-focus" />
             </div>
         {else}
             {$placeholder = $placeholder|default:$addons.cp_otp_registration.no_mask_placeholder}
             <div class="ty-control-group cm-phone cp-otp-auth-field">
-                <label for="login_phone_{$obj_id}" class="ty-login__filed-label ty-control-group__label cm-mask-phone-label cm-required cm-trim">{__("phone")}</label>
-                <input type="text" id="login_phone_{$obj_id}" name="user_data[phone]" size="30" value="{$login_phone}" class="ty-login__input cm-focus cm-mask-phone cp-phone" {if $placeholder}placeholder="{$placeholder}"{/if} />
+                {include file="components/phone.tpl"
+                    id="login_phone_{$obj_id}"
+                    name="user_data[phone]"
+                    required="{if $phone_required}true{/if}"
+                    value="{$login_phone}"
+                    placeholder="{if $placeholder}{$placeholder}{/if}"
+                    class="ty-login__input cm-focus cm-mask-phone cp-phone"
+                }
+
             </div>
         {/if}
 

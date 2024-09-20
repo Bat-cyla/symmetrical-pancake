@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-09 12:27:03
+/* Smarty version 4.1.1, created on 2024-09-20 07:36:02
   from '/app/www/design/backend/templates/addons/geo_maps/hooks/order_management/profiles_info.post.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66b5e0e73f8f22_63816711',
+  'unifunc' => 'content_66ecfbb2255d03_75427805',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66b5e0e73f8f22_63816711 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66ecfbb2255d03_75427805 (Smarty_Internal_Template $_smarty_tpl) {
 \Tygh\Languages\Helper::preloadLangVars(array('geo_maps.shipping_address_on_map','store_locator.use_two_fingers_for_move_map','no_data'));
 if ($_smarty_tpl->tpl_vars['settings']->value['geo_maps']['general']['provider'] === "yandex") {?>
     <?php $_smarty_tpl->_assignInScope('show_move_map_mobile_hint', true);

@@ -1,6 +1,6 @@
 <div class="cp-phone-verified-wrap" id="phone_verification_info_{$obj_id}">
     {$placeholder = $placeholder|default:$addons.cp_otp_registration.no_mask_placeholder}
-    {$phone = ""}
+
     {if $user_data.phone}
         {$phone = $user_data.phone}
         {if $user_data.cp_phone_verified == "Y"}
@@ -17,10 +17,18 @@
     {else}
         {$cntr_code=false}
     {/if}
+
     <div class="ty-control-group ty-shipping-phone cm-phone">
-        <label for="phone" class="ty-control-group__title cm-required cm-mask-phone-label cm-trim">{__("phone")}</label>
-        <input type="text" id="phone" class="ty-input-text cm-focus cm-mask-phone cp-phone" maxlength="25" value="{if $phone}{$phone}{elseif !$placeholder}{elseif $cntr_code}{else}+{/if}" data-ca-verification="phone_verification_info_{$obj_id}" name="company_data[phone]" autocomplete="n" {if $placeholder}placeholder="{$placeholder}"{/if}>
-        
+
+        {$attrs['data-ca-verification']="phone_verification_info_{$obj_id}"}
+        {include file="components/phone.tpl"
+        id="phone"
+        required="{if $phone_required} true {/if}"
+        class="ty-input-text cm-focus cm-mask-phone cp-phone"
+        name="company_data[phone]"
+        value="{if $phone}+{$phone}{elseif !$placeholder}{/if}"
+        placeholder="{if $placeholder}{$placeholder}{/if}"
+        }
         {if "cp_otp"|fn_needs_image_verification == true}
             {$cp_btn_href="cp_otp.pre_verification?otp_type=register&obj_id=`$obj_id`&phone=`$phone`&redir_dispatch=companies"|fn_url}
         {else}
@@ -54,14 +62,16 @@
                 {$timer_s="%02d"|sprintf:$secs}
                 {$timer_str="`$timer_m`:`$timer_s`"}
             {/if}
-            <a class="ty-btn ty-btn__primary cp-verification-link cm-dialog-auto-size cm-dialog-opener cm-ajax {if $send_in_ses_dif && !$phone_verified}cp-otp__hard-hidden{/if} {if $code_valid}cp-otp__run-again-timer{/if}" 
-                style="{if $phone_verified}display: none;{/if}" id="otp_verification_link_{$obj_id}"
-                href="{$cp_btn_href}"
-                object_id="{$obj_id}"
-                data-ca-dialog-title="{__("cp_otp_phone_verification")}"
-                data-ca-target-id="phone_verification_{$obj_id}">
-                {__("cp_otp_phone_confirm")}
-            </a>
+            {include file="buttons/button.tpl"
+            id="otp_verification_link_{$obj_id}"
+            but_role="submit"
+            but_extra="style={if $phone_verified}display: none;{/if}"
+            but_meta="ty-btn ty-btn__primary cp-verification-link cm-dialog-auto-size cm-dialog-opener cm-ajax {if $send_in_ses_dif && !$phone_verified}cp-otp__hard-hidden{/if} {if $code_valid}cp-otp__run-again-timer{/if}"
+            but_target_id="phone_verification_{$obj_id}"
+            but_href="{$cp_btn_href}"
+            but_title=__("cp_otp_phone_verification")
+            but_text=__("cp_otp_phone_confirm")
+            }
             <div class="cp__otp-new-send {if !$send_in_ses_dif || $phone_verified}hidden{else}cp-otp__run-separately{/if}" id="cp_otp_new_send_{$obj_id}" object_id="{$obj_id}">{__("cp_otp_send_again_after")}: <span data-cp-total="{$code_valid}" class="cp-otp-timer-again">{$timer_str}</span></div>
             <label for="cp_otp_verified" class="hidden cm-regexp" data-ca-regexp="Y" data-ca-message="{__("cp_otp_phone_need_confirm")}">
                 {__("cp_otp_phone_verification")}

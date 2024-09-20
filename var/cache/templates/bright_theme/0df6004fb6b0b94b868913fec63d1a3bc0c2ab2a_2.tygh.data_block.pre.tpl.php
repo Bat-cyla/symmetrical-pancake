@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-09 12:25:08
+/* Smarty version 4.1.1, created on 2024-09-19 14:09:50
   from '/app/www/design/themes/responsive/templates/addons/product_reviews/hooks/products/data_block.pre.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66b5e0749af889_13719447',
+  'unifunc' => 'content_66ec067e1fa1d5_54566764',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0df6004fb6b0b94b868913fec63d1a3bc0c2ab2a' => 
     array (
       0 => '/app/www/design/themes/responsive/templates/addons/product_reviews/hooks/products/data_block.pre.tpl',
-      1 => 1723194965,
+      1 => 1726744066,
       2 => 'tygh',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:addons/product_reviews/views/product_reviews/components/product_reviews_stars.tpl' => 2,
   ),
 ),false)) {
-function content_66b5e0749af889_13719447 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66ec067e1fa1d5_54566764 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/app/www/app/functions/smarty_plugins/function.set_id.php','function'=>'smarty_function_set_id',),));
 if ($_smarty_tpl->tpl_vars['runtime']->value['customization_mode']['design'] == "Y" && (defined('AREA') ? constant('AREA') : null) == "C") {
 $_smarty_tpl->smarty->ext->_capture->open($_smarty_tpl, "template_content", null, null);

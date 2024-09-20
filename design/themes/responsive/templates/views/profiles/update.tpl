@@ -8,7 +8,6 @@
 
 {if $runtime.mode == "add" && $settings.General.quick_registration == "YesNo::YES"|enum}
     <div class="ty-account">
-
         <form name="profiles_register_form" enctype="multipart/form-data" action="{""|fn_url}" method="post">
             {include file="views/profiles/components/profile_fields.tpl" section="C" nothing_extra="YesNo::YES"|enum}
             {include file="views/profiles/components/profiles_account.tpl" nothing_extra="YesNo::YES"|enum location="checkout"}

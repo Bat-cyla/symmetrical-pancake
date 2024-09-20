@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-09 12:27:04
+/* Smarty version 4.1.1, created on 2024-09-19 14:08:48
   from '/app/www/design/backend/templates/addons/help_center/templates/help_center_block.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66b5e0e86b0dc5_73467616',
+  'unifunc' => 'content_66ec064088e767_25542452',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66b5e0e86b0dc5_73467616 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66ec064088e767_25542452 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
     <?php echo '<script'; ?>
  type="text/template" data-ca-help-center="block" data-no-defer="true" data-no-execute="§"

@@ -7,39 +7,46 @@
             return phone_mask_codes[key];
         });
         window.localStorage.setItem('phoneMasks', JSON.stringify(phoneMasks));
-        $(document).on('focus blur', '.cp-phone', function(){
-            $(this).val($(this).val().replace(/[^0-9]/g,""));
+        $(document).on('focus blur', '.ty-input-phone', function(){
+            $(this).val($(this).val().replace(/[^0-9,+]/g,""));
         });
     }(Tygh, Tygh.$));
 </script>
 
-{if $addons.cp_otp_registration.use_country_prefix == "Y"}
-    {script src="js/addons/cp_otp_registration/intlTelInput-jquery.min.js"}
-    {$cp_countries_list = ""|fn_cp_otp_get_avail_countries}
+{if $runtime.controller == "profiles"}
     <script type="text/javascript">
         (function (_, $) {
-            $.extend(_, {
-                cp_otp_registration: {
-                    'default_country': '{$addons.cp_otp_registration.default_country}',
-                    {if $cp_countries_list}'countries_list': {$cp_countries_list|json_encode nofilter}{/if}
-                }
+            $.ceEvent('on', 'ce.commoninit', function(context) {
+                {if $addons.cp_otp_registration.auth_by_email =="make_required"}
+                    $('label[for="email"]').addClass('cm-required');
+                {/if}
             });
         }(Tygh, Tygh.$));
     </script>
 {/if}
 
+
 {if $runtime.controller == "checkout" && $runtime.mode == "checkout"}
     {$c_url = $config.current_url|escape:url}
+
     <script type="text/javascript">
         (function (_, $) {
+
+            _.tr('cp_otp_phone_verification', '{__("cp_otp_phone_verification")|escape:"javascript"}');
             $.ceEvent('on', 'ce.commoninit', function(context) {
-                {if $addons.cp_otp_registration.required_email != "Y"}
-                    $('label[for="litecheckout_email"]').removeClass('cm-required');
+
+                {if $addons.cp_otp_registration.auth_by_email = "make_required"}
+                    $('label[for="litecheckout_email"]').addClass('cm-required');
                 {/if}
-                $('label[for="litecheckout_phone"]').addClass('cm-required');
+                $('label[for="litecheckout_phone"]').removeClass('cm-required');
+                _.user_id = '{$cart.user_data.user_id}';
+
+                _.phone = '{$cart.user_data.phone}';
+
             });
             
-            $.ceEvent('on', 'ce.ajaxdone', function(context, inline_scripts, params, data) { 
+            $.ceEvent('on', 'ce.ajaxdone', function(context, inline_scripts, params, data) {
+
                 var title = '{__("cp_otp_already_exists_title")}';
                 var block_id = 'litecheckout_login_block';
               

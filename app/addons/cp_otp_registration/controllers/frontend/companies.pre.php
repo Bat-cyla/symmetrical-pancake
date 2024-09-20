@@ -1,3 +1,4 @@
+
 <?php
 /*****************************************************************************
 *                                                        © 2013 Cart-Power   *
@@ -44,7 +45,10 @@ if ($mode == 'cp_phone_verification') {
     if (!defined('AJAX_REQUEST')) {
         return array(CONTROLLER_STATUS_NO_PAGE);
     }
+
+
     $phone = !empty($_REQUEST['phone']) ? $_REQUEST['phone'] : '';
+    $phone=preg_replace('# #','+',$phone);
     if (strlen($phone) < CP_OTP_MIN_PHONE_NUM) {
         fn_set_notification('E', __('warning'), __('cp_correct_phone_format'));
         return fn_cp_otp_controller_do_redirect('companies.apply_for_vendor', false, true);

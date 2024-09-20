@@ -1,31 +1,32 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-20 13:31:46
+/* Smarty version 4.1.1, created on 2024-09-19 14:09:16
   from '/app/www/design/themes/responsive/templates/addons/cp_otp_registration/components/auth_form.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66c4709274db51_70678601',
+  'unifunc' => 'content_66ec065c49e248_72279285',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '26776e5aa72638080579f19144c3f9ae85bd6574' => 
     array (
       0 => '/app/www/design/themes/responsive/templates/addons/cp_otp_registration/components/auth_form.tpl',
-      1 => 1724149494,
+      1 => 1726744065,
       2 => 'tygh',
     ),
   ),
   'includes' => 
   array (
     'tygh:common/subheader.tpl' => 2,
+    'tygh:components/phone.tpl' => 2,
     'tygh:common/image_verification.tpl' => 2,
     'tygh:addons/cp_otp_registration/components/otp_verification.tpl' => 2,
   ),
 ),false)) {
-function content_66c4709274db51_70678601 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66ec065c49e248_72279285 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/app/www/app/functions/smarty_plugins/function.set_id.php','function'=>'smarty_function_set_id',),));
-\Tygh\Languages\Helper::preloadLangVars(array('returning_customer','cp_otp_by_','cp_otp_fast_register_email_text','cp_otp_fast_register_phone_text','email','phone','password','forgot_password_question','forgot_password_question','returning_customer','cp_otp_by_','cp_otp_fast_register_email_text','cp_otp_fast_register_phone_text','email','phone','password','forgot_password_question','forgot_password_question'));
+\Tygh\Languages\Helper::preloadLangVars(array('returning_customer','cp_otp_by_','cp_otp_fast_register_email_text','cp_otp_fast_register_phone_text','email','password','forgot_password_question','forgot_password_question','returning_customer','cp_otp_by_','cp_otp_fast_register_email_text','cp_otp_fast_register_phone_text','email','password','forgot_password_question','forgot_password_question'));
 if ($_smarty_tpl->tpl_vars['runtime']->value['customization_mode']['design'] == "Y" && (defined('AREA') ? constant('AREA') : null) == "C") {
 $_smarty_tpl->smarty->ext->_capture->open($_smarty_tpl, "template_content", null, null);?><div class="cp-auth-form-wrap" id="cp_auth_form_wrap_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['obj_id']->value, ENT_QUOTES, 'UTF-8');?>
 ">
@@ -43,7 +44,15 @@ $_smarty_tpl->smarty->ext->_capture->open($_smarty_tpl, "template_content", null
                 <?php $_smarty_tpl->_assignInScope('cp_location', "checkout");?>
             <?php }?>
         <?php }?>
-
+        <?php if ($_smarty_tpl->tpl_vars['addons']->value['cp_otp_registration']['auth_by_email'] === 'forbid') {?>
+            <?php $_smarty_tpl->_assignInScope('no_email', true);?>
+        <?php }?>
+        <?php if ($_smarty_tpl->tpl_vars['addons']->value['cp_otp_registration']['auth_by_email'] === 'make_optional') {?>
+            <?php $_smarty_tpl->_assignInScope('email_optional', true);?>
+        <?php }?>
+        <?php if ($_smarty_tpl->tpl_vars['addons']->value['cp_otp_registration']['phone_optional'] === 'N') {?>
+            <?php $_smarty_tpl->_assignInScope('phone_required', true);?>
+        <?php }?>
         <?php if (!$_smarty_tpl->tpl_vars['no_email']->value) {?>
             <?php $_smarty_tpl->_assignInScope('auth_methods', array("phone","email"));?>
             <?php if ($_smarty_tpl->tpl_vars['addons']->value['cp_otp_registration']['default_auth_method'] == "email") {?>
@@ -57,7 +66,8 @@ $_smarty_tpl->tpl_vars['method']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['method']->value) {
 $_smarty_tpl->tpl_vars['method']->do_else = false;
 ?>
-                        <li class="ty-tabs__item <?php if ($_smarty_tpl->tpl_vars['auth_field']->value == $_smarty_tpl->tpl_vars['method']->value) {?> active<?php }?>">
+                        <li class="ty-tabs__item <?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['method']->value, ENT_QUOTES, 'UTF-8');?>
+ active">
                             <a class="ty-tabs__a cm-ajax cm-ajax-full-render" data-ca-target-id="cp_auth_form_wrap_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['obj_id']->value, ENT_QUOTES, 'UTF-8');?>
 " href="<?php echo htmlspecialchars((string) fn_url("auth.login_form?auth_field=".((string)$_smarty_tpl->tpl_vars['method']->value)."&custom_id=".((string)$_smarty_tpl->tpl_vars['obj_id']->value)."&cp_location=".((string)$_smarty_tpl->tpl_vars['cp_location']->value)."&otp_action=".((string)$_smarty_tpl->tpl_vars['otp_action']->value)."&email=".((string)$_smarty_tpl->tpl_vars['login_email']->value)."&phone=".((string)$_smarty_tpl->tpl_vars['login_phone']->value)), ENT_QUOTES, 'UTF-8');?>
 "><?php echo $_smarty_tpl->__("cp_otp_by_".((string)$_smarty_tpl->tpl_vars['method']->value));?>
@@ -84,7 +94,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
         <?php if ($_smarty_tpl->tpl_vars['auth_field']->value == "email" && !$_smarty_tpl->tpl_vars['no_email']->value) {?>
             <div class="ty-control-group cp-otp-auth-field">
                 <label for="login_email_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['obj_id']->value, ENT_QUOTES, 'UTF-8');?>
-" class="ty-login__filed-label ty-control-group__label cm-required cm-trim cm-email"><?php echo $_smarty_tpl->__("email");?>
+" class="ty-login__filed-label ty-control-group__label <?php if (!$_smarty_tpl->tpl_vars['email_optional']->value) {?>cm-required<?php }?> cm-trim cm-email"><?php echo $_smarty_tpl->__("email");?>
 </label>
                 <input type="text" id="login_email_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['obj_id']->value, ENT_QUOTES, 'UTF-8');?>
 " name="user_data[email]" size="30" value="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['login_email']->value, ENT_QUOTES, 'UTF-8');?>
@@ -93,13 +103,19 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
         <?php } else { ?>
             <?php $_smarty_tpl->_assignInScope('placeholder', (($tmp = $_smarty_tpl->tpl_vars['placeholder']->value ?? null)===null||$tmp==='' ? $_smarty_tpl->tpl_vars['addons']->value['cp_otp_registration']['no_mask_placeholder'] ?? null : $tmp));?>
             <div class="ty-control-group cm-phone cp-otp-auth-field">
-                <label for="login_phone_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['obj_id']->value, ENT_QUOTES, 'UTF-8');?>
-" class="ty-login__filed-label ty-control-group__label cm-mask-phone-label cm-required cm-trim"><?php echo $_smarty_tpl->__("phone");?>
-</label>
-                <input type="text" id="login_phone_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['obj_id']->value, ENT_QUOTES, 'UTF-8');?>
-" name="user_data[phone]" size="30" value="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['login_phone']->value, ENT_QUOTES, 'UTF-8');?>
-" class="ty-login__input cm-focus cm-mask-phone cp-phone" <?php if ($_smarty_tpl->tpl_vars['placeholder']->value) {?>placeholder="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['placeholder']->value, ENT_QUOTES, 'UTF-8');?>
-"<?php }?> />
+                <?php ob_start();
+if ($_smarty_tpl->tpl_vars['phone_required']->value) {
+echo "true";
+}
+$_prefixVariable4=ob_get_clean();
+ob_start();
+if ($_smarty_tpl->tpl_vars['placeholder']->value) {
+echo (string)$_smarty_tpl->tpl_vars['placeholder']->value;
+}
+$_prefixVariable5=ob_get_clean();
+$_smarty_tpl->_subTemplateRender("tygh:components/phone.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('id'=>"login_phone_".((string)$_smarty_tpl->tpl_vars['obj_id']->value),'name'=>"user_data[phone]",'required'=>$_prefixVariable4,'value'=>((string)$_smarty_tpl->tpl_vars['login_phone']->value),'placeholder'=>$_prefixVariable5,'class'=>"ty-login__input cm-focus cm-mask-phone cp-phone"), 0, false);
+?>
+
             </div>
         <?php }?>
 
@@ -156,7 +172,15 @@ echo $_smarty_tpl->smarty->ext->_capture->getBuffer($_smarty_tpl, 'template_cont
                 <?php $_smarty_tpl->_assignInScope('cp_location', "checkout");?>
             <?php }?>
         <?php }?>
-
+        <?php if ($_smarty_tpl->tpl_vars['addons']->value['cp_otp_registration']['auth_by_email'] === 'forbid') {?>
+            <?php $_smarty_tpl->_assignInScope('no_email', true);?>
+        <?php }?>
+        <?php if ($_smarty_tpl->tpl_vars['addons']->value['cp_otp_registration']['auth_by_email'] === 'make_optional') {?>
+            <?php $_smarty_tpl->_assignInScope('email_optional', true);?>
+        <?php }?>
+        <?php if ($_smarty_tpl->tpl_vars['addons']->value['cp_otp_registration']['phone_optional'] === 'N') {?>
+            <?php $_smarty_tpl->_assignInScope('phone_required', true);?>
+        <?php }?>
         <?php if (!$_smarty_tpl->tpl_vars['no_email']->value) {?>
             <?php $_smarty_tpl->_assignInScope('auth_methods', array("phone","email"));?>
             <?php if ($_smarty_tpl->tpl_vars['addons']->value['cp_otp_registration']['default_auth_method'] == "email") {?>
@@ -170,7 +194,8 @@ $_smarty_tpl->tpl_vars['method']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['method']->value) {
 $_smarty_tpl->tpl_vars['method']->do_else = false;
 ?>
-                        <li class="ty-tabs__item <?php if ($_smarty_tpl->tpl_vars['auth_field']->value == $_smarty_tpl->tpl_vars['method']->value) {?> active<?php }?>">
+                        <li class="ty-tabs__item <?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['method']->value, ENT_QUOTES, 'UTF-8');?>
+ active">
                             <a class="ty-tabs__a cm-ajax cm-ajax-full-render" data-ca-target-id="cp_auth_form_wrap_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['obj_id']->value, ENT_QUOTES, 'UTF-8');?>
 " href="<?php echo htmlspecialchars((string) fn_url("auth.login_form?auth_field=".((string)$_smarty_tpl->tpl_vars['method']->value)."&custom_id=".((string)$_smarty_tpl->tpl_vars['obj_id']->value)."&cp_location=".((string)$_smarty_tpl->tpl_vars['cp_location']->value)."&otp_action=".((string)$_smarty_tpl->tpl_vars['otp_action']->value)."&email=".((string)$_smarty_tpl->tpl_vars['login_email']->value)."&phone=".((string)$_smarty_tpl->tpl_vars['login_phone']->value)), ENT_QUOTES, 'UTF-8');?>
 "><?php echo $_smarty_tpl->__("cp_otp_by_".((string)$_smarty_tpl->tpl_vars['method']->value));?>
@@ -197,7 +222,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
         <?php if ($_smarty_tpl->tpl_vars['auth_field']->value == "email" && !$_smarty_tpl->tpl_vars['no_email']->value) {?>
             <div class="ty-control-group cp-otp-auth-field">
                 <label for="login_email_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['obj_id']->value, ENT_QUOTES, 'UTF-8');?>
-" class="ty-login__filed-label ty-control-group__label cm-required cm-trim cm-email"><?php echo $_smarty_tpl->__("email");?>
+" class="ty-login__filed-label ty-control-group__label <?php if (!$_smarty_tpl->tpl_vars['email_optional']->value) {?>cm-required<?php }?> cm-trim cm-email"><?php echo $_smarty_tpl->__("email");?>
 </label>
                 <input type="text" id="login_email_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['obj_id']->value, ENT_QUOTES, 'UTF-8');?>
 " name="user_data[email]" size="30" value="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['login_email']->value, ENT_QUOTES, 'UTF-8');?>
@@ -206,13 +231,19 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
         <?php } else { ?>
             <?php $_smarty_tpl->_assignInScope('placeholder', (($tmp = $_smarty_tpl->tpl_vars['placeholder']->value ?? null)===null||$tmp==='' ? $_smarty_tpl->tpl_vars['addons']->value['cp_otp_registration']['no_mask_placeholder'] ?? null : $tmp));?>
             <div class="ty-control-group cm-phone cp-otp-auth-field">
-                <label for="login_phone_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['obj_id']->value, ENT_QUOTES, 'UTF-8');?>
-" class="ty-login__filed-label ty-control-group__label cm-mask-phone-label cm-required cm-trim"><?php echo $_smarty_tpl->__("phone");?>
-</label>
-                <input type="text" id="login_phone_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['obj_id']->value, ENT_QUOTES, 'UTF-8');?>
-" name="user_data[phone]" size="30" value="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['login_phone']->value, ENT_QUOTES, 'UTF-8');?>
-" class="ty-login__input cm-focus cm-mask-phone cp-phone" <?php if ($_smarty_tpl->tpl_vars['placeholder']->value) {?>placeholder="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['placeholder']->value, ENT_QUOTES, 'UTF-8');?>
-"<?php }?> />
+                <?php ob_start();
+if ($_smarty_tpl->tpl_vars['phone_required']->value) {
+echo "true";
+}
+$_prefixVariable6=ob_get_clean();
+ob_start();
+if ($_smarty_tpl->tpl_vars['placeholder']->value) {
+echo (string)$_smarty_tpl->tpl_vars['placeholder']->value;
+}
+$_prefixVariable7=ob_get_clean();
+$_smarty_tpl->_subTemplateRender("tygh:components/phone.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('id'=>"login_phone_".((string)$_smarty_tpl->tpl_vars['obj_id']->value),'name'=>"user_data[phone]",'required'=>$_prefixVariable6,'value'=>((string)$_smarty_tpl->tpl_vars['login_phone']->value),'placeholder'=>$_prefixVariable7,'class'=>"ty-login__input cm-focus cm-mask-phone cp-phone"), 0, true);
+?>
+
             </div>
         <?php }?>
 

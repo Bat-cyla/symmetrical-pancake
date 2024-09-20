@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-09 12:26:47
+/* Smarty version 4.1.1, created on 2024-09-19 14:08:45
   from '/app/www/design/backend/templates/addons/vendor_panel_configurator/hooks/index/index_container.pre.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66b5e0d715baf1_29681341',
+  'unifunc' => 'content_66ec063d4e2aa3_79049808',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66b5e0d715baf1_29681341 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66ec063d4e2aa3_79049808 (Smarty_Internal_Template $_smarty_tpl) {
 if ($_smarty_tpl->tpl_vars['runtime']->value['customization_mode']['theme_editor']) {?>
     <?php $_smarty_tpl->_assignInScope('html_class', ((string)$_smarty_tpl->tpl_vars['html_class']->value)." te-theme-editor-active" ,false ,2);
 }

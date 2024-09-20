@@ -33,10 +33,10 @@ if (!defined('CONSOLE')) {
 /*
  * Database connection options
  */
-$config['db_host'] = 'mysql5.7';
-$config['db_name'] = 'dnemov_dev_db';
-$config['db_user'] = 'root';
-$config['db_password'] = 'root';
+$config['db_host'] = 'localhost';
+$config['db_name'] = 'otp_reg';
+$config['db_user'] = 'otp_reg';
+$config['db_password'] = '123321';
 
 $config['database_backend'] = 'mysqli';
 
@@ -58,12 +58,12 @@ $config['table_prefix'] = 'cscart_';
  */
 
 // Host and directory where software is installed on no-secure server
-$config['http_host'] = 'localhost';
-$config['http_path'] = '';
+$config['http_host'] = 'dnemov.cart-power.tech';
+$config['http_path'] = '/projects/cp_otp_registration';
 
 // Host and directory where software is installed on secure server
-$config['https_host'] = 'localhost';
-$config['https_path'] = '';
+$config['https_host'] = 'dnemov.cart-power.tech';
+$config['https_path'] = '/projects/cp_otp_registration';
 
 /*
  * Misc options
@@ -182,5 +182,6 @@ if (PRODUCT_STATUS != '' && !defined('DEVELOPMENT')) {
     ini_set('display_errors', 'on');
     ini_set('display_startup_errors', true);
 
-    define('DEVELOPMENT', true);
+
 }
+define('DEVELOPMENT', true);

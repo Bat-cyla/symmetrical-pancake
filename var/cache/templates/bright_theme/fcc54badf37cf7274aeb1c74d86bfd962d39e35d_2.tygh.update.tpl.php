@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-19 10:05:25
+/* Smarty version 4.1.1, created on 2024-09-19 14:09:16
   from '/app/www/design/themes/responsive/templates/views/profiles/update.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66c2eeb5665e28_81472237',
+  'unifunc' => 'content_66ec065caf0bf8_81789717',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fcc54badf37cf7274aeb1c74d86bfd962d39e35d' => 
     array (
       0 => '/app/www/design/themes/responsive/templates/views/profiles/update.tpl',
-      1 => 1724051122,
+      1 => 1724826041,
       2 => 'tygh',
     ),
   ),
@@ -30,7 +30,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:common/tabsbox.tpl' => 2,
   ),
 ),false)) {
-function content_66c2eeb5665e28_81472237 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66ec065caf0bf8_81789717 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/app/www/app/functions/smarty_plugins/modifier.enum.php','function'=>'smarty_modifier_enum',),1=>array('file'=>'/app/www/app/functions/smarty_plugins/block.hook.php','function'=>'smarty_block_hook',),2=>array('file'=>'/app/www/app/functions/smarty_plugins/function.set_id.php','function'=>'smarty_function_set_id',),));
 \Tygh\Languages\Helper::preloadLangVars(array('register_new_account','contact_information','text_multiprofile_notice','billing_address','shipping_address','shipping_address','billing_address','revert','delete_my_account_description','delete_my_account','delete_my_account','delete_my_account','usergroup','status','action','active','remove','available','join','declined','join','pending','cancel','profile_details','register_new_account','contact_information','text_multiprofile_notice','billing_address','shipping_address','shipping_address','billing_address','revert','delete_my_account_description','delete_my_account','delete_my_account','delete_my_account','usergroup','status','action','active','remove','available','join','declined','join','pending','cancel','profile_details'));
 if ($_smarty_tpl->tpl_vars['runtime']->value['customization_mode']['design'] == "Y" && (defined('AREA') ? constant('AREA') : null) == "C") {
@@ -46,7 +46,6 @@ $_smarty_tpl->_subTemplateRender("tygh:views/profiles/components/profiles_script
 
 <?php if ($_smarty_tpl->tpl_vars['runtime']->value['mode'] == "add" && $_smarty_tpl->tpl_vars['settings']->value['General']['quick_registration'] == smarty_modifier_enum("YesNo::YES")) {?>
     <div class="ty-account">
-
         <form name="profiles_register_form" enctype="multipart/form-data" action="<?php echo htmlspecialchars((string) fn_url(''), ENT_QUOTES, 'UTF-8');?>
 " method="post">
             <?php $_smarty_tpl->_subTemplateRender("tygh:views/profiles/components/profile_fields.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('section'=>"C",'nothing_extra'=>smarty_modifier_enum("YesNo::YES")), 0, false);
@@ -315,7 +314,6 @@ $_smarty_tpl->_subTemplateRender("tygh:views/profiles/components/profiles_script
 
 <?php if ($_smarty_tpl->tpl_vars['runtime']->value['mode'] == "add" && $_smarty_tpl->tpl_vars['settings']->value['General']['quick_registration'] == smarty_modifier_enum("YesNo::YES")) {?>
     <div class="ty-account">
-
         <form name="profiles_register_form" enctype="multipart/form-data" action="<?php echo htmlspecialchars((string) fn_url(''), ENT_QUOTES, 'UTF-8');?>
 " method="post">
             <?php $_smarty_tpl->_subTemplateRender("tygh:views/profiles/components/profile_fields.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('section'=>"C",'nothing_extra'=>smarty_modifier_enum("YesNo::YES")), 0, true);

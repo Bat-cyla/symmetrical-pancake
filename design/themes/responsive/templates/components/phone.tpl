@@ -40,6 +40,7 @@
     {$title = $title|default:false}
     {$class = $class|default:""}
     {$attrs = $attrs|default:false}
+
     {$extra = $extra|default:""}
     {$control_group_class = $control_group_class|default:""}
     {$label_position = $label_position|default:"default"}
@@ -63,6 +64,7 @@
     {/if}
     {* Get countries list *}
     {$country_code = $profile_data.s_country|default:$settings.Checkout.default_country}
+
     {$countries = 1|fn_get_simple_phone_country_codes}
     {foreach $countries as $id => $country}
         {$countries[$id].symbol = "+`$country.phone_code`"}
@@ -95,6 +97,7 @@
         <div class="controls">
     {/if}
     <div class="cm-field-container {if $is_phone_number_with_country_selection}ty-input-append ty-input-append--phone-mask{/if} {$input_phone_container_class}">
+
         <input {""}
             type="tel" {""}
             id="{$id}" {""}

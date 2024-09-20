@@ -16,6 +16,10 @@ msgctxt "Languages::cp_otp_use_for_otp"
 msgid "OTP confirm phone number"
 msgstr "ОТР подтверждение номера"
 
+msgctxt "Languages::cp_otp_not_enable_to_send_another_code_notification"
+msgid "Code was sended. Its validity has not expired"
+msgstr "Код отправлен. Время его действия не истекло"
+
 msgctxt "Languages::cp_otp_your_code_is"
 msgid "DEMO mode! Your verification code:"
 msgstr "DEMO режим! Ваш код верификации:"
@@ -44,9 +48,9 @@ msgctxt "SettingsTooltips::cp_otp_registration::use_fake_email"
 msgid "If enabled a fake Email will be added to the accounts of the users who left the Email field empty while placing the order or registering"
 msgstr "Если включено, сгенерированный Email будет добавляться к учетным записям пользователей, которые оставили поле Email пустым при оформлении заказа или регистрации"
 
-msgctxt "SettingsOptions::cp_otp_registration::comfirm_on"
-msgid "Add phone verification"
-msgstr "Добавить подтверждение телефона на"
+msgctxt "SettingsOptions::cp_otp_registration::confirm_on_cr"
+msgid "Add phone verification on Call requests"
+msgstr "Добавить подтверждение телефона на Обратные звонки"
 
 msgctxt "SettingsOptions::cp_otp_registration::send_registration_data"
 msgid "Send registration data by sms"
@@ -175,6 +179,66 @@ msgstr "Запретить"
 msgctxt "SettingsVariants::cp_otp_registration::auth_by_email::make_required"
 msgid "Make Required"
 msgstr "Сделать обязательной"
+
+msgctxt "SettingsVariants::cp_otp_registration::code_valid_time::1"
+msgid "1"
+msgstr "1"
+
+msgctxt "SettingsVariants::cp_otp_registration::code_valid_time::2"
+msgid "2"
+msgstr "2"
+
+msgctxt "SettingsVariants::cp_otp_registration::code_valid_time::3"
+msgid "3"
+msgstr "3"
+
+msgctxt "SettingsVariants::cp_otp_registration::code_valid_time::4"
+msgid "4"
+msgstr "4"
+
+msgctxt "SettingsVariants::cp_otp_registration::code_valid_time::5"
+msgid "5"
+msgstr "5"
+
+msgctxt "SettingsVariants::cp_otp_registration::new_send_time::1"
+msgid "1"
+msgstr "1"
+
+msgctxt "SettingsVariants::cp_otp_registration::new_send_time::2"
+msgid "2"
+msgstr "2"
+
+msgctxt "SettingsVariants::cp_otp_registration::new_send_time::3"
+msgid "3"
+msgstr "3"
+
+msgctxt "SettingsVariants::cp_otp_registration::new_send_time::4"
+msgid "4"
+msgstr "4"
+
+msgctxt "SettingsVariants::cp_otp_registration::new_send_time::5"
+msgid "5"
+msgstr "5"
+
+msgctxt "SettingsVariants::cp_otp_registration::code_attempts::1"
+msgid "1"
+msgstr "1"
+
+msgctxt "SettingsVariants::cp_otp_registration::code_attempts::2"
+msgid "2"
+msgstr "2"
+
+msgctxt "SettingsVariants::cp_otp_registration::code_attempts::3"
+msgid "3"
+msgstr "3"
+
+msgctxt "SettingsVariants::cp_otp_registration::code_attempts::4"
+msgid "4"
+msgstr "4"
+
+msgctxt "SettingsVariants::cp_otp_registration::code_attempts::5"
+msgid "5"
+msgstr "5"
 
 msgctxt "SettingsVariants::cp_otp_registration::auth_by_email::make_optional"
 msgid "Make Optional"

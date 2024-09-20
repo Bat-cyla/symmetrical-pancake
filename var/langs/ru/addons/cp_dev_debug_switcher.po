@@ -1,0 +1,125 @@
+msgid ""
+msgstr "Project-Id-Version: tygh"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language-Team: Russian\n"
+"Language: ru_RU\n"
+
+msgctxt "Addons::name::cp_dev_debug_switcher"
+msgid "Cart-Power: Debug switcher [DEV HELPER]"
+msgstr "Cart-Power: Переключатель режима отладки [DEV HELPER]"
+
+msgctxt "Addons::description::cp_dev_debug_switcher"
+msgid "Toggles debug mode and development mode with error display. Developed by <a target=\"_blank\" href=\"https://cart-power.com/\">Cart-Power</a>"
+msgstr "Переключает режим отладки и режим разработки с отображением ошибок. Разработано <a target=\"_blank\" href=\"https://cart-power.ru/\">Cart-Power</a>"
+
+msgctxt "SettingsSections::cp_dev_debug_switcher::general"
+msgid "General"
+msgstr "Общее"
+
+msgctxt "Languages::cp_dev_debug_switcher.enable_debug_mode"
+msgid "Enable debug mode"
+msgstr "Включить режим отладки"
+
+msgctxt "Languages::cp_dev_debug_switcher.enable_debug_mode_desc"
+msgid "Activate <code>DEBUG_MODE</code>."
+msgstr "Активирует <code>DEBUG_MODE</code>."
+
+msgctxt "Languages::cp_dev_debug_switcher.enable_debug_mode_desc_notice"
+msgid "<code>DEBUG_MODE</code> is already defined outside of the add-on. Debug mode switching functionality is disabled. Check your settings in the config files."
+msgstr "<code>DEBUG_MODE</code> уже активирован вне модуля. Функциональность переключения режима отладки отключена. Проверьте свои настройки в файлах конфигурации."
+
+msgctxt "Languages::cp_dev_debug_switcher.enable_development_mode"
+msgid "Enable develop mode"
+msgstr "Включить режим разработки"
+
+msgctxt "Languages::cp_dev_debug_switcher.enable_development_mode_desc"
+msgid "Activate <code>DEVELOPMENT</code>, <code>display_errors</code>, <code>display_startup_errors</code>."
+msgstr "Активирует <code>DEVELOPMENT</code>, <code>display_errors</code>, <code>display_startup_errors</code>."
+
+msgctxt "Languages::cp_dev_debug_switcher.enable_development_mode_notice"
+msgid "<code>DEVELOPMENT</code> is already defined outside of the module. The development mode switching functionality is limited. Check your settings in the config files. <p>When switching setting, only <code>display_errors</code>, <code>display_startup_errors</code> will be activated.</p>"
+msgstr "<code>DEVELOPMENT</code> уже активирован вне модуля. Функциональность переключения режима разработки ограничена. Проверьте свои настройки в файлах конфигурации. <p>При переключении настройки будут активироваться только <code>display_errors</code>, <code>display_startup_errors</code>.</p>"
+
+msgctxt "Languages::cp_dev_debug_switcher.enable_error_logging"
+msgid "Enable error logging"
+msgstr "Включить логирование ошибок"
+
+msgctxt "Languages::cp_dev_debug_switcher.enable_error_logging_desc"
+msgid "Enables logging errors, warnings and notices to a separate errors.log file in the module folder."
+msgstr "Включает запись ошибок, предупреждений и уведомлений в отдельный файл errors.log в папку модуля."
+
+msgctxt "Languages::cp_dev_debug_switcher.download_log_file"
+msgid "Download log file"
+msgstr "Скачать лог файл"
+
+msgctxt "Languages::cp_dev_debug_switcher.delete_log_file"
+msgid "Delete log file"
+msgstr "Удалить лог файл"
+
+msgctxt "Languages::cp_dev_debug_switcher.delete_file_log.success"
+msgid "Log file deleted successfully."
+msgstr "Файл логирования успешно удален."
+
+msgctxt "Languages::cp_dev_debug_switcher.current_state"
+msgid "Current state"
+msgstr "Текущее состояние"
+
+msgctxt "Languages::cp_dev_debug_switcher.mail_to"
+msgid "To"
+msgstr "Кому"
+
+msgctxt "Languages::cp_dev_debug_switcher.mail_from"
+msgid "From"
+msgstr "От кого"
+
+msgctxt "Languages::cp_dev_debug_switcher.debugger_menu"
+msgid "CP: DEV HELPER"
+msgstr "CP: DEV HELPER"
+
+msgctxt "Languages::cp_dev_debug_switcher.logger_mail"
+msgid "Intercepted email notifications"
+msgstr "Перехваченные email уведомления"
+
+msgctxt "Languages::cp_dev_debug_switcher.logs"
+msgid "Intercepted email notifications"
+msgstr "Перехваченные email уведомления"
+
+msgctxt "Languages::cp_dev_debug_switcher.current_server_time"
+msgid "Current server time"
+msgstr "Текущее серверное время"
+
+msgctxt "Languages::cp_dev_debug_switcher.php_info"
+msgid "PHP Information"
+msgstr "Информация о PHP"
+
+msgctxt "Languages::cp_dev_debug_switcher.save_mail_message"
+msgid "Enable email interception"
+msgstr "Включить перехват email"
+
+msgctxt "Languages::cp_dev_debug_switcher.save_mail_message_desc"
+msgid "Blocks the sending of email notifications and intercepts them."
+msgstr "Блокирует отправку email уведомлений и осуществляет их перехват."
+
+msgctxt "Languages::cp_dev_debug_switcher.works_from_ip"
+msgid "Restrict modes for IP"
+msgstr "Ограничить режимы для IP"
+
+msgctxt "Languages::cp_dev_debug_switcher.works_from_ip_desc"
+msgid "Enables debug and development modes only for the specified IPs."
+msgstr "Активирует режимы отладки и разработки только для указанных IP-адресов."
+
+msgctxt "Languages::cp_dev_debug_switcher.works_from_ip_help_desc"
+msgid "Make sure the IP address is entered correctly using four groups of numbers separated by dots. For multiple IP addresses, use a comma delimiter (e.g., 192.168.0.1,192.168.0.2)."
+msgstr "Убедитесь, что IP-адрес введен правильно, используя четыре группы чисел, разделенных точками. Для нескольких IP-адресов используйте разделитель запятую (например, 192.168.0.1,192.168.0.2)."
+
+msgctxt "Languages::cp_dev_debug_switcher.ip_matches"
+msgid "Your current IP address matches one of the following"
+msgstr "Ваш текущий IP-адрес соответствует одному из указанных"
+
+msgctxt "Languages::cp_dev_debug_switcher.ip_not_matches"
+msgid "Your current IP address does not match any of the specified ones"
+msgstr "Ваш текущий IP-адрес не соответствует ни одному из указанных"
+
+msgctxt "Languages::cp_dev_debug_switcher.uninstall_full"
+msgid "Full remove"
+msgstr "Удалить полностью"

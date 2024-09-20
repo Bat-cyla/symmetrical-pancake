@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<addon scheme="3.0">
+    <id>cp_dev_debug_switcher</id>
+    <version>1.2</version>
+    <priority>1</priority>
+    <position>100</position>
+    <status>active</status>
+    <default_language>en</default_language>
+    <has_icon>Y</has_icon>
+    <authors>
+        <author>
+            <name>Cart-Power</name>
+            <email>sales@cart-power.com</email>
+            <url>https://cart-power.com</url>
+        </author>
+    </authors>
+    <compatibility>
+        <core_version>
+            <min>4.10.1</min>
+        </core_version>
+    </compatibility>
+    <supplier>Cart-Power</supplier>
+    <supplier_link>https://cart-power.com</supplier_link>
+    <settings>
+        <sections>
+            <section id="general">
+                <items>
+                    <item id="general">
+                        <type>template</type>
+                        <default_value>general.tpl</default_value>
+                    </item>
+                    <item id="enable_debug_mode">
+                        <type>hidden</type>
+                        <default_value>N</default_value>
+                    </item>
+                    <item id="enable_development_mode">
+                        <type>hidden</type>
+                        <default_value>N</default_value>
+                    </item>
+                    <item id="enable_error_logging">
+                        <type>hidden</type>
+                        <default_value>N</default_value>
+                    </item>
+                    <item id="save_mail_message">
+                        <type>hidden</type>
+                        <default_value>N</default_value>
+                    </item>
+                    <item id="works_from_ip">
+                        <type>hidden</type>
+                        <default_value></default_value>
+                    </item>
+                </items>
+            </section>
+        </sections>
+    </settings>
+
+    <queries>
+        <item for="install">DROP TABLE IF EXISTS ?:cp_dev_debug_mail_save;</item>
+        <item for="install">
+            CREATE TABLE `?:cp_dev_debug_mail_save` (
+            `mail_delay_id` mediumint(8) unsigned NOT NULL auto_increment,
+            `params` LONGTEXT NOT NULL default '',
+            `timestamp` int(11) NOT NULL default 0,
+            `sent` char(1) NOT NULL default 'N',
+            `timestamp_sent` int(11) NOT NULL default '0',
+            `company_id` mediumint(8) unsigned NOT NULL default '0',
+            `result` VARCHAR(1) NOT NULL DEFAULT 'N',
+            `email` VARCHAR(128) NOT NULL DEFAULT '',
+            `from_mail` VARCHAR(128) NOT NULL DEFAULT '',
+            `object_mail` text NOT NULL DEFAULT '',
+            `failed_count` smallint(5) unsigned NOT NULL DEFAULT '0',
+            `invalid_email` char(1) NOT NULL DEFAULT 'N',
+            `blob_params` LONGBLOB NOT NULL,
+            PRIMARY KEY  (`mail_delay_id`)
+            ) Engine=InnoDB DEFAULT CHARSET UTF8;
+        </item>
+
+        <item for="uninstall">DROP TABLE IF EXISTS ?:cp_dev_debug_mail_save;</item>
+    </queries>
+</addon>

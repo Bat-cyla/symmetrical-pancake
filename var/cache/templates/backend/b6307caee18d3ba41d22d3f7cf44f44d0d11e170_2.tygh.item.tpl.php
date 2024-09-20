@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-09 12:27:03
+/* Smarty version 4.1.1, created on 2024-09-19 14:08:48
   from '/app/www/design/backend/templates/views/storefronts/components/picker/item.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66b5e0e7a86db9_24351996',
+  'unifunc' => 'content_66ec064007da32_70853675',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66b5e0e7a86db9_24351996 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66ec064007da32_70853675 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="object-picker__storefronts-main">
     <div class="object-picker__storefronts-name">
         <div class="object-picker__storefronts-name-content"><?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['title_pre']->value, ENT_QUOTES, 'UTF-8');?>

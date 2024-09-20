@@ -25,10 +25,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($mode == 'cp_phone_verification') {
         if (fn_cp_otp_validate_code($_REQUEST['cp_otp_code'], 'register')) {
             $cart = Tygh::$app['session']['cart'];
+
+
             if (empty($cart['user_data']['email'])){
                 $cart['user_data']['email'] = fn_checkout_generate_fake_email_address($cart['user_data'], TIME);
             }
-            if(empty($cart['user_data']['phone'])){
+            if((!empty($cart['user_data']['phone']) && $cart['user_data']['phone']!==$_REQUEST['phone']) || empty($cart['user_data']['phone'])){
                 $cart['user_data']['phone']=$_REQUEST['phone'];
             }
             $status = fn_checkout_place_order($cart, $auth, $_REQUEST);

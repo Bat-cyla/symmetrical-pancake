@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-09 12:26:48
+/* Smarty version 4.1.1, created on 2024-09-19 14:20:18
   from '/app/www/design/backend/templates/views/auth/login_form.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66b5e0d8688337_29777390',
+  'unifunc' => 'content_66ec08f28bf2d1_31910215',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:buttons/sign_in.tpl' => 1,
   ),
 ),false)) {
-function content_66b5e0d8688337_29777390 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66ec08f28bf2d1_31910215 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/app/www/app/functions/smarty_plugins/block.hook.php','function'=>'smarty_block_hook',),));
 \Tygh\Languages\Helper::preloadLangVars(array('administration_panel','email','password','forgot_password_question'));
 $_smarty_tpl->smarty->_cache['_tag_stack'][] = array('hook', array('name'=>"auth:login_form"));

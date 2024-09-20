@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-09 12:25:47
+/* Smarty version 4.1.1, created on 2024-09-19 14:09:16
   from '/app/www/design/themes/responsive/templates/views/profiles/components/profile_fields.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66b5e09b6e5812_36751307',
+  'unifunc' => 'content_66ec065cbcf2c0_68337828',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'de8467bf4f7edff7591815cb1ffb64769752532b' => 
     array (
       0 => '/app/www/design/themes/responsive/templates/views/profiles/components/profile_fields.tpl',
-      1 => 1723194965,
+      1 => 1724766477,
       2 => 'tygh',
     ),
   ),
@@ -25,7 +25,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:components/phone.tpl' => 2,
   ),
 ),false)) {
-function content_66b5e09b6e5812_36751307 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66ec065cbcf2c0_68337828 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/app/www/app/functions/smarty_plugins/modifier.enum.php','function'=>'smarty_modifier_enum',),1=>array('file'=>'/app/www/app/functions/smarty_plugins/block.hook.php','function'=>'smarty_block_hook',),2=>array('file'=>'/app/www/app/functions/smarty_plugins/function.include_ext.php','function'=>'smarty_function_include_ext',),3=>array('file'=>'/app/www/app/functions/smarty_plugins/function.set_id.php','function'=>'smarty_function_set_id',),));
 \Tygh\Languages\Helper::preloadLangVars(array('email','shipping_same_as_billing','text_billing_same_with_shipping','yes','no','select_state','select_country','address_residential','address_commercial','remove_this_item','email','shipping_same_as_billing','text_billing_same_with_shipping','yes','no','select_state','select_country','address_residential','address_commercial','remove_this_item'));
 if ($_smarty_tpl->tpl_vars['runtime']->value['customization_mode']['design'] == "Y" && (defined('AREA') ? constant('AREA') : null) == "C") {
@@ -41,11 +41,9 @@ elm_email" name="user_data[email]" size="32" value="<?php echo htmlspecialchars(
 " <?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['disabled_param']->value, ENT_QUOTES, 'UTF-8');?>
  />
     </div>
-<?php } else { ?>
-
-<?php $_smarty_tpl->_assignInScope('fields', array());?>
-
-<?php if (!$_smarty_tpl->tpl_vars['exclude']->value && !$_smarty_tpl->tpl_vars['include']->value) {?>
+<?php } else {
+$_smarty_tpl->_assignInScope('fields', array());
+if (!$_smarty_tpl->tpl_vars['exclude']->value && !$_smarty_tpl->tpl_vars['include']->value) {?>
     <?php $_smarty_tpl->_assignInScope('fields', $_smarty_tpl->tpl_vars['profile_fields']->value[$_smarty_tpl->tpl_vars['section']->value]);
 } else { ?>
     <?php
@@ -492,11 +490,9 @@ elm_email" name="user_data[email]" size="32" value="<?php echo htmlspecialchars(
 " <?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['disabled_param']->value, ENT_QUOTES, 'UTF-8');?>
  />
     </div>
-<?php } else { ?>
-
-<?php $_smarty_tpl->_assignInScope('fields', array());?>
-
-<?php if (!$_smarty_tpl->tpl_vars['exclude']->value && !$_smarty_tpl->tpl_vars['include']->value) {?>
+<?php } else {
+$_smarty_tpl->_assignInScope('fields', array());
+if (!$_smarty_tpl->tpl_vars['exclude']->value && !$_smarty_tpl->tpl_vars['include']->value) {?>
     <?php $_smarty_tpl->_assignInScope('fields', $_smarty_tpl->tpl_vars['profile_fields']->value[$_smarty_tpl->tpl_vars['section']->value]);
 } else { ?>
     <?php

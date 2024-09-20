@@ -14,6 +14,7 @@
                 seconds += Number(start_time[1]);
             }
             var timer = $(this);
+
             var parent = $(this).closest('.cp-otp-timer-wrap');
             
             var countdown = setInterval(function() {
@@ -30,9 +31,9 @@
         });
 
         $.ceEvent('on', 'ce.formpost_litecheckout_payments_form', function(form,elm) {
-            if (!_.user_id)
-            {
             let phone = $('#litecheckout_phone').val()
+            if (!_.user_id || phone!==_.phone)
+            {
             let main_container = form[0];
             $('#phone_verification_').remove();
             let container = $('<div id="phone_verification"></div>').appendTo(main_container);
@@ -49,11 +50,12 @@
         }
         });
 
+
         if (typeof _.cp_otp_registration != 'undefined') {
             var countries = (typeof _.cp_otp_registration.countries_list != 'undefined') ? _.cp_otp_registration.countries_list : [];
             var defaultCountry = (typeof _.cp_otp_registration.default_country != 'undefined') ? _.cp_otp_registration.default_country : '';
             setTimeout(function() {
-                $('.cp-phone').intlTelInput({
+                $('.ty-input-phone').intlTelInput({
                     nationalMode: false,
                     autoHideDialCode: false,
                     onlyCountries: countries,
@@ -61,6 +63,7 @@
                 });
             }, 200);
         }
+
     });
 
     $.ceEvent('on', 'ce.ajaxdone', function(context, scripts, params, data) {
@@ -75,7 +78,7 @@
             params.form.find('[type="submit"]').data('clicked', false); // fix for form btn
         }
         setTimeout(function(){
-            $('.cp-phone').trigger('click');
+            $('.ty-input-phone').trigger('click');
             if (data.cp_show_code_popup) {
                 var pop_link = $('#otp_verification_link_');
                 if (pop_link && pop_link.length > 0) {
@@ -84,13 +87,22 @@
             }
         }, 200);
     });
+    $(_.doc).on('input', '.cm-focus', function(e) {
+        const isMobile = window.innerWidth < 768;
+        let parents=$(this).parents();
+        let error_message=parents.find('.help-inline');
+        if(error_message.length === 2 && isMobile === true){
+            let buttons_container=parents.find('.ui-dialog .buttons-container');
+            let style= buttons_container.attr('style');
+            style+='margin:0;'
+            buttons_container.attr('style',style);
+        }
+    });
 
 
     // change popup link
     $(_.doc).on('blur keydown', '.cp-phone', function(e) {
-
-        var phone = $(this).val().replace(/[^0-9,+]/gim, '');
-
+        var phone = $(this).val().replace(/[^0-9,+]/gim,'');
         var verificationBlock = $(this).data('caVerification');
         if (typeof verificationBlock != 'undefined' && $('#' + verificationBlock).length) {
             var link = $('#' + verificationBlock).find('.cp-verification-link');
@@ -103,10 +115,8 @@
             } else {
                 var ca_phone = '';
             }
-            var ca_phone="+" + ca_phone
 
-            //console.log(phone)
-            //console.log(ca_phone)
+
             if (ca_phone != phone && link.is(':hidden')) {
                 verPhone.hide();
                 link.show();
@@ -114,6 +124,7 @@
                 verPhone.show();
                 link.hide();
             }
+
             if (phone != '') {
                 var linkParams = link.attr('href').split('&');
                 var newLink = '';
@@ -128,7 +139,14 @@
             }
         }
     });
+    $(_.doc).on('click', '.cp-verification-link', function(e) {
+        let error_message = $(this).parents().find('#phone_error_message');
+        let url=$(this).attr('name')
+        if(error_message.length){
+            return false
+        }
 
+    });
 
     $(_.doc).on('click', '.cp-get-auth-field', function(e) {
         var url = $(this).attr('href');
@@ -141,6 +159,7 @@
             } else if ($(this).data('caInputEmail')) {
                 data.email = $('#' + $(this).data('caInputEmail')).val();
             }
+
             $.ceAjax('request', url, {
                 method: 'post',
                 caching: false,
@@ -184,6 +203,7 @@
     });
     $.ceEvent('on', 'ce.ajaxdone', function (elms, inline_scripts, params, data) {
         if (data.cp_otp_code_sended && data.obj_id != 'undefined') {
+
             var btn_elm = $('#otp_verification_link_' + data.obj_id);
             var btn_elm2 = $('#otp_verification_link2_' + data.obj_id);
             if (btn_elm && btn_elm.length > 0) {
@@ -208,31 +228,6 @@
         
     });
 
-    function ajaxGetModal(data)
-    {
-        $.ceAjax('request', fn_url('checkout.cp_phone_verification'), {
-            method: 'get',
-            caching: false,
-            hidden: true,
-            data: {'phone': data},
-            force_exec: true,
-            callback: function() {
-                let main_container = $("#litecheckout_payments_form")[0];
-                $('#phone_verification_').remove();
-                let container = $('<div id="phone_verification"></div>').appendTo(main_container);
-                $(container).ceDialog('open', {
-                    'href': fn_url('checkout.cp_phone_verification'),
-                    'title': _.tr('cp_otp_phone_verification'),
-                    'width': 400,
-                    'height': 'auto',
-                    onClose: function () {
-                        fn_cp_otp_registration_close_popup();
-                    }
-                });
-            }
-        });
-
-    }
     function fn_cp_otp_registration_close_popup() {
         $('#phone_verification_').remove()
     }
@@ -248,23 +243,6 @@ function cpConvertSecondsToTime(num) {
     var timerOutput = (mins < 10 ? "0" : "") + mins + ":" + (secs < 10 ? "0" : "") + secs;
     return timerOutput;
 }
-
-function cpValidatePhone(evt, area) {
-    var theEvent = evt || window.event;
-    var key = theEvent.keyCode || theEvent.which;
-    key = String.fromCharCode( key );
-    if (area == 'C') {
-        var regex = /[-\[\]\(\)0-9]/;
-    } else {
-        var regex = /[+-\[\]\(\)0-9]/;
-    }
-    if( !regex.test(key) ) {
-        theEvent.returnValue = false;
-        if(theEvent.preventDefault) theEvent.preventDefault();
-    }
-}
-
-
 function cpChangePhone(val, key) {
     var cpReference = "+", prevVal = '';
 
@@ -321,6 +299,7 @@ function fn_cp_otp_run_again_timer (elm, btn, btn_2, obj_id) {
         seconds += Number(start_time[1]);
     }
     var timer = elm;
+
     var parent = elm.closest('.cp-otp-timer-wrap');
     var total_time = elm.attr('data-cp-total');
     var countdown = setInterval(function() {

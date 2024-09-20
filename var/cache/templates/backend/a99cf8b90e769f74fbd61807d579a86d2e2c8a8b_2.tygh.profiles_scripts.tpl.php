@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-09 12:27:02
+/* Smarty version 4.1.1, created on 2024-09-20 07:36:01
   from '/app/www/design/backend/templates/views/profiles/components/profiles_scripts.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66b5e0e6df9658_66513630',
+  'unifunc' => 'content_66ecfbb1aeff06_36089957',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66b5e0e6df9658_66513630 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66ecfbb1aeff06_36089957 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/app/www/app/functions/smarty_plugins/block.inline_script.php','function'=>'smarty_block_inline_script',),));
 $_smarty_tpl->smarty->_cache['_tag_stack'][] = array('inline_script', array());
 $_block_repeat=true;

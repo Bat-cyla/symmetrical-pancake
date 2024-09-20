@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-09 12:27:04
+/* Smarty version 4.1.1, created on 2024-09-19 14:08:49
   from '/app/www/design/backend/templates/views/settings/store_mode.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66b5e0e8d56798_23849659',
+  'unifunc' => 'content_66ec06412df556_86820334',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:common/product_release_info.tpl' => 1,
   ),
 ),false)) {
-function content_66b5e0e8d56798_23849659 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66ec06412df556_86820334 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/app/www/app/functions/smarty_plugins/block.inline_script.php','function'=>'smarty_block_inline_script',),));
 \Tygh\Languages\Helper::preloadLangVars(array('store_mode','choose_your_store_mode','full','product_state_description.','license_number','please_enter_license_here','licensed_product','trial','trial_mode_ult_disabled','trial_mode_mve_disabled','text_store_mode_trial','select'));
 if ($_smarty_tpl->tpl_vars['show']->value) {?>

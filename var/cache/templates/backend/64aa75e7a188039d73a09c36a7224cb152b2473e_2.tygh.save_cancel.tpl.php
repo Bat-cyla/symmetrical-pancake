@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-14 09:06:02
+/* Smarty version 4.1.1, created on 2024-09-19 14:08:46
   from '/app/www/design/backend/templates/buttons/save_cancel.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66bc494a725ad5_12685890',
+  'unifunc' => 'content_66ec063edfd869_93958766',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:buttons/button.tpl' => 1,
   ),
 ),false)) {
-function content_66bc494a725ad5_12685890 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66ec063edfd869_93958766 (Smarty_Internal_Template $_smarty_tpl) {
 \Tygh\Languages\Helper::preloadLangVars(array('save','save_and_close','create','create_and_close','cancel'));
 if ($_smarty_tpl->tpl_vars['but_target_id']->value || $_smarty_tpl->tpl_vars['but_target_form']->value) {
 $_smarty_tpl->_assignInScope('but_role', "submit-link");

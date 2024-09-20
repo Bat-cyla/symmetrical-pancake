@@ -10,7 +10,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 
 if ($mode == 'update' || $mode == 'add') {
+
     $profile_fields = Tygh::$app['view']->getTemplateVars('profile_fields');
+
     if (!empty($profile_fields)) {
         foreach ($profile_fields as $section => $fields) {
             foreach ($fields as $field_id => $field) {

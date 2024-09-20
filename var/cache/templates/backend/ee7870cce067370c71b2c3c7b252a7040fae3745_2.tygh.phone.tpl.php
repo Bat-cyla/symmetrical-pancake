@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-09 12:27:03
+/* Smarty version 4.1.1, created on 2024-09-20 07:36:01
   from '/app/www/design/backend/templates/components/phone.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66b5e0e700c9d3_21536496',
+  'unifunc' => 'content_66ecfbb1c89ed6_68502992',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:common/select_object.tpl' => 1,
   ),
 ),false)) {
-function content_66b5e0e700c9d3_21536496 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66ecfbb1c89ed6_68502992 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/app/www/app/lib/vendor/smarty/smarty/libs/plugins/modifier.replace.php','function'=>'smarty_modifier_replace',),1=>array('file'=>'/app/www/app/functions/smarty_plugins/modifier.render_tag_attrs.php','function'=>'smarty_modifier_render_tag_attrs',),));
 \Tygh\Languages\Helper::preloadLangVars(array('phone_mask_label'));
 if ($_smarty_tpl->tpl_vars['name']->value) {

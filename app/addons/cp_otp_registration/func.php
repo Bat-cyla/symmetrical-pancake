@@ -62,8 +62,7 @@ function fn_cp_otp_registration_get_user_short_info_pre($user_id, &$fields, $con
 function fn_cp_otp_registration_update_user_pre($user_id, &$user_data, $auth, $ship_to_another, &$notify_user)
 {
     if (!empty($user_data['phone'])) {
-        $user_data['phone'] = fn_cp_otp_phone_only_numbers($user_data['phone']);
-
+       $user_data['phone'] = fn_cp_otp_phone_only_numbers($user_data['phone']);
         if (AREA == 'A' && !empty($user_id)) {
             $current_phone = db_get_field('SELECT phone FROM ?:users WHERE user_id = ?i', $user_id);
             if ($user_data['phone'] != $current_phone) {
@@ -110,7 +109,8 @@ function fn_cp_otp_registration_update_profile($action, $user_data, $current_use
     if ($action == 'add' && Registry::get('addons.cp_otp_registration.send_registration_data') == 'Y' && $user_data['phone']){
         $login_url = fn_url('auth.login_form', 'C');
         $message = __('cp_otp_registration.create_user_text', ['[url]' => $login_url]);
-        $sended = fn_cp_sms_send_by_service($user_data['phone'], $message);   
+
+        fn_cp_sms_send_by_service($user_data['phone'], $message);
     }
 }
 
@@ -259,6 +259,16 @@ function fn_cp_otp_registration_user_logout_after($auth)
 // Common functions
 //
 
+function fn_cp_otp_registration_check_timeout($code_sended_time,$timeout){
+    $time=TIME;
+    $timeout_in_sec=$timeout*60;
+
+    if($time-$code_sended_time<$timeout_in_sec){
+        return false;
+    }else
+        return true;
+}
+
 function fn_cp_otp_assign_phone_verified($user_id, $params = [])
 {
     return db_query('UPDATE ?:users SET cp_phone_verified = ?s WHERE user_id = ?i', 'Y', $user_id);
@@ -381,8 +391,10 @@ function fn_cp_otp_send_code($user_data, $type = 'register', &$error = '')
                         $code_sended = true;
                     }
                 } else {
+
                     $sms_message = __('cp_otp_code_sms_text', array('[code]' => $code));
                     $code_sended = fn_cp_sms_send_by_service($phone, $sms_message);
+
                 }
             }
         } else {
@@ -494,7 +506,7 @@ function fn_cp_otp_allow_fast_registration()
     return $result;
 }
 
-function fn_cp_otp_check_verified($phone, $type = 'register')
+function fn_cp_otp_check_verified($phone, $type= 'register')
 {
     $otp_data = !empty(Tygh::$app['session']['cp_otp'][$type]) ? Tygh::$app['session']['cp_otp'][$type] : [];
     $phone = fn_cp_otp_phone_only_numbers($phone);
@@ -503,7 +515,7 @@ function fn_cp_otp_check_verified($phone, $type = 'register')
 
 function fn_cp_otp_phone_only_numbers($phone)
 {
-    return preg_replace('/[^\d]+/', '', $phone);
+    return preg_replace('#\D[+]#', '', $phone);
 }
 
 function fn_cp_otp_generate_code()
@@ -660,11 +672,4 @@ function fn_cp_otp_registration_data_texts()
     return $str;
 }
 
-function fn_settings_variants_addons_cp_otp_registration_comfirm_on()
-{
-    $data = [];
-    if (Registry::get('addons.call_requests.status') == 'A') {
-        $data['CR'] = __('call_requests');
-    }
-    return $data; 
-}
+

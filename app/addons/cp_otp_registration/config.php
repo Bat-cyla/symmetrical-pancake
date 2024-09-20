@@ -22,7 +22,7 @@ use Tygh\Registry;
 if (!defined('BOOTSTRAP')) { die('Access denied'); }
 
 define('CP_OTP_MIN_PHONE_NUM', 4); // minimum count of numbers in phone
-define('CP_OTP_DEMO_MODE',true);
+
 
 
 $http_host = Registry::get('config.http_host');

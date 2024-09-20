@@ -80,10 +80,9 @@
                         <type>checkbox</type>
                         <default_value>N</default_value>
                     </item>
-                    <item id="comfirm_on">
-                        <type>multiple checkboxes</type>
-                        <default_value><![CDATA[#M#CR=Y]]></default_value>
-                        <variants/>
+                    <item id="confirm_on_cr">
+                        <type>checkbox</type>
+                        <default_value>Y</default_value>
                     </item>
                     <item id="send_registration_data">
                         <type>checkbox</type>
@@ -106,15 +105,36 @@
             <section id="confirm_code">
                 <items>
                     <item id="code_valid_time">
-                        <type>input</type>
+                        <type>selectbox</type>
+                        <variants>
+                            <item id="1"></item>
+                            <item id="2"></item>
+                            <item id="3"></item>
+                            <item id="4"></item>
+                            <item id="5"></item>
+                        </variants>
                          <default_value>2</default_value>
                     </item>
                     <item id="new_send_time">
-                        <type>input</type>
+                        <type>selectbox</type>
+                        <variants>
+                            <item id="1"></item>
+                            <item id="2"></item>
+                            <item id="3"></item>
+                            <item id="4"></item>
+                            <item id="5"></item>
+                        </variants>
                          <default_value>1</default_value>
                     </item>
                     <item id="code_attempts">
-                        <type>input</type>
+                        <type>selectbox</type>
+                        <variants>
+                            <item id="1"></item>
+                            <item id="2"></item>
+                            <item id="3"></item>
+                            <item id="4"></item>
+                            <item id="5"></item>
+                        </variants>
                          <default_value>3</default_value>
                     </item>
                     <item id="last_num_confirm">

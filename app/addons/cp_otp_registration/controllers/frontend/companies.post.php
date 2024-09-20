@@ -30,6 +30,7 @@ if ($mode == 'apply_for_vendor') {
     $profile_fields = Tygh::$app['view']->getTemplateVars('profile_fields');
     $user_id=Tygh::$app['session']['auth']['user_id'];
     $phone=fn_cp_otp_find_phone_by_user_id($user_id);
+    $phone_verified=fn_cp_otp_check_verified($phone);
 
     if (!empty($profile_fields)) {
         foreach ($profile_fields as $section => $fields) {
@@ -39,7 +40,9 @@ if ($mode == 'apply_for_vendor') {
                 }
             }
         }
-        $profile_fields['phone']=$phone;
+
+        Tygh::$app['view']->assign('phone', $phone);
+        Tygh::$app['view']->assign('phone_verified', $phone_verified);
         Tygh::$app['view']->assign('profile_fields', $profile_fields);
     }
 }

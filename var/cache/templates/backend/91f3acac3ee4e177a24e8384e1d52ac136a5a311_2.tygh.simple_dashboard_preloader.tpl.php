@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-20 11:56:27
+/* Smarty version 4.1.1, created on 2024-09-19 14:09:32
   from '/app/www/design/backend/templates/views/index/components/simple_dashboard_preloader.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66c45a3b39c575_32075836',
+  'unifunc' => 'content_66ec066c342923_18063642',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66c45a3b39c575_32075836 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66ec066c342923_18063642 (Smarty_Internal_Template $_smarty_tpl) {
 \Tygh\Languages\Helper::preloadLangVars(array('dashboard.analytics_section_title'));
 ob_start();
 echo htmlspecialchars((string) mb_strlen($_smarty_tpl->__("dashboard.analytics_section_title"), 'UTF-8'), ENT_QUOTES, 'UTF-8');

@@ -11,7 +11,7 @@
         {$no_email = true}
     {/if}
 
-    <form name="{$id}_form" action="{""|fn_url}" method="post" class="cm-ajax cm-ajax-full-render">
+    <form id="otp_send_code_form" name="{$id}_form" action="{""|fn_url}" method="post" class="cm-ajax cm-ajax-full-render">
         <input type="hidden" name="return_url" value="{$smarty.request.return_url|default:$config.current_url}" />
         <input type="hidden" name="redirect_url" value="{$config.current_url}" />
         <input type="hidden" name="custom_id" value="{$id}" />
@@ -22,6 +22,10 @@
         (function(_, $) {
             $.ceEvent('on', 'ce.formpost_{$id}_form', function(form, clicked_elm) {
                 if (clicked_elm.attr('name') == 'dispatch[profiles.cp_check_otp]') {
+                    let verification_type = form[0][3].type;
+                    if(verification_type==='tel'){
+                        console.log(form.find(#li.class==='email'))
+                    }
                     var action = clicked_elm.data('caOtpAction') || '';
                     form.find('input[name="otp_action"]').val(action);
                 }

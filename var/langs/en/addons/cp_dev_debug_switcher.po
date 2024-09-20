@@ -1,0 +1,125 @@
+msgid ""
+msgstr "Project-Id-Version: tygh"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language-Team: English\n"
+"Language: en_US\n"
+
+msgctxt "Addons::name::cp_dev_debug_switcher"
+msgid "Cart-Power: Debug switcher [DEV HELPER]"
+msgstr "Cart-Power: Debug switcher [DEV HELPER]"
+
+msgctxt "Addons::description::cp_dev_debug_switcher"
+msgid "Toggles debug mode and development mode with error display. Developed by <a target=\"_blank\" href=\"https://cart-power.com/\">Cart-Power</a>"
+msgstr "Toggles debug mode and development mode with error display. Developed by <a target=\"_blank\" href=\"https://cart-power.com/\">Cart-Power</a>"
+
+msgctxt "SettingsSections::cp_dev_debug_switcher::general"
+msgid "General"
+msgstr "General"
+
+msgctxt "Languages::cp_dev_debug_switcher.enable_debug_mode"
+msgid "Enable debug mode"
+msgstr "Enable debug mode"
+
+msgctxt "Languages::cp_dev_debug_switcher.enable_debug_mode_desc"
+msgid "Activate <code>DEBUG_MODE</code>."
+msgstr "Activate <code>DEBUG_MODE</code>."
+
+msgctxt "Languages::cp_dev_debug_switcher.enable_debug_mode_desc_notice"
+msgid "<code>DEBUG_MODE</code> is already defined outside of the add-on. Debug mode switching functionality is disabled. Check your settings in the config files."
+msgstr "<code>DEBUG_MODE</code> is already defined outside of the add-on. Debug mode switching functionality is disabled. Check your settings in the config files."
+
+msgctxt "Languages::cp_dev_debug_switcher.enable_development_mode"
+msgid "Enable develop mode"
+msgstr "Enable develop mode"
+
+msgctxt "Languages::cp_dev_debug_switcher.enable_development_mode_desc"
+msgid "Activate <code>DEVELOPMENT</code>, <code>display_errors</code>, <code>display_startup_errors</code>."
+msgstr "Activate <code>DEVELOPMENT</code>, <code>display_errors</code>, <code>display_startup_errors</code>."
+
+msgctxt "Languages::cp_dev_debug_switcher.enable_development_mode_notice"
+msgid "<code>DEVELOPMENT</code> is already defined outside of the module. The development mode switching functionality is limited. Check your settings in the config files. <p>When switching setting, only <code>display_errors</code>, <code>display_startup_errors</code> will be activated.</p>"
+msgstr "<code>DEVELOPMENT</code> is already defined outside of the module. The development mode switching functionality is limited. Check your settings in the config files. <p>When switching setting, only <code>display_errors</code>, <code>display_startup_errors</code> will be activated.</p>"
+
+msgctxt "Languages::cp_dev_debug_switcher.enable_error_logging"
+msgid "Enable error logging"
+msgstr "Enable error logging"
+
+msgctxt "Languages::cp_dev_debug_switcher.enable_error_logging_desc"
+msgid "Enables logging errors, warnings and notices to a separate errors.log file in the module folder."
+msgstr "Enables logging errors, warnings and notices to a separate errors.log file in the module folder."
+
+msgctxt "Languages::cp_dev_debug_switcher.download_log_file"
+msgid "Download log file"
+msgstr "Download log file"
+
+msgctxt "Languages::cp_dev_debug_switcher.delete_log_file"
+msgid "Delete log file"
+msgstr "Delete log file"
+
+msgctxt "Languages::cp_dev_debug_switcher.delete_file_log.success"
+msgid "Log file deleted successfully."
+msgstr "Log file deleted successfully."
+
+msgctxt "Languages::cp_dev_debug_switcher.current_state"
+msgid "Current state"
+msgstr "Current state"
+
+msgctxt "Languages::cp_dev_debug_switcher.mail_to"
+msgid "To"
+msgstr "To"
+
+msgctxt "Languages::cp_dev_debug_switcher.mail_from"
+msgid "From"
+msgstr "From"
+
+msgctxt "Languages::cp_dev_debug_switcher.debugger_menu"
+msgid "CP: DEV HELPER"
+msgstr "CP: DEV HELPER"
+
+msgctxt "Languages::cp_dev_debug_switcher.logger_mail"
+msgid "Intercepted email notifications"
+msgstr "Intercepted email notifications"
+
+msgctxt "Languages::cp_dev_debug_switcher.logs"
+msgid "Intercepted email notifications"
+msgstr "Intercepted email notifications"
+
+msgctxt "Languages::cp_dev_debug_switcher.current_server_time"
+msgid "Current server time"
+msgstr "Current server time"
+
+msgctxt "Languages::cp_dev_debug_switcher.php_info"
+msgid "PHP Information"
+msgstr "PHP Information"
+
+msgctxt "Languages::cp_dev_debug_switcher.save_mail_message"
+msgid "Enable email interception"
+msgstr "Enable email interception"
+
+msgctxt "Languages::cp_dev_debug_switcher.save_mail_message_desc"
+msgid "Blocks the sending of email notifications and intercepts them."
+msgstr "Blocks the sending of email notifications and intercepts them."
+
+msgctxt "Languages::cp_dev_debug_switcher.works_from_ip"
+msgid "Restrict modes for IP"
+msgstr "Restrict modes for IP"
+
+msgctxt "Languages::cp_dev_debug_switcher.works_from_ip_desc"
+msgid "Enables debug and development modes only for the specified IPs."
+msgstr "Enables debug and development modes only for the specified IPs."
+
+msgctxt "Languages::cp_dev_debug_switcher.works_from_ip_help_desc"
+msgid "Make sure the IP address is entered correctly using four groups of numbers separated by dots. For multiple IP addresses, use a comma delimiter (e.g., 192.168.0.1,192.168.0.2)."
+msgstr "Make sure the IP address is entered correctly using four groups of numbers separated by dots. For multiple IP addresses, use a comma delimiter (e.g., 192.168.0.1,192.168.0.2)."
+
+msgctxt "Languages::cp_dev_debug_switcher.ip_matches"
+msgid "Your current IP address matches one of the following"
+msgstr "Your current IP address matches one of the following"
+
+msgctxt "Languages::cp_dev_debug_switcher.ip_not_matches"
+msgid "Your current IP address does not match any of the specified ones"
+msgstr "Your current IP address does not match any of the specified ones"
+
+msgctxt "Languages::cp_dev_debug_switcher.uninstall_full"
+msgid "Full remove"
+msgstr "Full remove"

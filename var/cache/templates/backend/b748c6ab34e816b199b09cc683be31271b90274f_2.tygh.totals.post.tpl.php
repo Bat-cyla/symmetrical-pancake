@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-09 12:27:03
+/* Smarty version 4.1.1, created on 2024-09-20 07:36:02
   from '/app/www/design/backend/templates/addons/gift_certificates/hooks/order_management/totals.post.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66b5e0e7a37146_50333309',
+  'unifunc' => 'content_66ecfbb297d750_61467613',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:common/price.tpl' => 1,
   ),
 ),false)) {
-function content_66b5e0e7a37146_50333309 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66ecfbb297d750_61467613 (Smarty_Internal_Template $_smarty_tpl) {
 \Tygh\Languages\Helper::preloadLangVars(array('gift_certificate','remove'));
 if ($_smarty_tpl->tpl_vars['cart']->value['use_gift_certificates']) {?>
 <input type="hidden" name="cert_code" value="" />

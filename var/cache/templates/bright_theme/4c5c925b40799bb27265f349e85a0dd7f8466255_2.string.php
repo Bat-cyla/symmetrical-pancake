@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-02 10:12:31
+/* Smarty version 4.1.1, created on 2024-09-19 14:09:17
   from '4c5c925b40799bb27265f349e85a0dd7f8466255' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66ac86df76bbf9_86454788',
+  'unifunc' => 'content_66ec065d111a47_74723827',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -14,7 +14,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66ac86df76bbf9_86454788 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66ec065d111a47_74723827 (Smarty_Internal_Template $_smarty_tpl) {
 ?><ul>
     <li>г. Москва, ул. 1-я Дубровская, д.1, офис 100</li>
     <li><bdi>8-800-000-00-00</bdi> (звонок бесплатный)</li>

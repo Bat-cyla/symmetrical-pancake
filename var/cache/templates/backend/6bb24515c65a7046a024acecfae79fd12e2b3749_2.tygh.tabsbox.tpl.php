@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-09 14:28:12
+/* Smarty version 4.1.1, created on 2024-09-19 14:08:47
   from '/app/www/design/backend/templates/common/tabsbox.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66b5fd4c2c5a66_02086861',
+  'unifunc' => 'content_66ec063f450101_89812847',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66b5fd4c2c5a66_02086861 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66ec063f450101_89812847 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/app/www/app/functions/smarty_plugins/function.script.php','function'=>'smarty_function_script',),1=>array('file'=>'/app/www/app/functions/smarty_plugins/modifier.empty_tabs.php','function'=>'smarty_modifier_empty_tabs',),2=>array('file'=>'/app/www/app/functions/smarty_plugins/modifier.in_array.php','function'=>'smarty_modifier_in_array',),3=>array('file'=>'/app/www/app/functions/smarty_plugins/modifier.enum.php','function'=>'smarty_modifier_enum',),));
 echo smarty_function_script(array('src'=>"js/tygh/tabs.js"),$_smarty_tpl);?>
 

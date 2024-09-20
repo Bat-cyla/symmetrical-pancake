@@ -4,9 +4,7 @@
         <input type="text" id="{$id_prefix}elm_email" name="user_data[email]" size="32" value="{$user_data.email}" class="ty-input-text {$_class}" {$disabled_param} />
     </div>
 {else}
-
 {$fields = []}
-
 {if !$exclude && !$include}
     {$fields = $profile_fields.$section}
 {else}

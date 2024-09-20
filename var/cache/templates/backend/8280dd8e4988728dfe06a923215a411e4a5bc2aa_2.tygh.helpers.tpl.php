@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-09 12:26:48
+/* Smarty version 4.1.1, created on 2024-09-19 14:08:46
   from '/app/www/design/backend/templates/buttons/helpers.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66b5e0d8596959_86385708',
+  'unifunc' => 'content_66ec063e1849a2_80561248',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,19 +20,19 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66b5e0d8596959_86385708 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66ec063e1849a2_80561248 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->smarty->ext->_tplFunction->registerTplFunctions($_smarty_tpl, array (
   'btn' => 
   array (
     'compiled_filepath' => '/app/www/var/cache/templates/backend/8280dd8e4988728dfe06a923215a411e4a5bc2aa_2.tygh.helpers.tpl.php',
     'uid' => '8280dd8e4988728dfe06a923215a411e4a5bc2aa',
-    'call_name' => 'smarty_template_function_btn_190116207566b5e0d8539602_12367545',
+    'call_name' => 'smarty_template_function_btn_24316599966ec063e0f5675_19663349',
   ),
   'dropdown' => 
   array (
     'compiled_filepath' => '/app/www/var/cache/templates/backend/8280dd8e4988728dfe06a923215a411e4a5bc2aa_2.tygh.helpers.tpl.php',
     'uid' => '8280dd8e4988728dfe06a923215a411e4a5bc2aa',
-    'call_name' => 'smarty_template_function_dropdown_190116207566b5e0d8539602_12367545',
+    'call_name' => 'smarty_template_function_dropdown_24316599966ec063e0f5675_19663349',
   ),
 ));
 ?>
@@ -40,9 +40,9 @@ $_smarty_tpl->smarty->ext->_tplFunction->registerTplFunctions($_smarty_tpl, arra
 
 <?php }
 \Tygh\Languages\Helper::preloadLangVars(array('delete_selected','delete','tools'));
-/* smarty_template_function_btn_190116207566b5e0d8539602_12367545 */
-if (!function_exists('smarty_template_function_btn_190116207566b5e0d8539602_12367545')) {
-function smarty_template_function_btn_190116207566b5e0d8539602_12367545(Smarty_Internal_Template $_smarty_tpl,$params) {
+/* smarty_template_function_btn_24316599966ec063e0f5675_19663349 */
+if (!function_exists('smarty_template_function_btn_24316599966ec063e0f5675_19663349')) {
+function smarty_template_function_btn_24316599966ec063e0f5675_19663349(Smarty_Internal_Template $_smarty_tpl,$params) {
 $params = array_merge(array('text'=>'','href'=>'','title'=>'','onclick'=>'','target'=>'','class'=>'','data'=>array(),'form'=>'','method'=>'','raw'=>false), $params);
 foreach ($params as $key => $value) {
 $_smarty_tpl->tpl_vars[$key] = new Smarty_Variable($value, $_smarty_tpl->isRenderingCache);
@@ -217,10 +217,10 @@ if (!$_smarty_tpl->tpl_vars['hide_clone']->value) {?><li><?php $_smarty_tpl->sma
 
     <?php }
 }}
-/*/ smarty_template_function_btn_190116207566b5e0d8539602_12367545 */
-/* smarty_template_function_dropdown_190116207566b5e0d8539602_12367545 */
-if (!function_exists('smarty_template_function_dropdown_190116207566b5e0d8539602_12367545')) {
-function smarty_template_function_dropdown_190116207566b5e0d8539602_12367545(Smarty_Internal_Template $_smarty_tpl,$params) {
+/*/ smarty_template_function_btn_24316599966ec063e0f5675_19663349 */
+/* smarty_template_function_dropdown_24316599966ec063e0f5675_19663349 */
+if (!function_exists('smarty_template_function_dropdown_24316599966ec063e0f5675_19663349')) {
+function smarty_template_function_dropdown_24316599966ec063e0f5675_19663349(Smarty_Internal_Template $_smarty_tpl,$params) {
 $params = array_merge(array('text'=>'','title'=>'','class'=>'','content'=>'','icon'=>'','no_caret'=>false,'placement'=>"left"), $params);
 foreach ($params as $key => $value) {
 $_smarty_tpl->tpl_vars[$key] = new Smarty_Variable($value, $_smarty_tpl->isRenderingCache);
@@ -252,5 +252,5 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/app/www/app/lib/vendor/smar
         </div>
     <?php }
 }}
-/*/ smarty_template_function_dropdown_190116207566b5e0d8539602_12367545 */
+/*/ smarty_template_function_dropdown_24316599966ec063e0f5675_19663349 */
 }

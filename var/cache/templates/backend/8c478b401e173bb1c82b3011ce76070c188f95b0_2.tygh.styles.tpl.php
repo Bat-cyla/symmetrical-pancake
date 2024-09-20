@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.1.1, created on 2024-08-09 12:26:47
+/* Smarty version 4.1.1, created on 2024-09-19 14:08:45
   from '/app/www/design/backend/templates/common/styles.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_66b5e0d719e962_36026163',
+  'unifunc' => 'content_66ec063d542807_09273893',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'tygh:views/statuses/components/styles.tpl' => 1,
   ),
 ),false)) {
-function content_66b5e0d719e962_36026163 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66ec063d542807_09273893 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/app/www/app/functions/smarty_plugins/block.styles.php','function'=>'smarty_block_styles',),1=>array('file'=>'/app/www/app/functions/smarty_plugins/function.style.php','function'=>'smarty_function_style',),2=>array('file'=>'/app/www/app/functions/smarty_plugins/block.hook.php','function'=>'smarty_block_hook',),));
 $_smarty_tpl->_subTemplateRender("tygh:common/critical_css.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 $_smarty_tpl->smarty->_cache['_tag_stack'][] = array('styles', array());
