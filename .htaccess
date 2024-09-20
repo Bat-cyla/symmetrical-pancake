@@ -35,6 +35,10 @@ DirectoryIndex index.html index.php
 	</filesMatch>
 </IfModule>
 
+<FilesMatch \.php$>
+    SetHandler "proxy:unix:/var/run/php/php7.4-fpm.sock|fcgi://localhost/"
+</FilesMatch>
+
 
 <IfModule mod_rewrite.c>
 RewriteEngine on
